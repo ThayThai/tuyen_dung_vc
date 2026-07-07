@@ -42,6 +42,7 @@ function verifyAdminToken($pdo) {
     $tokenHeader = $headers['Authorization'] ?? $headers['authorization'] ?? 
                    $headers['X-Authorization'] ?? $headers['x-authorization'] ?? 
                    $_SERVER['HTTP_AUTHORIZATION'] ?? $_SERVER['REDIRECT_HTTP_AUTHORIZATION'] ?? 
+                   $_SERVER['HTTP_X_AUTHORIZATION'] ?? 
                    $_GET['token'] ?? '';
     
     if (empty($tokenHeader)) {
