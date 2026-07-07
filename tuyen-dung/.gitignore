@@ -1,0 +1,6 @@
+# Ignore actual uploaded files but preserve uploads/ folder
+uploads/*
+!uploads/.gitkeep
+
+# Ignore simulated email log
+sent_emails.log

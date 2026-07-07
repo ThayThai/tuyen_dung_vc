@@ -1,0 +1,6456 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Chỉ Tiêu Tuyển Dụng – Sở GDĐT Đồng Tháp</title>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <style>:root {
+  --bd: #0a2463;
+  --bm: #1e4db7;
+  --bl: #3a7bd5;
+  --bp: #e8f0fe;
+  --ba: #00c2ff;
+  --w: #fff;
+  --g0: #f8fafc;
+  --g1: #f1f5f9;
+  --g3: #cbd5e1;
+  --g6: #475569;
+  --g8: #1e293b;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Be Vietnam Pro", sans-serif;
+  background: var(--w);
+  color: var(--g8);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+/* NAV */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(30, 77, 183, 0.1);
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  box-shadow: 0 2px 16px rgba(10, 36, 99, 0.08);
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.nav-icon {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, var(--bm), var(--ba));
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+.nav-txt strong {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--bd);
+  display: block;
+  line-height: 1.2;
+}
+.nav-txt span {
+  font-size: 0.7rem;
+  color: var(--g6);
+}
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+.nav-links a {
+  text-decoration: none;
+  color: var(--g6);
+  font-size: 0.82rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.nav-links a:hover {
+  color: var(--bm);
+}
+.btn-nav {
+  background: linear-gradient(135deg, var(--bm), var(--bl));
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.45rem 1.1rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 3px 10px rgba(30, 77, 183, 0.3);
+  transition: all 0.2s;
+}
+.btn-nav:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(30, 77, 183, 0.4);
+}
+/* HERO */
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    var(--bd) 0%,
+    var(--bm) 55%,
+    #1a6fd4 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 88px 1.5rem 4rem;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at 70% 25%,
+    rgba(0, 194, 255, 0.15) 0%,
+    transparent 55%
+  );
+}
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+.hero-badge {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 100px;
+  padding: 0.35rem 0.9rem;
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 500;
+  margin-bottom: 1.8rem;
+  animation: fup 0.8s ease;
+}
+.dot {
+  width: 6px;
+  height: 6px;
+  background: var(--ba);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(1.4);
+  }
+}
+.hero h1 {
+  position: relative;
+  z-index: 1;
+  font-size: clamp(2rem, 4.5vw, 3.6rem);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+  animation: fup 0.9s ease 0.15s both;
+}
+.hero h1 em {
+  color: var(--ba);
+  font-style: normal;
+}
+.hero-sub {
+  position: relative;
+  z-index: 1;
+  font-size: clamp(0.88rem, 1.8vw, 1rem);
+  color: rgba(255, 255, 255, 0.72);
+  max-width: 580px;
+  margin: 0 auto 2.5rem;
+  animation: fup 0.9s ease 0.3s both;
+}
+/* STATS */
+.hero-stats {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 2.5rem;
+  max-width: 680px;
+  width: 100%;
+  animation: fup 0.9s ease 0.45s both;
+}
+.stat-box {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 1.2rem 0.8rem;
+  text-align: center;
+}
+.stat-n {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1;
+}
+.stat-n small {
+  font-size: 1.1rem;
+}
+.stat-l {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.55);
+  margin-top: 3px;
+  line-height: 1.3;
+}
+/* HERO ACTIONS */
+.hero-actions {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  animation: fup 0.9s ease 0.55s both;
+}
+.btn-w {
+  background: #fff;
+  color: var(--bd);
+  border: none;
+  border-radius: 10px;
+  padding: 0.8rem 1.8rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+.btn-w:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.3);
+}
+.btn-o {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  padding: 0.8rem 1.8rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+.btn-o:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+/* SECTION */
+section {
+  padding: 4.5rem 1.5rem;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.sec-tag {
+  display: inline-block;
+  background: var(--bp);
+  color: var(--bm);
+  border-radius: 6px;
+  padding: 0.28rem 0.75rem;
+  font-size: 0.73rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+.sec-title {
+  font-size: clamp(1.6rem, 2.8vw, 2.4rem);
+  font-weight: 800;
+  color: var(--bd);
+  margin-bottom: 0.6rem;
+  line-height: 1.2;
+}
+.sec-desc {
+  color: var(--g6);
+  font-size: 0.92rem;
+}
+/* NOTICE */
+.notice-sec {
+  background: var(--g0);
+}
+.notice-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 1.2rem;
+  margin-top: 2.5rem;
+}
+.nc {
+  background: #fff;
+  border-radius: 14px;
+  padding: 1.6rem;
+  border: 1px solid var(--g1);
+  box-shadow: 0 3px 16px rgba(10, 36, 99, 0.07);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.nc::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--bm), var(--ba));
+}
+.nc:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 36px rgba(10, 36, 99, 0.13);
+}
+.nc-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 11px;
+  background: var(--bp);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 1rem;
+}
+.nc h3 {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--bd);
+  margin-bottom: 0.4rem;
+}
+.nc p {
+  font-size: 0.82rem;
+  color: var(--g6);
+  line-height: 1.6;
+}
+/* TABS */
+.tab-sec {
+  background: #fff;
+}
+.tab-hdr {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  margin: 2rem 0 1.5rem;
+  background: var(--g1);
+  border-radius: 14px;
+  padding: 5px;
+}
+.tab-btn {
+  border: none;
+  background: transparent;
+  border-radius: 10px;
+  padding: 0.85rem 1rem;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--g6);
+  cursor: pointer;
+  transition: all 0.25s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.tab-btn .tc {
+  background: var(--bm);
+  color: #fff;
+  border-radius: 100px;
+  padding: 2px 9px;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+.tab-btn.active {
+  background: #fff;
+  color: var(--bm);
+  box-shadow: 0 3px 12px rgba(10, 36, 99, 0.12);
+}
+.tab-btn.active .tc {
+  background: var(--bm);
+}
+.tab-pane {
+  display: none;
+}
+.tab-pane.active {
+  display: block;
+}
+/* SUMMARY CARDS */
+.sum-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+.sc {
+  background: var(--bp);
+  border-radius: 11px;
+  padding: 1rem 0.8rem;
+  text-align: center;
+  border: 1px solid rgba(30, 77, 183, 0.1);
+}
+.sc .n {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--bm);
+  line-height: 1;
+}
+.sc .l {
+  font-size: 0.7rem;
+  color: var(--g6);
+  margin-top: 3px;
+}
+/* FILTER */
+.fbar {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.2rem;
+  align-items: center;
+}
+.fbar input,
+.fbar select {
+  border: 1.5px solid var(--g3);
+  border-radius: 8px;
+  padding: 0.55rem 0.9rem;
+  font-size: 0.82rem;
+  font-family: "Be Vietnam Pro", sans-serif;
+  color: var(--g8);
+  background: #fff;
+  transition: border-color 0.2s;
+  outline: none;
+}
+.fbar input:focus,
+.fbar select:focus {
+  border-color: var(--bm);
+}
+.fbar input {
+  flex: 1;
+  min-width: 200px;
+}
+.fcnt {
+  margin-left: auto;
+  background: var(--bp);
+  color: var(--bm);
+  border-radius: 7px;
+  padding: 0.35rem 0.8rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+/* TABLE */
+.twrap {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--g1);
+  box-shadow: 0 3px 18px rgba(10, 36, 99, 0.08);
+  overflow-x: auto;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.78rem;
+}
+thead {
+  background: linear-gradient(135deg, var(--bd), var(--bm));
+}
+thead th {
+  color: #fff;
+  padding: 0.8rem 0.7rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.72rem;
+  white-space: nowrap;
+}
+thead th:nth-child(2) {
+  text-align: left;
+}
+tbody tr {
+  border-bottom: 1px solid var(--g1);
+  transition: background 0.15s;
+}
+tbody tr:hover {
+  background: #f0f5ff;
+}
+tbody tr:last-child {
+  border-bottom: none;
+}
+tbody td {
+  padding: 0.72rem 0.7rem;
+  vertical-align: middle;
+  text-align: center;
+}
+tbody td:nth-child(2) {
+  text-align: left;
+}
+.tstt {
+  color: var(--g6);
+  font-weight: 600;
+  width: 36px;
+}
+.tname {
+  font-weight: 600;
+  color: var(--bd);
+  min-width: 180px;
+  text-align: left;
+  white-space: nowrap;
+}
+.txa {
+  color: var(--g6);
+  font-size: 0.75rem;
+  min-width: 110px;
+  text-align: left;
+}
+.cap {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 100px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.cap-THPT {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+.cap-THCS {
+  background: #d1fae5;
+  color: #065f46;
+}
+.cap-GDTX {
+  background: #fef3c7;
+  color: #92400e;
+}
+.cap-TH {
+  background: #ede9fe;
+  color: #5b21b6;
+}
+.cap-MN {
+  background: #fce7f3;
+  color: #9d174d;
+}
+.badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 100px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.badge-thpt { background: #dbeafe; color: #1d4ed8; }
+.badge-thcs { background: #d1fae5; color: #065f46; }
+.badge-tieu-hoc { background: #ede9fe; color: #5b21b6; }
+.badge-mam-non { background: #fce7f3; color: #9d174d; }
+.badge-gdtx { background: #fef3c7; color: #92400e; }
+.ttot {
+  font-weight: 800;
+  color: var(--bm);
+  font-size: 0.9rem;
+}
+.tbc {
+  color: var(--g6);
+  font-size: 0.75rem;
+}
+.tv {
+  color: var(--bm);
+  font-weight: 700;
+}
+.te {
+  color: #d1d5db;
+}
+tfoot td {
+  background: var(--bd);
+  color: #fff;
+  font-weight: 700;
+  padding: 0.8rem 0.7rem;
+  text-align: center;
+  font-size: 0.75rem;
+}
+tfoot td.tlbl {
+  text-align: left;
+  font-size: 0.8rem;
+}
+/* STEPS */
+.steps-sec {
+  background: var(--g0);
+}
+.steps-wrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+.step {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 3px 14px rgba(10, 36, 99, 0.07);
+  border: 1px solid var(--g1);
+}
+.snum {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--bm), var(--ba));
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  box-shadow: 0 6px 18px rgba(30, 77, 183, 0.3);
+}
+.step h3 {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--bd);
+  margin-bottom: 0.4rem;
+}
+.step p {
+  font-size: 0.78rem;
+  color: var(--g6);
+  line-height: 1.5;
+}
+/* APPLY */
+.apply-sec {
+  background: linear-gradient(135deg, var(--bd), var(--bm));
+  position: relative;
+  overflow: hidden;
+}
+.apply-sec::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at 80% 20%,
+    rgba(0, 194, 255, 0.1) 0%,
+    transparent 60%
+  );
+}
+.apply-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.apply-txt h2 {
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 0.9rem;
+  line-height: 1.2;
+}
+.apply-txt p {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.9rem;
+  margin-bottom: 1.8rem;
+  line-height: 1.7;
+}
+.hi-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.hi {
+  display: flex;
+  gap: 9px;
+  align-items: flex-start;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.85rem;
+}
+.apply-form {
+  background: #fff;
+  border-radius: 18px;
+  padding: 2.2rem;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.22);
+}
+.apply-form h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--bd);
+  margin-bottom: 1.3rem;
+}
+.fg {
+  margin-bottom: 1rem;
+}
+.fg label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--g6);
+  margin-bottom: 0.35rem;
+}
+.fg input,
+.fg select {
+  width: 100%;
+  border: 1.5px solid var(--g3);
+  border-radius: 8px;
+  padding: 0.65rem 0.9rem;
+  font-size: 0.82rem;
+  font-family: "Be Vietnam Pro", sans-serif;
+  color: var(--g8);
+  transition: border-color 0.2s;
+  outline: none;
+  background: #fff;
+}
+.fg input:focus,
+.fg select:focus {
+  border-color: var(--bm);
+}
+.fgr {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.9rem;
+}
+.btn-sub {
+  width: 100%;
+  background: linear-gradient(135deg, var(--bm), var(--bl));
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.85rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 0.4rem;
+  box-shadow: 0 5px 16px rgba(30, 77, 183, 0.4);
+  transition: all 0.2s;
+}
+.btn-sub:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(30, 77, 183, 0.5);
+}
+.fnote {
+  font-size: 0.72rem;
+  color: var(--g6);
+  text-align: center;
+  margin-top: 0.7rem;
+}
+/* NOTES */
+.notes-sec {
+  background: var(--bp);
+}
+.nbox {
+  background: #fff;
+  border-radius: 14px;
+  padding: 1.8rem;
+  border-left: 4px solid var(--bm);
+  box-shadow: 0 3px 14px rgba(10, 36, 99, 0.08);
+  margin-top: 1.8rem;
+}
+.nbox h3 {
+  color: var(--bd);
+  font-weight: 700;
+  margin-bottom: 0.9rem;
+  font-size: 0.95rem;
+}
+.nbox ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+.nbox li {
+  display: flex;
+  gap: 9px;
+  font-size: 0.85rem;
+  color: var(--g6);
+}
+.nbox li::before {
+  content: "→";
+  color: var(--bm);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+/* FOOTER */
+footer {
+  background: var(--g8);
+  color: rgba(255, 255, 255, 0.65);
+  padding: 2.5rem 1.5rem 1.2rem;
+  font-size: 0.82rem;
+}
+.foot-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.foot-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 2.5rem;
+  margin-bottom: 2rem;
+}
+.foot-brand h4 {
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+}
+.foot-col h5 {
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 0.9rem;
+  font-size: 0.85rem;
+}
+.foot-col ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.foot-col ul li a {
+  color: rgba(255, 255, 255, 0.55);
+  text-decoration: none;
+  transition: color 0.2s;
+  font-size: 0.8rem;
+}
+.foot-col ul li a:hover {
+  color: var(--ba);
+}
+.foot-bot {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 1rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 0.75rem;
+}
+/* MODAL */
+.modal-ov {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.modal-ov.open {
+  display: flex;
+}
+.modal {
+  background: #fff;
+  border-radius: 18px;
+  max-width: 460px;
+  width: 100%;
+  padding: 2.2rem;
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.28);
+  animation: scl 0.3s ease;
+}
+@keyframes scl {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.modal-icon {
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 0.9rem;
+}
+.modal h3 {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--bd);
+  margin-bottom: 0.5rem;
+}
+.modal p {
+  text-align: center;
+  color: var(--g6);
+  font-size: 0.87rem;
+  margin-bottom: 1.3rem;
+}
+.modal-close {
+  width: 100%;
+  background: var(--bm);
+  color: #fff;
+  border: none;
+  border-radius: 9px;
+  padding: 0.75rem;
+  font-size: 0.87rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+/* ANIM */
+@keyframes fup {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.rev {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.rev.vis {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* SCROLL TOP */
+#scrollTop {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 42px;
+  height: 42px;
+  background: var(--bm);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(30, 77, 183, 0.4);
+  z-index: 500;
+  transition: all 0.2s;
+}
+#scrollTop.show {
+  display: flex;
+}
+#scrollTop:hover {
+  transform: translateY(-2px);
+}
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .apply-inner {
+    grid-template-columns: 1fr;
+  }
+  .foot-top {
+    grid-template-columns: 1fr 1fr;
+  }
+  .nav-toggle-btn {
+    display: flex !important;
+  }
+  .btn-nav {
+    display: none !important;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-bottom: 1px solid rgba(30, 77, 183, 0.1);
+    padding: 1.2rem 1.5rem;
+    gap: 1.1rem;
+    box-shadow: 0 8px 20px rgba(10, 36, 99, 0.08);
+    align-items: flex-start;
+    z-index: 1000;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .nav-links .btn-nav-mobile {
+    display: inline-block !important;
+  }
+}
+@media (max-width: 640px) {
+  .foot-top {
+    grid-template-columns: 1fr;
+  }
+  .fgr {
+    grid-template-columns: 1fr;
+  }
+  .hero-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .tab-hdr {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}
+::-webkit-scrollbar {
+  height: 5px;
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: var(--g1);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bl);
+  border-radius: 3px;
+}
+
+/* ===== BẢN ĐỒ TRƯỜNG ===== */
+.map-sec { background: var(--g0); }
+#school-map { width:100%; height:480px; border-radius:16px; border:1px solid var(--g3); box-shadow:0 4px 20px rgba(10,36,99,.1); margin-top:1.5rem; }
+.map-filter { display:flex; gap:.75rem; flex-wrap:wrap; margin:1.5rem 0 .8rem; align-items:center; }
+.map-filter input, .map-filter select {
+  border:1.5px solid var(--g3); border-radius:8px; padding:.55rem .9rem;
+  font-size:.82rem; font-family:'Be Vietnam Pro',sans-serif; color:var(--g8);
+  background:#fff; outline:none; transition:border-color .2s;
+}
+.map-filter input:focus,.map-filter select:focus { border-color:var(--bm); }
+.map-filter input { flex:1; min-width:200px; }
+.map-legend { display:flex; gap:1rem; flex-wrap:wrap; margin-top:.8rem; align-items:center; font-size:.78rem; color:var(--g6); }
+.map-legend span { display:flex; align-items:center; gap:5px; }
+.map-legend i { width:12px;height:12px;border-radius:50%;display:inline-block; }
+.mleg-thpt{background:#1d4ed8;} .mleg-thcs{background:#059669;} .mleg-th{background:#7c3aed;} .mleg-mn{background:#db2777;} .mleg-gdtx{background:#b45309;}
+
+/* ===== ADMIN PANEL GỬI EMAIL ===== */
+.admin-sec { background:#fff; }
+.admin-wrap { background:var(--g0); border-radius:16px; padding:2rem; border:1px solid var(--g1); margin-top:2rem; }
+.admin-wrap h3 { font-size:1rem; font-weight:700; color:var(--bd); margin-bottom:1.2rem; display:flex;align-items:center;gap:8px; }
+.admin-table-wrap { overflow-x:auto; border-radius:12px; border:1px solid var(--g1); margin-bottom:1.2rem; max-height:360px; overflow-y:auto; }
+.admin-table { width:100%; border-collapse:collapse; font-size:.78rem; }
+.admin-table thead { background:linear-gradient(135deg,var(--bd),var(--bm)); position:sticky;top:0;z-index:2; }
+.admin-table thead th { color:#fff; padding:.7rem .8rem; text-align:left; font-weight:600; white-space:nowrap; }
+.admin-table tbody tr { border-bottom:1px solid var(--g1); transition:background .15s; }
+.admin-table tbody tr:hover { background:#f0f5ff; }
+.admin-table tbody td { padding:.6rem .8rem; vertical-align:middle; }
+.status-badge { display:inline-block; border-radius:100px; padding:2px 10px; font-size:.7rem; font-weight:700; }
+.st-pass { background:#dcfce7; color:#166534; }
+.st-fail { background:#fee2e2; color:#991b1b; }
+.st-pending { background:#fef9c3; color:#854d0e; }
+.admin-actions { display:flex; gap:.8rem; flex-wrap:wrap; align-items:center; }
+.btn-send-all { background:linear-gradient(135deg,#059669,#34d399); color:#fff; border:none; border-radius:9px; padding:.65rem 1.4rem; font-size:.85rem; font-weight:700; cursor:pointer; font-family:'Be Vietnam Pro',sans-serif; box-shadow:0 4px 12px rgba(5,150,105,.35); transition:all .2s; }
+.btn-send-all:hover { transform:translateY(-1px); box-shadow:0 6px 18px rgba(5,150,105,.45); }
+.btn-reload { background:var(--bp); color:var(--bm); border:1.5px solid rgba(30,77,183,.15); border-radius:9px; padding:.65rem 1.2rem; font-size:.82rem; font-weight:600; cursor:pointer; font-family:'Be Vietnam Pro',sans-serif; transition:all .2s; }
+.send-log { margin-top:1rem; font-size:.78rem; color:var(--g6); background:var(--bp); border-radius:8px; padding:.7rem 1rem; max-height:120px; overflow-y:auto; line-height:1.8; display:none; }
+.send-log.show { display:block; }
+.admin-lock { background:#fff; border-radius:12px; padding:1.5rem; text-align:center; border:1px dashed var(--g3); }
+.admin-lock p { font-size:.85rem; color:var(--g6); margin-bottom:1rem; }
+.admin-lock-row { display:flex; gap:.7rem; max-width:320px; margin:0 auto; }
+.admin-lock-row input { flex:1; border:1.5px solid var(--g3); border-radius:8px; padding:.6rem .85rem; font-size:.82rem; font-family:'Be Vietnam Pro',sans-serif; outline:none; }
+.admin-lock-row input:focus { border-color:var(--bm); }
+.btn-unlock { background:var(--bm); color:#fff; border:none; border-radius:8px; padding:.6rem 1.1rem; font-size:.82rem; font-weight:600; cursor:pointer; font-family:'Be Vietnam Pro',sans-serif; }
+.emailjs-note { background:#fffbeb; border:1px solid #fef08a; border-radius:8px; padding:.8rem 1rem; font-size:.75rem; color:#854d0e; margin-bottom:1rem; line-height:1.6; }
+.emailjs-note a { color:var(--bm); }
+
+/* ===== KẾT QUẢ TUYỂN DỤNG ===== */
+.result-sec { background: var(--g0); }
+
+.vong-cards {
+  display: flex;
+  align-items: stretch;
+  gap: 1rem;
+  margin: 2.5rem 0 2rem;
+  flex-wrap: wrap;
+}
+.vc {
+  flex: 1;
+  min-width: 280px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.6rem;
+  box-shadow: 0 3px 16px rgba(10,36,99,.08);
+  display: flex;
+  gap: 1.1rem;
+  align-items: flex-start;
+  border: 1px solid var(--g1);
+  position: relative;
+  overflow: hidden;
+}
+.vc::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 3px;
+}
+.vc-1::before { background: linear-gradient(90deg,#1e4db7,#00c2ff); }
+.vc-2::before { background: linear-gradient(90deg,#059669,#34d399); }
+
+.vc-num {
+  width: 48px; height: 48px; flex-shrink: 0;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.4rem; font-weight: 800; color: #fff;
+}
+.vc-1 .vc-num { background: linear-gradient(135deg,var(--bm),var(--ba)); box-shadow: 0 4px 12px rgba(30,77,183,.3); }
+.vc-2 .vc-num { background: linear-gradient(135deg,#059669,#34d399); box-shadow: 0 4px 12px rgba(5,150,105,.3); }
+
+.vc-body h3 { font-size: .92rem; font-weight: 700; color: var(--bd); margin-bottom: .5rem; }
+.vc-body p  { font-size: .8rem; color: var(--g6); line-height: 1.6; }
+.vc-list { list-style: none; display: flex; flex-direction: column; gap: .45rem; }
+.vc-list li { font-size: .8rem; color: var(--g6); display: flex; gap: 7px; align-items: flex-start; }
+.vc-list li::before { content: '·'; color: #059669; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+
+.vc-tags { display: flex; flex-wrap: wrap; gap: .45rem; margin-top: .8rem; }
+.vtag { background: var(--bp); color: var(--bm); border-radius: 100px; padding: 2px 10px; font-size: .7rem; font-weight: 700; }
+
+.vc-arrow {
+  font-size: 2rem; color: var(--g3); align-self: center;
+  flex-shrink: 0; display: flex; align-items: center;
+}
+
+/* lookup */
+.lookup-wrap {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 3px 18px rgba(10,36,99,.09);
+  border: 1px solid var(--g1);
+  overflow: hidden;
+}
+.lookup-tabs {
+  display: flex;
+  background: var(--g1);
+  padding: 5px;
+  gap: 5px;
+}
+.ltab {
+  flex: 1; border: none; background: transparent;
+  border-radius: 9px; padding: .75rem 1rem;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-size: .85rem; font-weight: 600; color: var(--g6);
+  cursor: pointer; transition: all .2s;
+}
+.ltab.active { background: #fff; color: var(--bm); box-shadow: 0 2px 10px rgba(10,36,99,.1); }
+.ltab-pane { display: none; }
+.ltab-pane.active { display: block; }
+
+.lookup-form { padding: 1.8rem; }
+.lf-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr auto;
+  gap: .9rem;
+  align-items: end;
+  margin-bottom: 1.2rem;
+}
+.lf-g { display: flex; flex-direction: column; gap: 4px; }
+.lf-g label { font-size: .75rem; font-weight: 600; color: var(--g6); }
+.lf-g input {
+  border: 1.5px solid var(--g3); border-radius: 8px;
+  padding: .6rem .85rem; font-size: .82rem;
+  font-family: 'Be Vietnam Pro', sans-serif; color: var(--g8);
+  outline: none; transition: border-color .2s;
+}
+.lf-g input:focus { border-color: var(--bm); }
+.btn-lookup {
+  background: linear-gradient(135deg,var(--bm),var(--bl));
+  color: #fff; border: none; border-radius: 9px;
+  padding: .65rem 1.4rem; font-size: .85rem; font-weight: 700;
+  cursor: pointer; white-space: nowrap;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  box-shadow: 0 4px 12px rgba(30,77,183,.35);
+  transition: all .2s; height: fit-content;
+}
+.btn-lookup:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(30,77,183,.45); }
+
+.lresult { min-height: 20px; margin-bottom: .8rem; }
+
+/* result cards */
+.res-card {
+  border-radius: 12px; padding: 1.2rem 1.5rem;
+  display: flex; align-items: center; gap: 1rem; margin-bottom: .5rem;
+}
+.res-pass { background: #ecfdf5; border: 1.5px solid #6ee7b7; }
+.res-fail { background: #fef2f2; border: 1.5px solid #fca5a5; }
+.res-pending { background: #fffbeb; border: 1.5px solid #fcd34d; }
+.res-icon { font-size: 1.8rem; flex-shrink: 0; }
+.res-txt h4 { font-size: .92rem; font-weight: 700; margin-bottom: 3px; }
+.res-pass .res-txt h4 { color: #065f46; }
+.res-fail .res-txt h4 { color: #991b1b; }
+.res-pending .res-txt h4 { color: #92400e; }
+.res-txt p { font-size: .78rem; color: var(--g6); }
+.res-score {
+  margin-left: auto; text-align: center;
+  background: rgba(255,255,255,.7); border-radius: 10px; padding: .5rem 1rem;
+}
+.res-score .sn { font-size: 1.5rem; font-weight: 800; color: var(--bm); line-height: 1; }
+.res-score .sl { font-size: .65rem; color: var(--g6); margin-top: 2px; }
+
+.lnote {
+  font-size: .75rem; color: var(--g6);
+  background: #fffbeb; border: 1px solid #fef08a;
+  border-radius: 8px; padding: .7rem 1rem;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .vong-cards { flex-direction: column; }
+  .vc-arrow { transform: rotate(90deg); align-self: center; }
+  .lf-row { grid-template-columns: 1fr 1fr; }
+  .btn-lookup { grid-column: 1/-1; }
+}
+@media (max-width: 600px) {
+  .lf-row { grid-template-columns: 1fr; }
+  .vc-arrow { display: none; }
+}
+
+</style>
+  <style>nav .nav-links a[href="chi-tieu.html"]{color:var(--bm);font-weight:700}</style>
+  <script src="js/api.js"></script>
+</head>
+<body style="padding-top:64px">
+<button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<nav>
+  <div class="nav-logo">
+    <div class="nav-icon">🏛️</div>
+    <div class="nav-txt">
+      <strong>Sở GDĐT Đồng Tháp</strong><span>Tuyển dụng viên chức 2026</span>
+    </div>
+  </div>
+  <div class="nav-links">
+    <a href="index.html">Trang chủ</a>
+    <a href="thong-bao.html">Thông báo</a>
+    <a href="chi-tieu.html">Chỉ tiêu</a>
+    <a href="quy-trinh.html">Quy trình</a>
+    <a href="ket-qua.html">Kết quả</a>
+    <a href="dang-ky.html">Đăng ký</a>
+    <a href="dang-ky.html" class="btn-nav-mobile" style="display:none; background:linear-gradient(135deg, var(--bm), var(--bl)); color:#fff; text-align:center; padding:0.6rem; border-radius:8px; text-decoration:none; font-weight:600; width:100%; margin-top:0.5rem;">Đăng ký ngay →</a>
+  </div>
+  <a href="dang-ky.html" class="btn-nav">Đăng ký ngay →</a>
+  <button class="nav-toggle-btn" onclick="toggleNav()" style="background:none; border:none; font-size:1.6rem; color:var(--bd); cursor:pointer; display:none; align-items:center; justify-content:center;">☰</button>
+</nav>
+
+<section class="tab-sec" id="chi-tieu" style="padding-top:3rem">
+  <div class="container">
+    <div class="rev">
+      <div class="sec-tag">Phụ lục 01 & 02 – KH 407/KH-SGDĐT</div>
+      <h2 class="sec-title">Chỉ Tiêu Tuyển Dụng 2026</h2>
+      <p class="sec-desc">Tra cứu đầy đủ chỉ tiêu theo hai nhóm đơn vị. Dùng bộ lọc để tìm nhanh trường và vị trí phù hợp.</p>
+    </div>
+    <div class="tab-hdr rev">
+      <button class="tab-btn active" onclick="switchTab('so',this)">🏫 Đơn vị trực thuộc Sở GDĐT <span class="tc">101 CT</span></button>
+      <button class="tab-btn" onclick="switchTab('xa',this)">🏘️ Đơn vị thuộc Xã / Phường <span class="tc">1,139 CT</span></button>
+    </div>
+    <div class="tab-pane active" id="tab-so">
+      <div class="sum-row">
+        <div class="sc"><div class="n">101</div><div class="l">Tổng chỉ tiêu</div></div>
+        <div class="sc"><div class="n" style="color:#1d4ed8">~58</div><div class="l">THPT</div></div>
+        <div class="sc"><div class="n" style="color:#065f46">~16</div><div class="l">THCS</div></div>
+        <div class="sc"><div class="n" style="color:#92400e">~23</div><div class="l">GDTX</div></div>
+        <div class="sc"><div class="n" style="color:#5b21b6">4</div><div class="l">TH + MN</div></div>
+      </div>
+      <div class="fbar">
+        <input type="text" id="s1" placeholder="🔍 Tìm tên trường..." oninput="fSo()"/>
+        <select id="c1" onchange="fSo()">
+          <option value="">Tất cả cấp học</option>
+          <option>THPT</option><option>THCS</option><option>GDTX</option>
+          <option>Tiểu học</option><option>Mầm non</option>
+        </select>
+        <div class="fcnt" id="cnt1">—</div>
+      </div>
+      <div class="twrap">
+        <table>
+          <thead><tr>
+            <th>STT</th><th style="text-align:left">Tên trường / Đơn vị</th>
+            <th>Cấp</th><th>Tổng</th>
+            <th>Toán</th><th>Lý</th><th>Hoá</th><th>Sinh</th><th>Văn</th>
+            <th>Sử</th><th>Địa</th><th>GD KT&PL</th><th>T.Anh</th>
+            <th>T.dục</th><th>KT NN</th><th>KT CN</th><th>Tin</th>
+            <th>GDQP</th><th>Âm nhạc</th><th>Mỹ thuật</th><th>TH</th><th>MN</th>
+          </tr></thead>
+          <tbody id="body1"></tbody>
+          <tfoot><tr>
+            <td colspan="3" class="tlbl">TỔNG CỘNG</td>
+            <td>101</td><td>10</td><td>4</td><td>3</td><td>4</td><td>21</td>
+            <td>20</td><td>9</td><td>11</td><td>2</td><td>1</td><td>1</td>
+            <td>0</td><td>5</td><td>3</td><td>1</td><td>2</td><td>3</td><td>1</td>
+          </tr></tfoot>
+        </table>
+      </div>
+    </div>
+    <div class="tab-pane" id="tab-xa">
+      <div class="sum-row">
+        <div class="sc"><div class="n">1,139</div><div class="l">Tổng chỉ tiêu</div></div>
+        <div class="sc"><div class="n" style="color:#065f46">427</div><div class="l">THCS</div></div>
+        <div class="sc"><div class="n" style="color:#5b21b6">475</div><div class="l">Tiểu học</div></div>
+        <div class="sc"><div class="n" style="color:#9d174d">237</div><div class="l">Mầm non</div></div>
+        <div class="sc"><div class="n">22</div><div class="l">TPT Đội</div></div>
+      </div>
+      <div class="fbar">
+        <input type="text" id="s2" placeholder="🔍 Tìm tên trường / xã..." oninput="fXa()"/>
+        <select id="c2" onchange="fXa()">
+          <option value="">Tất cả cấp học</option>
+          <option>THCS</option><option>Tiểu học</option><option>Mầm non</option>
+        </select>
+        <select id="x2" onchange="fXa()"><option value="">Tất cả xã/phường</option></select>
+        <div class="fcnt" id="cnt2">—</div>
+      </div>
+      <div class="twrap">
+        <table>
+          <thead><tr>
+            <th>STT</th><th style="text-align:left">Tên trường</th><th style="text-align:left">Xã/Phường</th>
+            <th>Cấp</th><th>BC Giao</th><th>BC Có</th><th>Tổng CT</th>
+            <th>Toán</th><th>KH TN</th><th>Văn</th><th>L.Sử</th><th>Đ.Lý</th>
+            <th>GDCD</th><th>T.Anh</th><th>T.dục</th><th>Tin</th><th>C.Nghệ</th>
+            <th>Âm nhạc</th><th>Mỹ thuật</th><th>TH</th><th>MN</th><th>TPT</th>
+          </tr></thead>
+          <tbody id="body2"></tbody>
+          <tfoot><tr>
+            <td colspan="6" class="tlbl">TỔNG CỘNG</td>
+            <td>1,139</td><td>42</td><td>19</td><td>112</td><td>87</td><td>22</td>
+            <td>110</td><td>18</td><td>57</td><td>31</td><td>57</td><td>38</td>
+            <td>287</td><td>237</td><td>22</td>
+          </tr></tfoot>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modal Xem Danh sách Thí sinh -->
+<div class="modal-ov" id="modal-candidates" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.5); z-index:2000; align-items:center; justify-content:center; padding:1rem;">
+  <div class="modal" style="background:#fff; border-radius:18px; max-width:640px; width:100%; padding:2rem; box-shadow:0 32px 80px rgba(0,0,0,0.28); display:flex; flex-direction:column; max-height:85vh;">
+    <h3 style="text-align:left; font-size:1.15rem; font-weight:700; color:var(--bd); border-bottom:2px solid var(--g1); padding-bottom:0.6rem; margin-bottom:1rem; display:flex; justify-content:space-between; align-items:center; margin-top:0;">
+      <span>👥 Danh sách thí sinh đăng ký</span>
+      <button onclick="closeCandidatesModal()" style="background:none; border:none; font-size:1.4rem; cursor:pointer; color:var(--g6);">✕</button>
+    </h3>
+    <div id="school-title-modal" style="font-size:0.92rem; font-weight:700; color:var(--bm); margin-bottom:1rem;">Trường: </div>
+    <div class="twrap" style="flex:1; overflow-y:auto; max-height:50vh; border-radius:8px; border:1px solid var(--g1);">
+      <table style="width:100%; border-collapse:collapse; font-size:0.8rem;">
+        <thead>
+          <tr style="background:var(--g1); text-align:left;">
+            <th style="padding:0.6rem; font-weight:600; width:10%; text-align:center;">STT</th>
+            <th style="padding:0.6rem; font-weight:600; width:45%;">Họ và tên</th>
+            <th style="padding:0.6rem; font-weight:600; width:25%;">Vị trí tuyển</th>
+            <th style="padding:0.6rem; font-weight:600; width:20%; text-align:center;">Trạng thái</th>
+          </tr>
+        </thead>
+        <tbody id="candidates-modal-body"></tbody>
+      </table>
+    </div>
+    <div style="margin-top:1.2rem; text-align:right;">
+      <button class="modal-close" onclick="closeCandidatesModal()" style="width:auto; padding:0.55rem 1.4rem; background:var(--bm); color:#fff; border:none; border-radius:8px; font-weight:600; cursor:pointer;">Đóng</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="foot-inner">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <h4>🏛️ Sở GDĐT tỉnh Đồng Tháp</h4>
+        <p>Tuyển dụng viên chức giáo viên 2026 theo Kế hoạch 407/KH-SGDĐT ngày 24/4/2026.</p>
+      </div>
+      <div class="foot-col"><h5>Thông tin</h5><ul>
+        <li><a href="thong-bao.html">Thông báo tuyển dụng</a></li>
+        <li><a href="chi-tieu.html">Chỉ tiêu theo trường</a></li>
+        <li><a href="quy-trinh.html">Quy trình xét tuyển</a></li>
+      </ul></div>
+      <div class="foot-col"><h5>Liên hệ</h5><ul>
+        <li><a href="#">Phòng Tổ chức Cán bộ</a></li>
+        <li><a href="#">Tp. Cao Lãnh, Đồng Tháp</a></li>
+        <li><a href="dang-ky.html">Đăng ký trực tuyến</a></li>
+      </ul></div>
+    </div>
+    <div class="foot-bot">© 2026 Sở Giáo dục và Đào tạo tỉnh Đồng Tháp — Kế hoạch 407/KH-SGDĐT</div>
+  </div>
+</footer>
+
+<script>
+// ===== DATA PHỤ LỤC 01 – TẢI TỪ API =====
+// cols: Toán,Lý,Hoá,Sinh,Văn,Sử,Địa,GDKTPl,TAnh,Tduc,KTNN,KTCN,Tin,GDQP,Am,My,TH,MN
+// Dữ liệu dự phòng khi API chưa kết nối
+const D1_fallback = [
+  {
+    n: 1,
+    t: "THCS-THPT Ngô Văn Nhạc",
+    c: "THPT",
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 1,
+    t: "THCS-THPT Ngô Văn Nhạc",
+    c: "THCS",
+    s: 2,
+    d: [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 2,
+    t: "THPT Thiên Hộ Dương",
+    c: "THPT",
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0],
+  },
+  {
+    n: 3,
+    t: "THPT Huỳnh Văn Sâm",
+    c: "THPT",
+    s: 2,
+    d: [1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 4,
+    t: "THPT Đốc Binh Kiều - Cai Lậy",
+    c: "THPT",
+    s: 1,
+    d: [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 5,
+    t: "THPT Lưu Tấn Phát",
+    c: "THPT",
+    s: 2,
+    d: [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 6,
+    t: "THPT Phan Việt Thống",
+    c: "THPT",
+    s: 1,
+    d: [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 7,
+    t: "THPT Nguyễn Văn Tiếp",
+    c: "THPT",
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0],
+  },
+  {
+    n: 8,
+    t: "THPT Dưỡng Điềm",
+    c: "THPT",
+    s: 1,
+    d: [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 9,
+    t: "THPT Vĩnh Kim",
+    c: "THPT",
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 10,
+    t: "THPT Tân Hiệp",
+    c: "THPT",
+    s: 3,
+    d: [0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0],
+  },
+  {
+    n: 11,
+    t: "THCS-THPT Giồng Dứa",
+    c: "THPT",
+    s: 2,
+    d: [0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 12,
+    t: "THPT Nam Kỳ Khởi Nghĩa",
+    c: "THPT",
+    s: 2,
+    d: [1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 13,
+    t: "THPT chuyên Tiền Giang",
+    c: "THPT",
+    s: 3,
+    d: [2, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 14,
+    t: "THPT Phước Thạnh",
+    c: "THPT",
+    s: 1,
+    d: [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 15,
+    t: "THPT Thủ Khoa Huân",
+    c: "THPT",
+    s: 1,
+    d: [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 16,
+    t: "THPT Bình Phục Nhứt",
+    c: "THPT",
+    s: 1,
+    d: [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 17,
+    t: "THPT Vĩnh Bình",
+    c: "THPT",
+    s: 3,
+    d: [0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 18,
+    t: "THCS-THPT Long Bình",
+    c: "THPT",
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 18,
+    t: "THCS-THPT Long Bình",
+    c: "THCS",
+    s: 4,
+    d: [0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 19,
+    t: "THPT Nguyễn Văn Thìn",
+    c: "THPT",
+    s: 2,
+    d: [0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 20,
+    t: "THCS-THPT Đoàn Trần Nghiệp",
+    c: "THPT",
+    s: 1,
+    d: [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 20,
+    t: "THCS-THPT Đoàn Trần Nghiệp",
+    c: "THCS",
+    s: 3,
+    d: [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0],
+  },
+  {
+    n: 21,
+    t: "THPT Bình Đông",
+    c: "THPT",
+    s: 4,
+    d: [0, 0, 0, 0, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 22,
+    t: "THPT Trương Định",
+    c: "THPT",
+    s: 3,
+    d: [0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 23,
+    t: "THPT Gò Công Đông",
+    c: "THPT",
+    s: 2,
+    d: [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 24,
+    t: "THPT Nguyễn Văn Côn",
+    c: "THPT",
+    s: 6,
+    d: [1, 0, 0, 0, 2, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 25,
+    t: "THCS-THPT Phú Thạnh",
+    c: "THPT",
+    s: 3,
+    d: [0, 0, 0, 0, 2, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 25,
+    t: "THCS-THPT Phú Thạnh",
+    c: "THCS",
+    s: 2,
+    d: [1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 26,
+    t: "THCS-THPT Tân Thới",
+    c: "THCS",
+    s: 3,
+    d: [0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+  },
+  {
+    n: 27,
+    t: "TT GDTX Cai Lậy",
+    c: "GDTX",
+    s: 9,
+    d: [2, 0, 0, 1, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 28,
+    t: "TT GDTX Gò Công",
+    c: "GDTX",
+    s: 9,
+    d: [0, 0, 0, 1, 1, 1, 2, 0, 2, 0, 0, 0, 2, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 29,
+    t: "TT HTPT GD hòa nhập tỉnh",
+    c: "Tiểu học",
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+  },
+  {
+    n: 30,
+    t: "THPT chuyên Nguyễn Đình Chiểu",
+    c: "THPT",
+    s: 1,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 31,
+    t: "THPT Tân Hồng",
+    c: "THPT",
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 32,
+    t: "THCS-THPT Phú Thành A",
+    c: "THPT",
+    s: 2,
+    d: [0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 33,
+    t: "THCS-THPT Hoà Bình",
+    c: "THPT",
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0],
+  },
+  {
+    n: 33,
+    t: "THCS-THPT Hoà Bình",
+    c: "THCS",
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0],
+  },
+  {
+    n: 34,
+    t: "THPT Tháp Mười",
+    c: "THPT",
+    s: 1,
+    d: [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 35,
+    t: "THPT Thống Linh",
+    c: "THPT",
+    s: 1,
+    d: [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 36,
+    t: "THPT Châu Thành 2",
+    c: "THPT",
+    s: 1,
+    d: [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 37,
+    t: "THCS-THPT Tân Phú Trung",
+    c: "THCS",
+    s: 1,
+    d: [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 38,
+    t: "TT GDTX Cao Lãnh",
+    c: "GDTX",
+    s: 1,
+    d: [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 39,
+    t: "TT GDTX Hồng Ngự",
+    c: "GDTX",
+    s: 4,
+    d: [1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 40,
+    t: "Trường Nuôi dạy trẻ khuyết tật",
+    c: "Tiểu học",
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0],
+  },
+  {
+    n: 40,
+    t: "Trường Nuôi dạy trẻ khuyết tật",
+    c: "Mầm non",
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+];
+
+// ===== DATA PHỤ LỤC 02 – TẢI TỪ API =====
+// cols d[]: Toán,KH TN,Văn,LịchSử,ĐịaLý,GDCD,TAnh,Tduc,Tin,CongNghe,AmNhac,MyThuat,TieuHoc,MamNon,TPTDoi
+// Dữ liệu dự phòng khi API chưa kết nối
+const D2_fallback = [
+  {
+    n: 1,
+    t: "MG Bình Tấn",
+    x: "xã Bình Thành",
+    c: "Mầm non",
+    g: 21,
+    h: 15,
+    s: 6,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 0],
+  },
+  {
+    n: 2,
+    t: "TH Bình Thành 1",
+    x: "xã Bình Thành",
+    c: "Tiểu học",
+    g: 52,
+    h: 49,
+    s: 3,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 0],
+  },
+  {
+    n: 3,
+    t: "TH Bình Thành 2",
+    x: "xã Bình Thành",
+    c: "Tiểu học",
+    g: 54,
+    h: 51,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 4,
+    t: "MN Mỹ Quý 1",
+    x: "xã Mỹ Quý",
+    c: "Mầm non",
+    g: 33,
+    h: 31,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+  },
+  {
+    n: 5,
+    t: "MN Láng Biển",
+    x: "xã Mỹ Quý",
+    c: "Mầm non",
+    g: 29,
+    h: 26,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+  },
+  {
+    n: 6,
+    t: "TH Mỹ Quý 1",
+    x: "xã Mỹ Quý",
+    c: "Tiểu học",
+    g: 50,
+    h: 48,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0],
+  },
+  {
+    n: 7,
+    t: "TH Mỹ Quý 2",
+    x: "xã Mỹ Quý",
+    c: "Tiểu học",
+    g: 50,
+    h: 40,
+    s: 8,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 4],
+  },
+  {
+    n: 8,
+    t: "TH Mỹ Đông",
+    x: "xã Mỹ Quý",
+    c: "Tiểu học",
+    g: 35,
+    h: 31,
+    s: 3,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1],
+  },
+  {
+    n: 9,
+    t: "TH-THCS Láng Biển",
+    x: "xã Mỹ Quý",
+    c: "Tiểu học",
+    g: 46,
+    h: 42,
+    s: 3,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0],
+  },
+  {
+    n: 9,
+    t: "TH-THCS Láng Biển",
+    x: "xã Mỹ Quý",
+    c: "THCS",
+    g: 0,
+    h: 0,
+    s: 1,
+    d: [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 10,
+    t: "THCS Mỹ Quý",
+    x: "xã Mỹ Quý",
+    c: "THCS",
+    g: 67,
+    h: 66,
+    s: 1,
+    d: [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 11,
+    t: "THCS Mỹ Đông",
+    x: "xã Mỹ Quý",
+    c: "THCS",
+    g: 27,
+    h: 25,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0],
+  },
+  {
+    n: 12,
+    t: "TH Dinh Bà",
+    x: "xã Tân Hộ Cơ",
+    c: "Tiểu học",
+    g: 37,
+    h: 33,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0],
+  },
+  {
+    n: 13,
+    t: "TH Tân Thành B1",
+    x: "xã Tân Hộ Cơ",
+    c: "Tiểu học",
+    g: 33,
+    h: 29,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0],
+  },
+  {
+    n: 14,
+    t: "TH Tân Thành B2",
+    x: "xã Tân Hộ Cơ",
+    c: "Tiểu học",
+    g: 28,
+    h: 27,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 15,
+    t: "THCS Tân Hộ Cơ",
+    x: "xã Tân Hộ Cơ",
+    c: "THCS",
+    g: 49,
+    h: 45,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0],
+  },
+  {
+    n: 16,
+    t: "THCS Tân Thành B",
+    x: "xã Tân Hộ Cơ",
+    c: "THCS",
+    g: 26,
+    h: 23,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0],
+  },
+  {
+    n: 17,
+    t: "MN Phong Mỹ",
+    x: "xã Phong Mỹ",
+    c: "Mầm non",
+    g: 33,
+    h: 28,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+  },
+  {
+    n: 18,
+    t: "MN Phong Mỹ B",
+    x: "xã Phong Mỹ",
+    c: "Mầm non",
+    g: 31,
+    h: 23,
+    s: 4,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0],
+  },
+  {
+    n: 19,
+    t: "MN Gáo Giồng",
+    x: "xã Phong Mỹ",
+    c: "Mầm non",
+    g: 28,
+    h: 23,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+  },
+  {
+    n: 20,
+    t: "TH Phong Mỹ 1",
+    x: "xã Phong Mỹ",
+    c: "Tiểu học",
+    g: 45,
+    h: 35,
+    s: 3,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0],
+  },
+  {
+    n: 21,
+    t: "TH Phong Mỹ 2",
+    x: "xã Phong Mỹ",
+    c: "Tiểu học",
+    g: 45,
+    h: 34,
+    s: 5,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 4, 0],
+  },
+  {
+    n: 22,
+    t: "TH Gáo Giồng",
+    x: "xã Phong Mỹ",
+    c: "Tiểu học",
+    g: 42,
+    h: 28,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0],
+  },
+  {
+    n: 23,
+    t: "THCS Nguyễn Văn Đừng",
+    x: "xã Phong Mỹ",
+    c: "THCS",
+    g: 38,
+    h: 31,
+    s: 4,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 2],
+  },
+  {
+    n: 24,
+    t: "THCS Gáo Giồng",
+    x: "xã Phong Mỹ",
+    c: "THCS",
+    g: 33,
+    h: 27,
+    s: 1,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 25,
+    t: "MN Hướng Dương",
+    x: "xã Phú Hựu",
+    c: "Mầm non",
+    g: 34,
+    h: 32,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0],
+  },
+  {
+    n: 26,
+    t: "MN Hoa Sen",
+    x: "xã Phú Hựu",
+    c: "Mầm non",
+    g: 29,
+    h: 22,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0],
+  },
+  {
+    n: 27,
+    t: "TH Lê Văn Tám",
+    x: "xã Phú Hựu",
+    c: "Tiểu học",
+    g: 36,
+    h: 30,
+    s: 5,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 4, 0],
+  },
+  {
+    n: 28,
+    t: "TH Võ Thị Sáu",
+    x: "xã Phú Hựu",
+    c: "Tiểu học",
+    g: 49,
+    h: 38,
+    s: 6,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 4, 1],
+  },
+  {
+    n: 29,
+    t: "TH Kim Đồng",
+    x: "xã Phú Hựu",
+    c: "Tiểu học",
+    g: 62,
+    h: 56,
+    s: 3,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 0],
+  },
+  {
+    n: 30,
+    t: "TH-THCS Võ Văn Kiệt",
+    x: "xã Phú Hựu",
+    c: "THCS",
+    g: 47,
+    h: 35,
+    s: 5,
+    d: [1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1],
+  },
+  {
+    n: 30,
+    t: "TH-THCS Võ Văn Kiệt",
+    x: "xã Phú Hựu",
+    c: "Tiểu học",
+    g: 0,
+    h: 0,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 31,
+    t: "THCS Lý Tự Trọng",
+    x: "xã Phú Hựu",
+    c: "THCS",
+    g: 25,
+    h: 21,
+    s: 3,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0],
+  },
+  {
+    n: 32,
+    t: "THCS Võ Nguyên Giáp",
+    x: "xã Phú Hựu",
+    c: "THCS",
+    g: 39,
+    h: 33,
+    s: 6,
+    d: [2, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1],
+  },
+  {
+    n: 33,
+    t: "THCS Nguyễn Văn Trỗi",
+    x: "xã Phú Hựu",
+    c: "THCS",
+    g: 33,
+    h: 25,
+    s: 6,
+    d: [1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 2, 1, 0, 0, 1],
+  },
+  {
+    n: 34,
+    t: "THCS Nguyễn Chí Thanh",
+    x: "xã Phú Hựu",
+    c: "THCS",
+    g: 71,
+    h: 67,
+    s: 4,
+    d: [1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0],
+  },
+  {
+    n: 35,
+    t: "TH Đỗ Văn Châu",
+    x: "xã Phú Thành",
+    c: "Tiểu học",
+    g: 34,
+    h: 32,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 36,
+    t: "TH Hồ Biểu Chánh",
+    x: "xã Phú Thành",
+    c: "Tiểu học",
+    g: 30,
+    h: 25,
+    s: 4,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 1],
+  },
+  {
+    n: 37,
+    t: "TH Đỗ Trình Thoại",
+    x: "xã Phú Thành",
+    c: "Tiểu học",
+    g: 22,
+    h: 17,
+    s: 4,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 3, 0],
+  },
+  {
+    n: 38,
+    t: "MN Phú Điền",
+    x: "xã Thanh Mỹ",
+    c: "Mầm non",
+    g: 41,
+    h: 33,
+    s: 5,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0],
+  },
+  {
+    n: 39,
+    t: "MN Thanh Mỹ 1",
+    x: "xã Thanh Mỹ",
+    c: "Mầm non",
+    g: 25,
+    h: 17,
+    s: 4,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0],
+  },
+  {
+    n: 40,
+    t: "MN Thanh Mỹ 2",
+    x: "xã Thanh Mỹ",
+    c: "Mầm non",
+    g: 25,
+    h: 21,
+    s: 3,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0],
+  },
+  {
+    n: 41,
+    t: "TH Phú Điền",
+    x: "xã Thanh Mỹ",
+    c: "Tiểu học",
+    g: 55,
+    h: 40,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0],
+  },
+  {
+    n: 42,
+    t: "TH Thanh Mỹ",
+    x: "xã Thanh Mỹ",
+    c: "Tiểu học",
+    g: 30,
+    h: 24,
+    s: 5,
+    d: [0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 2, 1],
+  },
+  {
+    n: 43,
+    t: "TH Trần Thị Bích Dung",
+    x: "xã Thanh Mỹ",
+    c: "Tiểu học",
+    g: 23,
+    h: 19,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0],
+  },
+  {
+    n: 44,
+    t: "TH-THCS Phú Điền",
+    x: "xã Thanh Mỹ",
+    c: "THCS",
+    g: 43,
+    h: 33,
+    s: 2,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0],
+  },
+  {
+    n: 44,
+    t: "TH-THCS Phú Điền",
+    x: "xã Thanh Mỹ",
+    c: "Tiểu học",
+    g: 0,
+    h: 0,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 45,
+    t: "TH-THCS Thanh Mỹ",
+    x: "xã Thanh Mỹ",
+    c: "THCS",
+    g: 49,
+    h: 43,
+    s: 4,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 2, 0, 0, 0],
+  },
+  {
+    n: 45,
+    t: "TH-THCS Thanh Mỹ",
+    x: "xã Thanh Mỹ",
+    c: "Tiểu học",
+    g: 0,
+    h: 0,
+    s: 4,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 3, 0],
+  },
+  {
+    n: 46,
+    t: "THCS Phú Điền",
+    x: "xã Thanh Mỹ",
+    c: "THCS",
+    g: 41,
+    h: 35,
+    s: 3,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0],
+  },
+  {
+    n: 47,
+    t: "THCS Nguyễn Văn Tre",
+    x: "xã Thanh Mỹ",
+    c: "THCS",
+    g: 39,
+    h: 29,
+    s: 5,
+    d: [1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1],
+  },
+  {
+    n: 48,
+    t: "MN Bình Xuân",
+    x: "P.Bình Xuân",
+    c: "Mầm non",
+    g: 22,
+    h: 21,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+  },
+  {
+    n: 49,
+    t: "TH Bình Xuân 1",
+    x: "P.Bình Xuân",
+    c: "Tiểu học",
+    g: 35,
+    h: 34,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 50,
+    t: "TH Bình Xuân 2",
+    x: "P.Bình Xuân",
+    c: "Tiểu học",
+    g: 35,
+    h: 32,
+    s: 3,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0],
+  },
+  {
+    n: 51,
+    t: "THCS Bình Xuân",
+    x: "P.Bình Xuân",
+    c: "THCS",
+    g: 48,
+    h: 46,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0],
+  },
+  {
+    n: 52,
+    t: "MN Mỹ Phú",
+    x: "P.Mỹ Trà",
+    c: "Mầm non",
+    g: 25,
+    h: 23,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0],
+  },
+  {
+    n: 53,
+    t: "MN Mỹ Trà",
+    x: "P.Mỹ Trà",
+    c: "Mầm non",
+    g: 32,
+    h: 31,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+  },
+  {
+    n: 54,
+    t: "MN Nhị Mỹ",
+    x: "P.Mỹ Trà",
+    c: "Mầm non",
+    g: 26,
+    h: 23,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0],
+  },
+  {
+    n: 55,
+    t: "TH Lý Tự Trọng",
+    x: "P.Mỹ Trà",
+    c: "Tiểu học",
+    g: 24,
+    h: 22,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 56,
+    t: "TH Mỹ Trà",
+    x: "P.Mỹ Trà",
+    c: "Tiểu học",
+    g: 24,
+    h: 21,
+    s: 3,
+    d: [0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0],
+  },
+  {
+    n: 57,
+    t: "TH An Bình",
+    x: "P.Mỹ Trà",
+    c: "Tiểu học",
+    g: 31,
+    h: 26,
+    s: 3,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0],
+  },
+  {
+    n: 58,
+    t: "TH Nhị Mỹ",
+    x: "P.Mỹ Trà",
+    c: "Tiểu học",
+    g: 38,
+    h: 35,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0],
+  },
+  {
+    n: 59,
+    t: "THCS Nguyễn Tú",
+    x: "P.Mỹ Trà",
+    c: "THCS",
+    g: 52,
+    h: 47,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0],
+  },
+  {
+    n: 60,
+    t: "THCS Nguyễn Minh Trí",
+    x: "P.Mỹ Trà",
+    c: "THCS",
+    g: 35,
+    h: 27,
+    s: 4,
+    d: [2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0],
+  },
+  {
+    n: 61,
+    t: "THCS Nhị Mỹ",
+    x: "P.Mỹ Trà",
+    c: "THCS",
+    g: 32,
+    h: 28,
+    s: 1,
+    d: [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 62,
+    t: "MN Hậu Mỹ Trinh",
+    x: "xã Hậu Mỹ",
+    c: "Mầm non",
+    g: 19,
+    h: 18,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+  },
+  {
+    n: 63,
+    t: "TH Hậu Mỹ Bắc B",
+    x: "xã Hậu Mỹ",
+    c: "Tiểu học",
+    g: 32,
+    h: 31,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 64,
+    t: "MG Tân Thành A",
+    x: "xã Tân Thành",
+    c: "Mầm non",
+    g: 25,
+    h: 23,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0],
+  },
+  {
+    n: 65,
+    t: "MG Thông Bình",
+    x: "xã Tân Thành",
+    c: "Mầm non",
+    g: 30,
+    h: 26,
+    s: 4,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0],
+  },
+  {
+    n: 66,
+    t: "MN Thông Bình",
+    x: "xã Tân Thành",
+    c: "Mầm non",
+    g: 23,
+    h: 21,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0],
+  },
+  {
+    n: 67,
+    t: "TH Tân Thành A1",
+    x: "xã Tân Thành",
+    c: "Tiểu học",
+    g: 33,
+    h: 32,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 68,
+    t: "TH Thông Bình 2",
+    x: "xã Tân Thành",
+    c: "Tiểu học",
+    g: 49,
+    h: 48,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 69,
+    t: "THCS Thông Bình",
+    x: "xã Tân Thành",
+    c: "THCS",
+    g: 54,
+    h: 53,
+    s: 1,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 70,
+    t: "TH Lấp Vò 1",
+    x: "xã Lấp Vò",
+    c: "Tiểu học",
+    g: 47,
+    h: 43,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 71,
+    t: "TH Lấp Vò 2",
+    x: "xã Lấp Vò",
+    c: "Tiểu học",
+    g: 37,
+    h: 34,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0],
+  },
+  {
+    n: 72,
+    t: "TH Vĩnh Thạnh 1",
+    x: "xã Lấp Vò",
+    c: "Tiểu học",
+    g: 42,
+    h: 33,
+    s: 6,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 1],
+  },
+  {
+    n: 73,
+    t: "TH Vĩnh Thạnh 2",
+    x: "xã Lấp Vò",
+    c: "Tiểu học",
+    g: 35,
+    h: 31,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0],
+  },
+  {
+    n: 74,
+    t: "TH Bình Thành 2",
+    x: "xã Lấp Vò",
+    c: "Tiểu học",
+    g: 37,
+    h: 33,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 75,
+    t: "TH Bình Thành 3",
+    x: "xã Lấp Vò",
+    c: "Tiểu học",
+    g: 26,
+    h: 22,
+    s: 4,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 1],
+  },
+  {
+    n: 76,
+    t: "TH Bình Thạnh Trung 1",
+    x: "xã Lấp Vò",
+    c: "Tiểu học",
+    g: 31,
+    h: 29,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 77,
+    t: "TH Bình Thạnh Trung 2",
+    x: "xã Lấp Vò",
+    c: "Tiểu học",
+    g: 40,
+    h: 36,
+    s: 4,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 1],
+  },
+  {
+    n: 78,
+    t: "THCS Lấp Vò",
+    x: "xã Lấp Vò",
+    c: "THCS",
+    g: 92,
+    h: 79,
+    s: 7,
+    d: [1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1],
+  },
+  {
+    n: 79,
+    t: "THCS Vĩnh Thạnh",
+    x: "xã Lấp Vò",
+    c: "THCS",
+    g: 54,
+    h: 49,
+    s: 5,
+    d: [1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1],
+  },
+  {
+    n: 80,
+    t: "TH Đốc Binh Kiều 1",
+    x: "xã Đốc Binh Kiều",
+    c: "Tiểu học",
+    g: 48,
+    h: 37,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0],
+  },
+  {
+    n: 81,
+    t: "TH Đốc Binh Kiều 2",
+    x: "xã Đốc Binh Kiều",
+    c: "Tiểu học",
+    g: 53,
+    h: 44,
+    s: 5,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 0],
+  },
+  {
+    n: 82,
+    t: "TH Tân Kiều 1",
+    x: "xã Đốc Binh Kiều",
+    c: "Tiểu học",
+    g: 42,
+    h: 35,
+    s: 4,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 1],
+  },
+  {
+    n: 83,
+    t: "TH Tân Kiều 3",
+    x: "xã Đốc Binh Kiều",
+    c: "Tiểu học",
+    g: 28,
+    h: 19,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0],
+  },
+  {
+    n: 84,
+    t: "THCS Đốc Binh Kiều",
+    x: "xã Đốc Binh Kiều",
+    c: "THCS",
+    g: 49,
+    h: 46,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0],
+  },
+  {
+    n: 85,
+    t: "THCS Tân Kiều",
+    x: "xã Đốc Binh Kiều",
+    c: "THCS",
+    g: 35,
+    h: 30,
+    s: 4,
+    d: [2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0],
+  },
+  {
+    n: 86,
+    t: "MN Long Bình",
+    x: "xã Long Bình",
+    c: "Mầm non",
+    g: 28,
+    h: 24,
+    s: 3,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0],
+  },
+  {
+    n: 87,
+    t: "MN Bình Tân",
+    x: "xã Long Bình",
+    c: "Mầm non",
+    g: 20,
+    h: 18,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+  },
+  {
+    n: 88,
+    t: "TH Nguyễn Văn Nhiều",
+    x: "xã Long Bình",
+    c: "Tiểu học",
+    g: 27,
+    h: 24,
+    s: 3,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0],
+  },
+  {
+    n: 89,
+    t: "TH Nguyễn Văn Trừ",
+    x: "xã Long Bình",
+    c: "Tiểu học",
+    g: 35,
+    h: 29,
+    s: 3,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 0],
+  },
+  {
+    n: 90,
+    t: "TH Lê Thành Tắng",
+    x: "xã Long Bình",
+    c: "Tiểu học",
+    g: 36,
+    h: 30,
+    s: 4,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 1],
+  },
+  {
+    n: 91,
+    t: "THCS Huỳnh Xuân Việt",
+    x: "xã Long Bình",
+    c: "THCS",
+    g: 29,
+    h: 27,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0],
+  },
+  {
+    n: 92,
+    t: "MN Tân Hoà",
+    x: "xã Phong Hòa",
+    c: "Mầm non",
+    g: 26,
+    h: 23,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+  },
+  {
+    n: 93,
+    t: "MN Định Hoà",
+    x: "xã Phong Hòa",
+    c: "Mầm non",
+    g: 23,
+    h: 18,
+    s: 4,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0],
+  },
+  {
+    n: 94,
+    t: "MN Phong Hoà",
+    x: "xã Phong Hòa",
+    c: "Mầm non",
+    g: 32,
+    h: 31,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+  },
+  {
+    n: 95,
+    t: "TH Vĩnh Thới 2",
+    x: "xã Phong Hòa",
+    c: "Tiểu học",
+    g: 31,
+    h: 29,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 96,
+    t: "TH Tân Hoà 1",
+    x: "xã Phong Hòa",
+    c: "Tiểu học",
+    g: 38,
+    h: 34,
+    s: 4,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 3, 0],
+  },
+  {
+    n: 97,
+    t: "TH Tân Hoà 2",
+    x: "xã Phong Hòa",
+    c: "Tiểu học",
+    g: 28,
+    h: 24,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0],
+  },
+  {
+    n: 98,
+    t: "TH Phong Hoà 1",
+    x: "xã Phong Hòa",
+    c: "Tiểu học",
+    g: 46,
+    h: 44,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0],
+  },
+  {
+    n: 99,
+    t: "TH Phong Hoà 2",
+    x: "xã Phong Hòa",
+    c: "Tiểu học",
+    g: 29,
+    h: 24,
+    s: 4,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 1],
+  },
+  {
+    n: 100,
+    t: "THCS Vĩnh Thới",
+    x: "xã Phong Hòa",
+    c: "THCS",
+    g: 52,
+    h: 47,
+    s: 4,
+    d: [2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0],
+  },
+  {
+    n: 101,
+    t: "THCS Tân Hoà",
+    x: "xã Phong Hòa",
+    c: "THCS",
+    g: 46,
+    h: 43,
+    s: 2,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0],
+  },
+  {
+    n: 102,
+    t: "THCS Định Hoà",
+    x: "xã Phong Hòa",
+    c: "THCS",
+    g: 38,
+    h: 34,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0],
+  },
+  {
+    n: 103,
+    t: "THCS Phong Hoà",
+    x: "xã Phong Hòa",
+    c: "THCS",
+    g: 58,
+    h: 53,
+    s: 3,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0],
+  },
+  {
+    n: 104,
+    t: "MN Hậu Thành",
+    x: "xã Hội Cư",
+    c: "Mầm non",
+    g: 17,
+    h: 12,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+  },
+  {
+    n: 105,
+    t: "MN Hậu Mỹ Phú",
+    x: "xã Hội Cư",
+    c: "Mầm non",
+    g: 15,
+    h: 11,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+  },
+  {
+    n: 106,
+    t: "TH Đoàn Thị Nghiệp",
+    x: "xã Hội Cư",
+    c: "Tiểu học",
+    g: 49,
+    h: 43,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 107,
+    t: "THCS Hậu Thành",
+    x: "xã Hội Cư",
+    c: "THCS",
+    g: 28,
+    h: 25,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0],
+  },
+  {
+    n: 108,
+    t: "THCS Mỹ Hội",
+    x: "xã Hội Cư",
+    c: "THCS",
+    g: 39,
+    h: 35,
+    s: 1,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 109,
+    t: "TH-THCS Hậu Mỹ Phú",
+    x: "xã Hội Cư",
+    c: "THCS",
+    g: 54,
+    h: 50,
+    s: 1,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 110,
+    t: "TH Nha Mân 2",
+    x: "xã Tân Nhuận Đông",
+    c: "Tiểu học",
+    g: 53,
+    h: 50,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 111,
+    t: "MN Mỹ Đức Tây",
+    x: "xã Mỹ Đức Tây",
+    c: "Mầm non",
+    g: 22,
+    h: 21,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+  },
+  {
+    n: 112,
+    t: "MN Mỹ Đức Đông",
+    x: "xã Mỹ Đức Tây",
+    c: "Mầm non",
+    g: 21,
+    h: 20,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+  },
+  {
+    n: 113,
+    t: "MN Thiện Trí",
+    x: "xã Mỹ Đức Tây",
+    c: "Mầm non",
+    g: 13,
+    h: 11,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0],
+  },
+  {
+    n: 114,
+    t: "TH Mỹ Đức Tây",
+    x: "xã Mỹ Đức Tây",
+    c: "Tiểu học",
+    g: 53,
+    h: 48,
+    s: 5,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0],
+  },
+  {
+    n: 115,
+    t: "TH-THCS Thiện Trí",
+    x: "xã Mỹ Đức Tây",
+    c: "Tiểu học",
+    g: 55,
+    h: 49,
+    s: 4,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 3, 0],
+  },
+  {
+    n: 115,
+    t: "TH-THCS Thiện Trí",
+    x: "xã Mỹ Đức Tây",
+    c: "THCS",
+    g: 0,
+    h: 0,
+    s: 2,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0],
+  },
+  {
+    n: 116,
+    t: "THCS Mỹ Đức Tây",
+    x: "xã Mỹ Đức Tây",
+    c: "THCS",
+    g: 40,
+    h: 35,
+    s: 4,
+    d: [1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0],
+  },
+  {
+    n: 117,
+    t: "THCS Mỹ Đức Đông",
+    x: "xã Mỹ Đức Tây",
+    c: "THCS",
+    g: 26,
+    h: 25,
+    s: 1,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 118,
+    t: "TH Phú Kiết",
+    x: "xã Lương Hòa Lạc",
+    c: "Tiểu học",
+    g: 36,
+    h: 33,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0],
+  },
+  {
+    n: 119,
+    t: "THCS Lương Hòa Lạc",
+    x: "xã Lương Hòa Lạc",
+    c: "THCS",
+    g: 37,
+    h: 35,
+    s: 1,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 120,
+    t: "THCS Thanh Bình",
+    x: "xã Lương Hòa Lạc",
+    c: "THCS",
+    g: 35,
+    h: 33,
+    s: 2,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0],
+  },
+  {
+    n: 121,
+    t: "MN Phú Thọ",
+    x: "xã Phú Thọ",
+    c: "Mầm non",
+    g: 26,
+    h: 19,
+    s: 6,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 0],
+  },
+  {
+    n: 122,
+    t: "MN Phú Thành A",
+    x: "xã Phú Thọ",
+    c: "Mầm non",
+    g: 33,
+    h: 22,
+    s: 6,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 0],
+  },
+  {
+    n: 123,
+    t: "TH Phú Thọ",
+    x: "xã Phú Thọ",
+    c: "Tiểu học",
+    g: 37,
+    h: 30,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0],
+  },
+  {
+    n: 124,
+    t: "TH Phú Thành A1",
+    x: "xã Phú Thọ",
+    c: "Tiểu học",
+    g: 51,
+    h: 43,
+    s: 5,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 0],
+  },
+  {
+    n: 125,
+    t: "THCS Phú Thọ",
+    x: "xã Phú Thọ",
+    c: "THCS",
+    g: 30,
+    h: 22,
+    s: 5,
+    d: [1, 0, 0, 0, 0, 0, 2, 0, 0, 0, 1, 1, 0, 0, 0],
+  },
+  {
+    n: 126,
+    t: "MN Tân Phú Đông",
+    x: "xã Tân Dương",
+    c: "Mầm non",
+    g: 21,
+    h: 20,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+  },
+  {
+    n: 127,
+    t: "TH Tân Dương",
+    x: "xã Tân Dương",
+    c: "Tiểu học",
+    g: 48,
+    h: 46,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0],
+  },
+  {
+    n: 128,
+    t: "TH Tân Phú Đông",
+    x: "xã Tân Dương",
+    c: "Tiểu học",
+    g: 29,
+    h: 24,
+    s: 4,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 1, 0],
+  },
+  {
+    n: 129,
+    t: "TH Phú Long",
+    x: "xã Tân Dương",
+    c: "Tiểu học",
+    g: 28,
+    h: 25,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 130,
+    t: "TH-THCS Hoà Thành",
+    x: "xã Tân Dương",
+    c: "Tiểu học",
+    g: 51,
+    h: 47,
+    s: 3,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1],
+  },
+  {
+    n: 131,
+    t: "THCS Tân Dương",
+    x: "xã Tân Dương",
+    c: "THCS",
+    g: 39,
+    h: 34,
+    s: 4,
+    d: [1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0],
+  },
+  {
+    n: 132,
+    t: "TH Thạnh Tân",
+    x: "xã Tân Phước 2",
+    c: "Tiểu học",
+    g: 21,
+    h: 20,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 133,
+    t: "TH Tân Hòa Tây",
+    x: "xã Tân Phước 2",
+    c: "Tiểu học",
+    g: 15,
+    h: 12,
+    s: 3,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1],
+  },
+  {
+    n: 134,
+    t: "MG An Phong",
+    x: "xã An Long",
+    c: "Mầm non",
+    g: 33,
+    h: 24,
+    s: 8,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0],
+  },
+  {
+    n: 135,
+    t: "TH An Long 1",
+    x: "xã An Long",
+    c: "Tiểu học",
+    g: 37,
+    h: 32,
+    s: 4,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0],
+  },
+  {
+    n: 136,
+    t: "TH An Long 2",
+    x: "xã An Long",
+    c: "Tiểu học",
+    g: 27,
+    h: 21,
+    s: 5,
+    d: [0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 2, 1],
+  },
+  {
+    n: 137,
+    t: "TH An Phong 1",
+    x: "xã An Long",
+    c: "Tiểu học",
+    g: 48,
+    h: 41,
+    s: 3,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 0],
+  },
+  {
+    n: 138,
+    t: "TH An Phong 2",
+    x: "xã An Long",
+    c: "Tiểu học",
+    g: 28,
+    h: 23,
+    s: 4,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1],
+  },
+  {
+    n: 139,
+    t: "THCS Phú Ninh",
+    x: "xã An Long",
+    c: "THCS",
+    g: 69,
+    h: 60,
+    s: 4,
+    d: [1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0],
+  },
+  {
+    n: 140,
+    t: "THCS An Phong",
+    x: "xã An Long",
+    c: "THCS",
+    g: 49,
+    h: 45,
+    s: 3,
+    d: [1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0],
+  },
+  {
+    n: 141,
+    t: "MN Hưng Thạnh",
+    x: "xã Phương Thịnh",
+    c: "Mầm non",
+    g: 32,
+    h: 26,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+  },
+  {
+    n: 142,
+    t: "TH Hưng Thạnh 1",
+    x: "xã Phương Thịnh",
+    c: "Tiểu học",
+    g: 40,
+    h: 32,
+    s: 6,
+    d: [0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 3, 1],
+  },
+  {
+    n: 143,
+    t: "TH Hưng Thạnh 2",
+    x: "xã Phương Thịnh",
+    c: "Tiểu học",
+    g: 26,
+    h: 16,
+    s: 3,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 0],
+  },
+  {
+    n: 144,
+    t: "TH Phương Thịnh",
+    x: "xã Phương Thịnh",
+    c: "Tiểu học",
+    g: 40,
+    h: 35,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 145,
+    t: "THCS Hưng Thạnh",
+    x: "xã Phương Thịnh",
+    c: "THCS",
+    g: 38,
+    h: 32,
+    s: 3,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0],
+  },
+  {
+    n: 146,
+    t: "THCS Phương Thịnh",
+    x: "xã Phương Thịnh",
+    c: "THCS",
+    g: 34,
+    h: 29,
+    s: 3,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0],
+  },
+  {
+    n: 147,
+    t: "MG Long Khánh B",
+    x: "xã Long Khánh",
+    c: "Mầm non",
+    g: 28,
+    h: 22,
+    s: 6,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 0],
+  },
+  {
+    n: 148,
+    t: "TH Long Khánh A1",
+    x: "xã Long Khánh",
+    c: "Tiểu học",
+    g: 29,
+    h: 23,
+    s: 5,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 3, 1],
+  },
+  {
+    n: 149,
+    t: "TH Long Khánh A3",
+    x: "xã Long Khánh",
+    c: "Tiểu học",
+    g: 35,
+    h: 29,
+    s: 4,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1],
+  },
+  {
+    n: 150,
+    t: "TH Long Khánh A4",
+    x: "xã Long Khánh",
+    c: "Tiểu học",
+    g: 29,
+    h: 24,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0],
+  },
+  {
+    n: 151,
+    t: "TH Long Khánh B1",
+    x: "xã Long Khánh",
+    c: "Tiểu học",
+    g: 31,
+    h: 27,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 152,
+    t: "TH Long Khánh B2",
+    x: "xã Long Khánh",
+    c: "Tiểu học",
+    g: 23,
+    h: 19,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 153,
+    t: "THCS Long Khánh A",
+    x: "xã Long Khánh",
+    c: "THCS",
+    g: 61,
+    h: 55,
+    s: 4,
+    d: [1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0],
+  },
+  {
+    n: 154,
+    t: "THCS Long Khánh B",
+    x: "xã Long Khánh",
+    c: "THCS",
+    g: 30,
+    h: 26,
+    s: 2,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0],
+  },
+  {
+    n: 155,
+    t: "TH A An Hữu",
+    x: "xã An Hữu",
+    c: "Tiểu học",
+    g: 43,
+    h: 37,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0],
+  },
+  {
+    n: 156,
+    t: "TH B An Hữu",
+    x: "xã An Hữu",
+    c: "Tiểu học",
+    g: 28,
+    h: 23,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0],
+  },
+  {
+    n: 157,
+    t: "TH Hòa Hưng",
+    x: "xã An Hữu",
+    c: "Tiểu học",
+    g: 43,
+    h: 37,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0],
+  },
+  {
+    n: 158,
+    t: "THCS Hòa Hưng",
+    x: "xã An Hữu",
+    c: "THCS",
+    g: 34,
+    h: 30,
+    s: 1,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 159,
+    t: "TH-THCS Mỹ Lương",
+    x: "xã An Hữu",
+    c: "Tiểu học",
+    g: 51,
+    h: 48,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 159,
+    t: "TH-THCS Mỹ Lương",
+    x: "xã An Hữu",
+    c: "THCS",
+    g: 0,
+    h: 0,
+    s: 2,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0],
+  },
+  {
+    n: 160,
+    t: "MG Tân Hòa",
+    x: "xã Tân Long",
+    c: "Mầm non",
+    g: 23,
+    h: 18,
+    s: 3,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0],
+  },
+  {
+    n: 161,
+    t: "TH Định An",
+    x: "xã Lai Vung",
+    c: "Tiểu học",
+    g: 42,
+    h: 39,
+    s: 3,
+    d: [0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0],
+  },
+  {
+    n: 162,
+    t: "TH Định Yên 1",
+    x: "xã Lai Vung",
+    c: "Tiểu học",
+    g: 51,
+    h: 46,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0],
+  },
+  {
+    n: 163,
+    t: "TH Định Yên 2",
+    x: "xã Lai Vung",
+    c: "Tiểu học",
+    g: 32,
+    h: 28,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 164,
+    t: "TH Tân Phước 1",
+    x: "xã Lai Vung",
+    c: "Tiểu học",
+    g: 32,
+    h: 29,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0],
+  },
+  {
+    n: 165,
+    t: "TH Tân Thành 2",
+    x: "xã Lai Vung",
+    c: "Tiểu học",
+    g: 36,
+    h: 32,
+    s: 3,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1],
+  },
+  {
+    n: 166,
+    t: "THCS Định An",
+    x: "xã Lai Vung",
+    c: "THCS",
+    g: 43,
+    h: 40,
+    s: 1,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 167,
+    t: "THCS Định Yên",
+    x: "xã Lai Vung",
+    c: "THCS",
+    g: 65,
+    h: 56,
+    s: 6,
+    d: [2, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1],
+  },
+  {
+    n: 168,
+    t: "THCS Tân Phước",
+    x: "xã Lai Vung",
+    c: "THCS",
+    g: 41,
+    h: 35,
+    s: 5,
+    d: [2, 0, 0, 0, 0, 0, 2, 0, 0, 0, 1, 0, 0, 0, 0],
+  },
+  {
+    n: 169,
+    t: "THCS Tân Thành",
+    x: "xã Lai Vung",
+    c: "THCS",
+    g: 70,
+    h: 62,
+    s: 7,
+    d: [1, 0, 0, 0, 0, 0, 4, 0, 0, 0, 1, 1, 0, 0, 0],
+  },
+  {
+    n: 170,
+    t: "MG Tân Thạnh",
+    x: "xã Tân Thạnh",
+    c: "Mầm non",
+    g: 33,
+    h: 30,
+    s: 3,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0],
+  },
+  {
+    n: 171,
+    t: "MG Phú Lợi",
+    x: "xã Tân Thạnh",
+    c: "Mầm non",
+    g: 24,
+    h: 15,
+    s: 9,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9, 0],
+  },
+  {
+    n: 172,
+    t: "TH Tân Thạnh 1",
+    x: "xã Tân Thạnh",
+    c: "Tiểu học",
+    g: 55,
+    h: 50,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0],
+  },
+  {
+    n: 173,
+    t: "TH Phú Lợi 2",
+    x: "xã Tân Thạnh",
+    c: "Tiểu học",
+    g: 17,
+    h: 13,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 174,
+    t: "THCS Tân Thạnh",
+    x: "xã Tân Thạnh",
+    c: "THCS",
+    g: 55,
+    h: 51,
+    s: 4,
+    d: [1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0],
+  },
+  {
+    n: 175,
+    t: "THCS Phú Lợi",
+    x: "xã Tân Thạnh",
+    c: "THCS",
+    g: 29,
+    h: 27,
+    s: 1,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 176,
+    t: "TH Võ Thị Lớ",
+    x: "xã Gò Công Đông",
+    c: "Tiểu học",
+    g: 29,
+    h: 27,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 177,
+    t: "THCS Võ Văn Dánh",
+    x: "xã Gò Công Đông",
+    c: "THCS",
+    g: 75,
+    h: 70,
+    s: 5,
+    d: [1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1],
+  },
+  {
+    n: 178,
+    t: "THCS Võ Duy Linh",
+    x: "xã Gò Công Đông",
+    c: "THCS",
+    g: 42,
+    h: 37,
+    s: 4,
+    d: [2, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0],
+  },
+  {
+    n: 179,
+    t: "MN Tân Hiệp",
+    x: "xã Châu Thành",
+    c: "Mầm non",
+    g: 33,
+    h: 30,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+  },
+  {
+    n: 180,
+    t: "TH Tân Lý Tây",
+    x: "xã Châu Thành",
+    c: "Tiểu học",
+    g: 44,
+    h: 36,
+    s: 5,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 4, 0],
+  },
+  {
+    n: 181,
+    t: "TH Thân Cửu Nghĩa",
+    x: "xã Châu Thành",
+    c: "Tiểu học",
+    g: 56,
+    h: 49,
+    s: 5,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 3, 1],
+  },
+  {
+    n: 182,
+    t: "THCS Tân Hiệp",
+    x: "xã Châu Thành",
+    c: "THCS",
+    g: 44,
+    h: 42,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0],
+  },
+  {
+    n: 183,
+    t: "THCS Thân Cửu Nghĩa",
+    x: "xã Châu Thành",
+    c: "THCS",
+    g: 35,
+    h: 26,
+    s: 5,
+    d: [1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 2, 1, 0, 0, 0],
+  },
+  {
+    n: 184,
+    t: "THCS Đoàn Giỏi",
+    x: "xã Châu Thành",
+    c: "THCS",
+    g: 52,
+    h: 49,
+    s: 1,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 185,
+    t: "TH-THCS Long An",
+    x: "xã Châu Thành",
+    c: "Tiểu học",
+    g: 52,
+    h: 49,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 185,
+    t: "TH-THCS Long An",
+    x: "xã Châu Thành",
+    c: "THCS",
+    g: 0,
+    h: 0,
+    s: 1,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 186,
+    t: "TH Phước Trung",
+    x: "xã Tân Hòa",
+    c: "Tiểu học",
+    g: 43,
+    h: 40,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0],
+  },
+  {
+    n: 187,
+    t: "TH Tân Hòa",
+    x: "xã Tân Hòa",
+    c: "Tiểu học",
+    g: 39,
+    h: 38,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 188,
+    t: "THCS Nguyễn Trọng Dân",
+    x: "xã Tân Hòa",
+    c: "THCS",
+    g: 29,
+    h: 28,
+    s: 1,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 189,
+    t: "MG Thường Phước 1",
+    x: "xã Thường Phước",
+    c: "Mầm non",
+    g: 26,
+    h: 24,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+  },
+  {
+    n: 190,
+    t: "MG Thường Phước 2",
+    x: "xã Thường Phước",
+    c: "Mầm non",
+    g: 26,
+    h: 23,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0],
+  },
+  {
+    n: 191,
+    t: "MG Thường Thới Tiền",
+    x: "xã Thường Phước",
+    c: "Mầm non",
+    g: 26,
+    h: 24,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0],
+  },
+  {
+    n: 192,
+    t: "MN Thường Thới Tiền",
+    x: "xã Thường Phước",
+    c: "Mầm non",
+    g: 19,
+    h: 18,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+  },
+  {
+    n: 193,
+    t: "TH Thường Phước 1A",
+    x: "xã Thường Phước",
+    c: "Tiểu học",
+    g: 41,
+    h: 37,
+    s: 3,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1],
+  },
+  {
+    n: 194,
+    t: "TH Thường Phước 1B",
+    x: "xã Thường Phước",
+    c: "Tiểu học",
+    g: 50,
+    h: 46,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0],
+  },
+  {
+    n: 195,
+    t: "TH Thường Phước 2",
+    x: "xã Thường Phước",
+    c: "Tiểu học",
+    g: 27,
+    h: 24,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0],
+  },
+  {
+    n: 196,
+    t: "TH Thường Phước 2A",
+    x: "xã Thường Phước",
+    c: "Tiểu học",
+    g: 34,
+    h: 29,
+    s: 3,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1],
+  },
+  {
+    n: 197,
+    t: "TH Thường Thới Tiền 1",
+    x: "xã Thường Phước",
+    c: "Tiểu học",
+    g: 41,
+    h: 39,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0],
+  },
+  {
+    n: 198,
+    t: "TH Thường Thới Tiền 2",
+    x: "xã Thường Phước",
+    c: "Tiểu học",
+    g: 37,
+    h: 30,
+    s: 3,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 0],
+  },
+  {
+    n: 199,
+    t: "THCS Thường Phước 1",
+    x: "xã Thường Phước",
+    c: "THCS",
+    g: 61,
+    h: 60,
+    s: 1,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 200,
+    t: "THCS Thường Phước 2",
+    x: "xã Thường Phước",
+    c: "THCS",
+    g: 32,
+    h: 29,
+    s: 1,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 201,
+    t: "THCS Thường Thới Tiền",
+    x: "xã Thường Phước",
+    c: "THCS",
+    g: 55,
+    h: 52,
+    s: 2,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0],
+  },
+  {
+    n: 202,
+    t: "MN Mỹ Tân",
+    x: "P.Mỹ Ngãi",
+    c: "Mầm non",
+    g: 27,
+    h: 25,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0],
+  },
+  {
+    n: 203,
+    t: "MN Mỹ Ngãi",
+    x: "P.Mỹ Ngãi",
+    c: "Mầm non",
+    g: 22,
+    h: 21,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+  },
+  {
+    n: 204,
+    t: "MN Tân Nghĩa",
+    x: "P.Mỹ Ngãi",
+    c: "Mầm non",
+    g: 29,
+    h: 28,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+  },
+  {
+    n: 205,
+    t: "MN Bình Minh",
+    x: "P.Mỹ Ngãi",
+    c: "Mầm non",
+    g: 24,
+    h: 22,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0],
+  },
+  {
+    n: 206,
+    t: "TH Mỹ Ngãi",
+    x: "P.Mỹ Ngãi",
+    c: "Tiểu học",
+    g: 26,
+    h: 22,
+    s: 3,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0],
+  },
+  {
+    n: 207,
+    t: "TH Trưng Vương",
+    x: "P.Mỹ Ngãi",
+    c: "Tiểu học",
+    g: 24,
+    h: 23,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 208,
+    t: "TH Nguyễn Bỉnh Khiêm",
+    x: "P.Mỹ Ngãi",
+    c: "Tiểu học",
+    g: 35,
+    h: 32,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0],
+  },
+  {
+    n: 209,
+    t: "TH Nguyễn Trung Trực",
+    x: "P.Mỹ Ngãi",
+    c: "Tiểu học",
+    g: 21,
+    h: 19,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0],
+  },
+  {
+    n: 210,
+    t: "TH Hoàng Diệu",
+    x: "P.Mỹ Ngãi",
+    c: "Tiểu học",
+    g: 35,
+    h: 33,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0],
+  },
+  {
+    n: 211,
+    t: "THCS Võ Trường Toản",
+    x: "P.Mỹ Ngãi",
+    c: "THCS",
+    g: 64,
+    h: 59,
+    s: 5,
+    d: [1, 0, 0, 0, 0, 0, 2, 0, 0, 0, 1, 1, 0, 0, 0],
+  },
+  {
+    n: 212,
+    t: "THCS Trần Đại Nghĩa",
+    x: "P.Mỹ Ngãi",
+    c: "THCS",
+    g: 38,
+    h: 35,
+    s: 3,
+    d: [2, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 213,
+    t: "THCS Tân Nghĩa",
+    x: "P.Mỹ Ngãi",
+    c: "THCS",
+    g: 29,
+    h: 27,
+    s: 2,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0],
+  },
+  {
+    n: 214,
+    t: "MN Tân Công Chí",
+    x: "xã Tân Hồng",
+    c: "Mầm non",
+    g: 18,
+    h: 17,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+  },
+  {
+    n: 215,
+    t: "TH Tân Công Chí 2",
+    x: "xã Tân Hồng",
+    c: "Tiểu học",
+    g: 34,
+    h: 33,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 216,
+    t: "THCS Nguyễn Du",
+    x: "xã Tân Hồng",
+    c: "THCS",
+    g: 30,
+    h: 28,
+    s: 1,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 217,
+    t: "THCS Nguyễn Văn Tiệp",
+    x: "xã Tân Hồng",
+    c: "THCS",
+    g: 60,
+    h: 57,
+    s: 1,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 218,
+    t: "MG Long Thuận",
+    x: "xã Long Phú Thuận",
+    c: "Mầm non",
+    g: 41,
+    h: 34,
+    s: 4,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0],
+  },
+  {
+    n: 219,
+    t: "MG Phú Thuận A",
+    x: "xã Long Phú Thuận",
+    c: "Mầm non",
+    g: 40,
+    h: 32,
+    s: 4,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0],
+  },
+  {
+    n: 220,
+    t: "MG Phú Thuận B",
+    x: "xã Long Phú Thuận",
+    c: "Mầm non",
+    g: 41,
+    h: 32,
+    s: 4,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0],
+  },
+  {
+    n: 221,
+    t: "TH Long Thuận 1",
+    x: "xã Long Phú Thuận",
+    c: "Tiểu học",
+    g: 32,
+    h: 26,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0],
+  },
+  {
+    n: 222,
+    t: "TH Long Thuận 3",
+    x: "xã Long Phú Thuận",
+    c: "Tiểu học",
+    g: 25,
+    h: 22,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0],
+  },
+  {
+    n: 223,
+    t: "TH Long Thuận 4",
+    x: "xã Long Phú Thuận",
+    c: "Tiểu học",
+    g: 38,
+    h: 30,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0],
+  },
+  {
+    n: 224,
+    t: "TH Phú Thuận A1",
+    x: "xã Long Phú Thuận",
+    c: "Tiểu học",
+    g: 32,
+    h: 28,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 225,
+    t: "TH Phú Thuận A2",
+    x: "xã Long Phú Thuận",
+    c: "Tiểu học",
+    g: 44,
+    h: 39,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 226,
+    t: "TH Phú Thuận B2",
+    x: "xã Long Phú Thuận",
+    c: "Tiểu học",
+    g: 54,
+    h: 49,
+    s: 4,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 3, 0],
+  },
+  {
+    n: 227,
+    t: "TH Phú Thuận B3",
+    x: "xã Long Phú Thuận",
+    c: "Tiểu học",
+    g: 25,
+    h: 21,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 228,
+    t: "THCS Long Thuận",
+    x: "xã Long Phú Thuận",
+    c: "THCS",
+    g: 51,
+    h: 47,
+    s: 2,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0],
+  },
+  {
+    n: 229,
+    t: "THCS Phú Thuận A",
+    x: "xã Long Phú Thuận",
+    c: "THCS",
+    g: 46,
+    h: 40,
+    s: 2,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0],
+  },
+  {
+    n: 230,
+    t: "MN Vĩnh Hựu",
+    x: "xã Vĩnh Hựu",
+    c: "Mầm non",
+    g: 16,
+    h: 15,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+  },
+  {
+    n: 231,
+    t: "TH Nguyễn Thị Tốt",
+    x: "xã Vĩnh Hựu",
+    c: "Tiểu học",
+    g: 36,
+    h: 31,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0],
+  },
+  {
+    n: 232,
+    t: "TH Nguyễn Văn Quyên",
+    x: "xã Vĩnh Hựu",
+    c: "Tiểu học",
+    g: 33,
+    h: 31,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 233,
+    t: "THCS Nguyễn Thị Bảy",
+    x: "xã Vĩnh Hựu",
+    c: "THCS",
+    g: 40,
+    h: 36,
+    s: 4,
+    d: [1, 0, 0, 0, 0, 0, 2, 0, 0, 0, 1, 0, 0, 0, 0],
+  },
+  {
+    n: 234,
+    t: "MG Mỹ An Hưng B",
+    x: "xã Mỹ An Hưng",
+    c: "Mầm non",
+    g: 26,
+    h: 24,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+  },
+  {
+    n: 235,
+    t: "TH Tân Mỹ 1",
+    x: "xã Mỹ An Hưng",
+    c: "Tiểu học",
+    g: 26,
+    h: 22,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 236,
+    t: "TH Tân Mỹ 2",
+    x: "xã Mỹ An Hưng",
+    c: "Tiểu học",
+    g: 27,
+    h: 22,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 237,
+    t: "THCS Mỹ An Hưng B",
+    x: "xã Mỹ An Hưng",
+    c: "THCS",
+    g: 48,
+    h: 43,
+    s: 1,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 238,
+    t: "MG Tân Quy Đông",
+    x: "P.Sa Đéc",
+    c: "Mầm non",
+    g: 17,
+    h: 10,
+    s: 3,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0],
+  },
+  {
+    n: 239,
+    t: "MN Ánh Dương",
+    x: "P.Sa Đéc",
+    c: "Mầm non",
+    g: 26,
+    h: 21,
+    s: 4,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0],
+  },
+  {
+    n: 240,
+    t: "MN Hoa Mai",
+    x: "P.Sa Đéc",
+    c: "Mầm non",
+    g: 35,
+    h: 27,
+    s: 7,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 0],
+  },
+  {
+    n: 241,
+    t: "MN Hoa Sen",
+    x: "P.Sa Đéc",
+    c: "Mầm non",
+    g: 22,
+    h: 20,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0],
+  },
+  {
+    n: 242,
+    t: "MN Nắng Hồng",
+    x: "P.Sa Đéc",
+    c: "Mầm non",
+    g: 28,
+    h: 22,
+    s: 6,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 0],
+  },
+  {
+    n: 243,
+    t: "MN Sen Hồng",
+    x: "P.Sa Đéc",
+    c: "Mầm non",
+    g: 37,
+    h: 28,
+    s: 8,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0],
+  },
+  {
+    n: 244,
+    t: "MN Tân Khánh Đông",
+    x: "P.Sa Đéc",
+    c: "Mầm non",
+    g: 44,
+    h: 39,
+    s: 4,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0],
+  },
+  {
+    n: 245,
+    t: "TH Kim Đồng",
+    x: "P.Sa Đéc",
+    c: "Tiểu học",
+    g: 51,
+    h: 48,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 246,
+    t: "TH Phú Mỹ",
+    x: "P.Sa Đéc",
+    c: "Tiểu học",
+    g: 51,
+    h: 46,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 247,
+    t: "TH Tân Khánh Đông 1",
+    x: "P.Sa Đéc",
+    c: "Tiểu học",
+    g: 34,
+    h: 28,
+    s: 5,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 4, 0],
+  },
+  {
+    n: 248,
+    t: "TH Tân Khánh Đông 3",
+    x: "P.Sa Đéc",
+    c: "Tiểu học",
+    g: 36,
+    h: 29,
+    s: 5,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0],
+  },
+  {
+    n: 249,
+    t: "TH Tân Long",
+    x: "P.Sa Đéc",
+    c: "Tiểu học",
+    g: 32,
+    h: 29,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 250,
+    t: "TH Trưng Vương",
+    x: "P.Sa Đéc",
+    c: "Tiểu học",
+    g: 51,
+    h: 42,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 251,
+    t: "TH Vĩnh Phước",
+    x: "P.Sa Đéc",
+    c: "Tiểu học",
+    g: 45,
+    h: 41,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 252,
+    t: "THCS Hùng Vương",
+    x: "P.Sa Đéc",
+    c: "THCS",
+    g: 69,
+    h: 58,
+    s: 5,
+    d: [1, 0, 0, 0, 0, 0, 2, 0, 0, 0, 1, 1, 0, 0, 0],
+  },
+  {
+    n: 253,
+    t: "THCS Lưu Văn Lang",
+    x: "P.Sa Đéc",
+    c: "THCS",
+    g: 86,
+    h: 75,
+    s: 10,
+    d: [2, 0, 0, 0, 0, 0, 1, 0, 0, 0, 2, 1, 0, 0, 2],
+  },
+  {
+    n: 254,
+    t: "THCS Tân Khánh Đông",
+    x: "P.Sa Đéc",
+    c: "THCS",
+    g: 57,
+    h: 44,
+    s: 10,
+    d: [1, 0, 0, 0, 0, 0, 4, 0, 0, 0, 2, 1, 0, 0, 1],
+  },
+  {
+    n: 255,
+    t: "THCS Trần Thị Nhượng",
+    x: "P.Sa Đéc",
+    c: "THCS",
+    g: 63,
+    h: 54,
+    s: 7,
+    d: [1, 0, 0, 0, 0, 0, 3, 0, 0, 0, 2, 1, 0, 0, 0],
+  },
+  {
+    n: 256,
+    t: "THCS Võ Thị Sáu",
+    x: "P.Sa Đéc",
+    c: "THCS",
+    g: 82,
+    h: 71,
+    s: 8,
+    d: [1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 2, 1, 0, 0, 1],
+  },
+  {
+    n: 257,
+    t: "MN Mỹ Phước Tây",
+    x: "P.Mỹ Phước Tây",
+    c: "Mầm non",
+    g: 23,
+    h: 20,
+    s: 3,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0],
+  },
+  {
+    n: 258,
+    t: "MN Mỹ Hạnh Trung",
+    x: "P.Mỹ Phước Tây",
+    c: "Mầm non",
+    g: 19,
+    h: 17,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0],
+  },
+  {
+    n: 259,
+    t: "TH-THCS Mỹ Hạnh Trung",
+    x: "P.Mỹ Phước Tây",
+    c: "Tiểu học",
+    g: 58,
+    h: 48,
+    s: 4,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 1],
+  },
+  {
+    n: 259,
+    t: "TH-THCS Mỹ Hạnh Trung",
+    x: "P.Mỹ Phước Tây",
+    c: "THCS",
+    g: 0,
+    h: 0,
+    s: 6,
+    d: [1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1],
+  },
+  {
+    n: 260,
+    t: "THCS Trừ Văn Thố",
+    x: "P.Mỹ Phước Tây",
+    c: "THCS",
+    g: 64,
+    h: 59,
+    s: 2,
+    d: [0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 261,
+    t: "THCS Mai Thị Út",
+    x: "P.Mỹ Phước Tây",
+    c: "THCS",
+    g: 56,
+    h: 48,
+    s: 7,
+    d: [2, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1],
+  },
+  {
+    n: 262,
+    t: "THCS Thạnh Lộc",
+    x: "xã Thạnh Phú",
+    c: "THCS",
+    g: 38,
+    h: 37,
+    s: 1,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 263,
+    t: "THCS Phú Cường",
+    x: "xã Thạnh Phú",
+    c: "THCS",
+    g: 25,
+    h: 23,
+    s: 2,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0],
+  },
+  {
+    n: 264,
+    t: "TH Ngô Văn Nhạc",
+    x: "xã Mỹ Thiện",
+    c: "Tiểu học",
+    g: 30,
+    h: 29,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 265,
+    t: "TH-THCS Mỹ Trung",
+    x: "xã Mỹ Thiện",
+    c: "Tiểu học",
+    g: 52,
+    h: 50,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 265,
+    t: "TH-THCS Mỹ Trung",
+    x: "xã Mỹ Thiện",
+    c: "THCS",
+    g: 0,
+    h: 0,
+    s: 2,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0],
+  },
+  {
+    n: 266,
+    t: "TH-THCS Thiện Trung",
+    x: "xã Mỹ Thiện",
+    c: "Tiểu học",
+    g: 64,
+    h: 61,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 267,
+    t: "TH Long Hưng",
+    x: "P.Sơn Qui",
+    c: "Tiểu học",
+    g: 27,
+    h: 26,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 268,
+    t: "TH Tân Trung",
+    x: "P.Sơn Qui",
+    c: "Tiểu học",
+    g: 56,
+    h: 54,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 269,
+    t: "TH Bình Đông",
+    x: "P.Sơn Qui",
+    c: "Tiểu học",
+    g: 63,
+    h: 59,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0],
+  },
+  {
+    n: 270,
+    t: "THCS Tân Trung",
+    x: "P.Sơn Qui",
+    c: "THCS",
+    g: 45,
+    h: 43,
+    s: 2,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0],
+  },
+  {
+    n: 271,
+    t: "THCS Bình Đông",
+    x: "P.Sơn Qui",
+    c: "THCS",
+    g: 48,
+    h: 41,
+    s: 6,
+    d: [2, 0, 0, 0, 0, 0, 2, 0, 0, 0, 1, 1, 0, 0, 0],
+  },
+  {
+    n: 272,
+    t: "MN Tháp Mười",
+    x: "xã Tháp Mười",
+    c: "Mầm non",
+    g: 38,
+    h: 33,
+    s: 3,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0],
+  },
+  {
+    n: 273,
+    t: "TH Dương Văn Hòa",
+    x: "xã Tháp Mười",
+    c: "Tiểu học",
+    g: 54,
+    h: 49,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0],
+  },
+  {
+    n: 274,
+    t: "TH Mỹ An 1",
+    x: "xã Tháp Mười",
+    c: "Tiểu học",
+    g: 34,
+    h: 31,
+    s: 3,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 0],
+  },
+  {
+    n: 275,
+    t: "TH Mỹ An 2",
+    x: "xã Tháp Mười",
+    c: "Tiểu học",
+    g: 24,
+    h: 19,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0],
+  },
+  {
+    n: 276,
+    t: "TH Mỹ An",
+    x: "xã Tháp Mười",
+    c: "Tiểu học",
+    g: 41,
+    h: 35,
+    s: 3,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 0],
+  },
+  {
+    n: 277,
+    t: "TH Mỹ Hòa 1",
+    x: "xã Tháp Mười",
+    c: "Tiểu học",
+    g: 37,
+    h: 33,
+    s: 3,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 0],
+  },
+  {
+    n: 278,
+    t: "TH Mỹ Hòa 2",
+    x: "xã Tháp Mười",
+    c: "Tiểu học",
+    g: 28,
+    h: 25,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 279,
+    t: "THCS Tháp Mười",
+    x: "xã Tháp Mười",
+    c: "THCS",
+    g: 88,
+    h: 81,
+    s: 6,
+    d: [1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 2, 1, 0, 0, 1],
+  },
+  {
+    n: 280,
+    t: "TH Tân Bình",
+    x: "P.Thanh Hòa",
+    c: "Tiểu học",
+    g: 27,
+    h: 24,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0],
+  },
+  {
+    n: 281,
+    t: "THCS Tân Bình",
+    x: "P.Thanh Hòa",
+    c: "THCS",
+    g: 27,
+    h: 24,
+    s: 2,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0],
+  },
+  {
+    n: 282,
+    t: "TH-THCS Thanh Hòa",
+    x: "P.Thanh Hòa",
+    c: "Tiểu học",
+    g: 35,
+    h: 31,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 282,
+    t: "TH-THCS Thanh Hòa",
+    x: "P.Thanh Hòa",
+    c: "THCS",
+    g: 0,
+    h: 0,
+    s: 1,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 283,
+    t: "MN Tân Phú Đông",
+    x: "xã Tân Phú Đông",
+    c: "Mầm non",
+    g: 28,
+    h: 24,
+    s: 4,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0],
+  },
+  {
+    n: 284,
+    t: "TH Phú Thạnh",
+    x: "xã Tân Phú Đông",
+    c: "Tiểu học",
+    g: 42,
+    h: 41,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 285,
+    t: "TH-THCS Phú Tân",
+    x: "xã Tân Phú Đông",
+    c: "THCS",
+    g: 39,
+    h: 36,
+    s: 2,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0],
+  },
+  {
+    n: 285,
+    t: "TH-THCS Phú Tân",
+    x: "xã Tân Phú Đông",
+    c: "Tiểu học",
+    g: 0,
+    h: 0,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 286,
+    t: "THCS Phú Đông",
+    x: "xã Tân Phú Đông",
+    c: "THCS",
+    g: 27,
+    h: 23,
+    s: 2,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0],
+  },
+  {
+    n: 287,
+    t: "TH Tân Thới",
+    x: "xã Tân Thới",
+    c: "Tiểu học",
+    g: 58,
+    h: 56,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0],
+  },
+  {
+    n: 288,
+    t: "TH Tân Phú",
+    x: "xã Tân Thới",
+    c: "Tiểu học",
+    g: 38,
+    h: 36,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0],
+  },
+  {
+    n: 289,
+    t: "THCS Tân Phú",
+    x: "xã Tân Thới",
+    c: "THCS",
+    g: 37,
+    h: 32,
+    s: 4,
+    d: [2, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0],
+  },
+  {
+    n: 290,
+    t: "MN Bình Thạnh",
+    x: "P.Hồng Ngự",
+    c: "Mầm non",
+    g: 37,
+    h: 35,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0],
+  },
+  {
+    n: 291,
+    t: "TH Bình Thạnh",
+    x: "P.Hồng Ngự",
+    c: "Tiểu học",
+    g: 29,
+    h: 28,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 292,
+    t: "THCS Bình Thạnh",
+    x: "P.Hồng Ngự",
+    c: "THCS",
+    g: 38,
+    h: 37,
+    s: 1,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 293,
+    t: "MN Sơn Ca",
+    x: "P.Gò Công",
+    c: "Mầm non",
+    g: 29,
+    h: 27,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0],
+  },
+  {
+    n: 294,
+    t: "TH Long Hòa",
+    x: "P.Gò Công",
+    c: "Tiểu học",
+    g: 41,
+    h: 40,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 295,
+    t: "THCS Phường 1",
+    x: "P.Gò Công",
+    c: "THCS",
+    g: 60,
+    h: 58,
+    s: 2,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0],
+  },
+  {
+    n: 296,
+    t: "THCS Phường 5",
+    x: "P.Gò Công",
+    c: "THCS",
+    g: 47,
+    h: 43,
+    s: 4,
+    d: [1, 0, 0, 0, 0, 0, 2, 0, 0, 0, 1, 0, 0, 0, 0],
+  },
+  {
+    n: 297,
+    t: "TH Quơn Long",
+    x: "xã Tân Thuận Bình",
+    c: "Tiểu học",
+    g: 41,
+    h: 35,
+    s: 5,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 4, 0],
+  },
+  {
+    n: 298,
+    t: "THCS Quơn Long",
+    x: "xã Tân Thuận Bình",
+    c: "THCS",
+    g: 45,
+    h: 38,
+    s: 6,
+    d: [1, 0, 0, 0, 0, 0, 2, 0, 0, 0, 1, 1, 0, 0, 1],
+  },
+  {
+    n: 299,
+    t: "THCS Đăng Hưng Phước",
+    x: "xã Tân Thuận Bình",
+    c: "THCS",
+    g: 41,
+    h: 38,
+    s: 3,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0],
+  },
+  {
+    n: 300,
+    t: "TH thị trấn Chợ Gạo",
+    x: "xã Chợ Gạo",
+    c: "Tiểu học",
+    g: 48,
+    h: 46,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0],
+  },
+  {
+    n: 301,
+    t: "TH Long Bình Điền",
+    x: "xã Chợ Gạo",
+    c: "Tiểu học",
+    g: 36,
+    h: 34,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0],
+  },
+  {
+    n: 302,
+    t: "TH Song Bình",
+    x: "xã Chợ Gạo",
+    c: "Tiểu học",
+    g: 25,
+    h: 24,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 303,
+    t: "THCS thị trấn Chợ Gạo",
+    x: "xã Chợ Gạo",
+    c: "THCS",
+    g: 82,
+    h: 78,
+    s: 4,
+    d: [2, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0],
+  },
+  {
+    n: 304,
+    t: "THCS Long Bình Điền",
+    x: "xã Chợ Gạo",
+    c: "THCS",
+    g: 46,
+    h: 43,
+    s: 3,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0],
+  },
+  {
+    n: 305,
+    t: "TH-THCS An Thái Trung",
+    x: "xã Thanh Hưng",
+    c: "THCS",
+    g: 75,
+    h: 72,
+    s: 1,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 306,
+    t: "MN Bình Phan",
+    x: "xã An Thạnh Thủy",
+    c: "Mầm non",
+    g: 19,
+    h: 18,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+  },
+  {
+    n: 307,
+    t: "TH An Thạnh Thủy",
+    x: "xã An Thạnh Thủy",
+    c: "Tiểu học",
+    g: 39,
+    h: 36,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0],
+  },
+  {
+    n: 308,
+    t: "TH Bình Phan",
+    x: "xã An Thạnh Thủy",
+    c: "Tiểu học",
+    g: 21,
+    h: 16,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 309,
+    t: "TH Bình Phục Nhứt",
+    x: "xã An Thạnh Thủy",
+    c: "Tiểu học",
+    g: 44,
+    h: 42,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 310,
+    t: "THCS An Thạnh Thủy",
+    x: "xã An Thạnh Thủy",
+    c: "THCS",
+    g: 28,
+    h: 21,
+    s: 3,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0],
+  },
+  {
+    n: 311,
+    t: "THCS Bình Phục Nhứt",
+    x: "xã An Thạnh Thủy",
+    c: "THCS",
+    g: 43,
+    h: 41,
+    s: 1,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 312,
+    t: "MN Mỹ Tịnh An",
+    x: "xã Mỹ Tịnh An",
+    c: "Mầm non",
+    g: 27,
+    h: 23,
+    s: 4,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0],
+  },
+  {
+    n: 313,
+    t: "TH Hòa Tịnh",
+    x: "xã Mỹ Tịnh An",
+    c: "Tiểu học",
+    g: 28,
+    h: 23,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0],
+  },
+  {
+    n: 314,
+    t: "TH Trung Hòa",
+    x: "xã Mỹ Tịnh An",
+    c: "Tiểu học",
+    g: 24,
+    h: 21,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0],
+  },
+  {
+    n: 315,
+    t: "TH Mỹ Tinh An",
+    x: "xã Mỹ Tịnh An",
+    c: "Tiểu học",
+    g: 35,
+    h: 33,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0],
+  },
+  {
+    n: 316,
+    t: "TH Tân Bình Thạnh",
+    x: "xã Mỹ Tịnh An",
+    c: "Tiểu học",
+    g: 21,
+    h: 19,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0],
+  },
+  {
+    n: 317,
+    t: "MG Thường Thới Hậu A",
+    x: "P.Thường Lạc",
+    c: "Mầm non",
+    g: 21,
+    h: 20,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+  },
+  {
+    n: 318,
+    t: "MN Thường Lạc",
+    x: "P.Thường Lạc",
+    c: "Mầm non",
+    g: 23,
+    h: 22,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+  },
+  {
+    n: 319,
+    t: "TH Thường Thới Hậu A1",
+    x: "P.Thường Lạc",
+    c: "Tiểu học",
+    g: 51,
+    h: 48,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0],
+  },
+  {
+    n: 320,
+    t: "TH Thường Lạc 1",
+    x: "P.Thường Lạc",
+    c: "Tiểu học",
+    g: 21,
+    h: 19,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0],
+  },
+  {
+    n: 321,
+    t: "TH Thường Lạc 2",
+    x: "P.Thường Lạc",
+    c: "Tiểu học",
+    g: 41,
+    h: 39,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 322,
+    t: "THCS Thường Lạc",
+    x: "P.Thường Lạc",
+    c: "THCS",
+    g: 34,
+    h: 31,
+    s: 1,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 323,
+    t: "TH Bình Ninh",
+    x: "xã Bình Ninh",
+    c: "Tiểu học",
+    g: 37,
+    h: 36,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 324,
+    t: "THCS Bình Ninh",
+    x: "xã Bình Ninh",
+    c: "THCS",
+    g: 46,
+    h: 42,
+    s: 2,
+    d: [0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 325,
+    t: "THCS Xuân Đông",
+    x: "xã Bình Ninh",
+    c: "THCS",
+    g: 28,
+    h: 25,
+    s: 3,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0],
+  },
+  {
+    n: 326,
+    t: "MN Hoa Hồng",
+    x: "P.Mỹ Tho",
+    c: "Mầm non",
+    g: 41,
+    h: 39,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+  },
+  {
+    n: 327,
+    t: "MN Sao Mai",
+    x: "P.Mỹ Tho",
+    c: "Mầm non",
+    g: 23,
+    h: 22,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+  },
+  {
+    n: 328,
+    t: "MN Lê Thị Hồng Gấm",
+    x: "P.Mỹ Tho",
+    c: "Mầm non",
+    g: 33,
+    h: 32,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+  },
+  {
+    n: 329,
+    t: "TH Hồ Văn Nhánh",
+    x: "P.Mỹ Tho",
+    c: "Tiểu học",
+    g: 31,
+    h: 29,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0],
+  },
+  {
+    n: 330,
+    t: "TH Tân Long",
+    x: "P.Mỹ Tho",
+    c: "Tiểu học",
+    g: 15,
+    h: 14,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 331,
+    t: "TH Đinh Bộ Lĩnh",
+    x: "P.Mỹ Tho",
+    c: "Tiểu học",
+    g: 48,
+    h: 47,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 332,
+    t: "THCS Trịnh Hoài Đức",
+    x: "P.Mỹ Tho",
+    c: "THCS",
+    g: 62,
+    h: 57,
+    s: 3,
+    d: [2, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 333,
+    t: "THCS Xuân Diệu",
+    x: "P.Mỹ Tho",
+    c: "THCS",
+    g: 144,
+    h: 142,
+    s: 1,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 334,
+    t: "MG An Phước",
+    x: "xã An Phước",
+    c: "Mầm non",
+    g: 28,
+    h: 23,
+    s: 5,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0],
+  },
+  {
+    n: 335,
+    t: "MN Giồng Găng",
+    x: "xã An Phước",
+    c: "Mầm non",
+    g: 31,
+    h: 26,
+    s: 5,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0],
+  },
+  {
+    n: 336,
+    t: "MG Tân Phước",
+    x: "xã An Phước",
+    c: "Mầm non",
+    g: 26,
+    h: 21,
+    s: 5,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0],
+  },
+  {
+    n: 337,
+    t: "TH An Phước",
+    x: "xã An Phước",
+    c: "Tiểu học",
+    g: 40,
+    h: 36,
+    s: 4,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 3, 0],
+  },
+  {
+    n: 338,
+    t: "TH Giồng Găng",
+    x: "xã An Phước",
+    c: "Tiểu học",
+    g: 43,
+    h: 39,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 339,
+    t: "TH Tân Phước",
+    x: "xã An Phước",
+    c: "Tiểu học",
+    g: 39,
+    h: 36,
+    s: 3,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 1, 0],
+  },
+  {
+    n: 340,
+    t: "THCS Tân Phước",
+    x: "xã An Phước",
+    c: "THCS",
+    g: 26,
+    h: 21,
+    s: 3,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0],
+  },
+  {
+    n: 341,
+    t: "THCS Nguyễn Quang Diêu",
+    x: "xã An Phước",
+    c: "THCS",
+    g: 32,
+    h: 28,
+    s: 3,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0],
+  },
+  {
+    n: 342,
+    t: "MN Gia Thuận",
+    x: "xã Gia Thuận",
+    c: "Mầm non",
+    g: 19,
+    h: 13,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+  },
+  {
+    n: 343,
+    t: "MN Kiểng Phước",
+    x: "xã Gia Thuận",
+    c: "Mầm non",
+    g: 26,
+    h: 23,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+  },
+  {
+    n: 344,
+    t: "MN Vàm Láng",
+    x: "xã Gia Thuận",
+    c: "Mầm non",
+    g: 38,
+    h: 32,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+  },
+  {
+    n: 345,
+    t: "TH Gia Thuận",
+    x: "xã Gia Thuận",
+    c: "Tiểu học",
+    g: 31,
+    h: 30,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 346,
+    t: "TH Kiểng Phước",
+    x: "xã Gia Thuận",
+    c: "Tiểu học",
+    g: 57,
+    h: 54,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0],
+  },
+  {
+    n: 347,
+    t: "TH Vàm Láng",
+    x: "xã Gia Thuận",
+    c: "Tiểu học",
+    g: 54,
+    h: 51,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 348,
+    t: "THCS Gia Thuận",
+    x: "xã Gia Thuận",
+    c: "THCS",
+    g: 39,
+    h: 28,
+    s: 5,
+    d: [3, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 349,
+    t: "THCS Thái Văn Nam",
+    x: "xã Gia Thuận",
+    c: "THCS",
+    g: 42,
+    h: 38,
+    s: 3,
+    d: [2, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 350,
+    t: "THCS Đoàn Hồng Phước",
+    x: "xã Gia Thuận",
+    c: "THCS",
+    g: 38,
+    h: 28,
+    s: 6,
+    d: [3, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0],
+  },
+  {
+    n: 351,
+    t: "TH Hưng Thạnh",
+    x: "xã Hưng Thạnh",
+    c: "Tiểu học",
+    g: 27,
+    h: 26,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 352,
+    t: "TH Phú Mỹ",
+    x: "xã Hưng Thạnh",
+    c: "Tiểu học",
+    g: 36,
+    h: 34,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0],
+  },
+  {
+    n: 353,
+    t: "TH Tân Hòa Thành",
+    x: "xã Hưng Thạnh",
+    c: "Tiểu học",
+    g: 49,
+    h: 47,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0],
+  },
+  {
+    n: 354,
+    t: "THCS Hưng Thạnh",
+    x: "xã Hưng Thạnh",
+    c: "THCS",
+    g: 27,
+    h: 25,
+    s: 2,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0],
+  },
+  {
+    n: 355,
+    t: "THCS Phú Mỹ",
+    x: "xã Hưng Thạnh",
+    c: "THCS",
+    g: 35,
+    h: 33,
+    s: 2,
+    d: [0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 356,
+    t: "THCS Tân Hòa Thành",
+    x: "xã Hưng Thạnh",
+    c: "THCS",
+    g: 37,
+    h: 35,
+    s: 2,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0],
+  },
+  {
+    n: 357,
+    t: "TH Trần Hưng Đạo",
+    x: "P.Long Thuận",
+    c: "Tiểu học",
+    g: 46,
+    h: 45,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 358,
+    t: "THCS Phường 2",
+    x: "P.Long Thuận",
+    c: "THCS",
+    g: 53,
+    h: 51,
+    s: 2,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0],
+  },
+  {
+    n: 359,
+    t: "MN Bình Nhì",
+    x: "xã Đồng Sơn",
+    c: "Mầm non",
+    g: 29,
+    h: 21,
+    s: 6,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 0],
+  },
+  {
+    n: 360,
+    t: "TH Huỳnh Văn Mảnh",
+    x: "xã Đồng Sơn",
+    c: "Tiểu học",
+    g: 48,
+    h: 43,
+    s: 3,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0],
+  },
+  {
+    n: 361,
+    t: "TH Huỳnh Văn Phèn",
+    x: "xã Đồng Sơn",
+    c: "Tiểu học",
+    g: 26,
+    h: 21,
+    s: 5,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 4, 0],
+  },
+  {
+    n: 362,
+    t: "THCS Võ Đăng Được",
+    x: "xã Đồng Sơn",
+    c: "THCS",
+    g: 57,
+    h: 50,
+    s: 7,
+    d: [1, 0, 0, 0, 0, 0, 2, 0, 0, 0, 1, 1, 0, 0, 1],
+  },
+  {
+    n: 363,
+    t: "MN Tuổi Xanh",
+    x: "P.Đạo Thạnh",
+    c: "Mầm non",
+    g: 24,
+    h: 23,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+  },
+  {
+    n: 364,
+    t: "TH Lê Quý Đôn",
+    x: "P.Đạo Thạnh",
+    c: "Tiểu học",
+    g: 68,
+    h: 67,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 365,
+    t: "TH Thiên Hộ Dương",
+    x: "P.Đạo Thạnh",
+    c: "Tiểu học",
+    g: 91,
+    h: 90,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 366,
+    t: "TH Đạo Thạnh",
+    x: "P.Đạo Thạnh",
+    c: "Tiểu học",
+    g: 46,
+    h: 45,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 367,
+    t: "TH Bình Hàng Trung",
+    x: "xã Bình Hàng Trung",
+    c: "Tiểu học",
+    g: 43,
+    h: 32,
+    s: 7,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 5, 1],
+  },
+  {
+    n: 368,
+    t: "TH Bình Hàng Tây",
+    x: "xã Bình Hàng Trung",
+    c: "Tiểu học",
+    g: 54,
+    h: 40,
+    s: 9,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 6, 1],
+  },
+  {
+    n: 369,
+    t: "TH Tân Hội Trung 1",
+    x: "xã Bình Hàng Trung",
+    c: "Tiểu học",
+    g: 33,
+    h: 27,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 370,
+    t: "TH Tân Hội Trung 2",
+    x: "xã Bình Hàng Trung",
+    c: "Tiểu học",
+    g: 29,
+    h: 25,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 371,
+    t: "THCS Tân Hội Trung",
+    x: "xã Bình Hàng Trung",
+    c: "THCS",
+    g: 43,
+    h: 34,
+    s: 3,
+    d: [2, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 372,
+    t: "THCS Bình Hàng Tây",
+    x: "xã Bình Hàng Trung",
+    c: "THCS",
+    g: 36,
+    h: 29,
+    s: 1,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 373,
+    t: "THCS Nguyễn Văn Khải",
+    x: "xã Bình Hàng Trung",
+    c: "THCS",
+    g: 40,
+    h: 36,
+    s: 4,
+    d: [1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0],
+  },
+  {
+    n: 374,
+    t: "MN Vĩnh Bình",
+    x: "xã Vĩnh Bình",
+    c: "Mầm non",
+    g: 36,
+    h: 34,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0],
+  },
+  {
+    n: 375,
+    t: "MN Thạnh Trị",
+    x: "xã Vĩnh Bình",
+    c: "Mầm non",
+    g: 29,
+    h: 25,
+    s: 3,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0],
+  },
+  {
+    n: 376,
+    t: "TH Nguyễn Hữu Trí",
+    x: "xã Vĩnh Bình",
+    c: "Tiểu học",
+    g: 39,
+    h: 38,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 377,
+    t: "TH Nguyễn Văn Tươi",
+    x: "xã Vĩnh Bình",
+    c: "Tiểu học",
+    g: 39,
+    h: 37,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 378,
+    t: "TH Phan Thế Dõng",
+    x: "xã Vĩnh Bình",
+    c: "Tiểu học",
+    g: 42,
+    h: 40,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 379,
+    t: "THCS Nguyễn Đắc Thắng",
+    x: "xã Vĩnh Bình",
+    c: "THCS",
+    g: 50,
+    h: 48,
+    s: 2,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0],
+  },
+  {
+    n: 380,
+    t: "THCS Nguyễn Văn Thiều",
+    x: "xã Vĩnh Bình",
+    c: "THCS",
+    g: 69,
+    h: 66,
+    s: 1,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 381,
+    t: "THCS Nguyễn Thanh Sơn",
+    x: "xã Vĩnh Bình",
+    c: "THCS",
+    g: 46,
+    h: 44,
+    s: 2,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0],
+  },
+  {
+    n: 382,
+    t: "MN Tân Phước",
+    x: "xã Tân Đông",
+    c: "Mầm non",
+    g: 26,
+    h: 24,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0],
+  },
+  {
+    n: 383,
+    t: "TH Tân Đông",
+    x: "xã Tân Đông",
+    c: "Tiểu học",
+    g: 36,
+    h: 35,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 384,
+    t: "TH Tân Tây",
+    x: "xã Tân Đông",
+    c: "Tiểu học",
+    g: 63,
+    h: 62,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 385,
+    t: "TH Tân Phước",
+    x: "xã Tân Đông",
+    c: "Tiểu học",
+    g: 53,
+    h: 49,
+    s: 3,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 0],
+  },
+  {
+    n: 386,
+    t: "THCS Lê Quốc Việt",
+    x: "xã Tân Đông",
+    c: "THCS",
+    g: 29,
+    h: 27,
+    s: 1,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 387,
+    t: "THCS Võ Văn Chỉnh",
+    x: "xã Tân Đông",
+    c: "THCS",
+    g: 59,
+    h: 57,
+    s: 2,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0],
+  },
+  {
+    n: 388,
+    t: "THCS Phùng Thanh Vân",
+    x: "xã Tân Đông",
+    c: "THCS",
+    g: 30,
+    h: 25,
+    s: 4,
+    d: [1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0],
+  },
+  {
+    n: 389,
+    t: "MN Bình Ân",
+    x: "xã Tân Điền",
+    c: "Mầm non",
+    g: 22,
+    h: 21,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+  },
+  {
+    n: 390,
+    t: "THCS Võ Văn Kiết",
+    x: "xã Tân Điền",
+    c: "THCS",
+    g: 29,
+    h: 28,
+    s: 1,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 391,
+    t: "THCS Bình Ân",
+    x: "xã Tân Điền",
+    c: "THCS",
+    g: 31,
+    h: 26,
+    s: 3,
+    d: [1, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 392,
+    t: "TH Thị trấn Mỹ Thọ 1",
+    x: "xã Mỹ Thọ",
+    c: "Tiểu học",
+    g: 42,
+    h: 36,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 393,
+    t: "TH Thị trấn Mỹ Thọ 2",
+    x: "xã Mỹ Thọ",
+    c: "Tiểu học",
+    g: 48,
+    h: 39,
+    s: 4,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0],
+  },
+  {
+    n: 394,
+    t: "TH Đinh Công Bê",
+    x: "xã Mỹ Thọ",
+    c: "Tiểu học",
+    g: 39,
+    h: 32,
+    s: 4,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 3, 0],
+  },
+  {
+    n: 395,
+    t: "TH Mỹ Xương",
+    x: "xã Mỹ Thọ",
+    c: "Tiểu học",
+    g: 33,
+    h: 27,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0],
+  },
+  {
+    n: 396,
+    t: "TH Mỹ Hội",
+    x: "xã Mỹ Thọ",
+    c: "Tiểu học",
+    g: 43,
+    h: 36,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 397,
+    t: "THCS Thị trấn Mỹ Thọ",
+    x: "xã Mỹ Thọ",
+    c: "THCS",
+    g: 83,
+    h: 73,
+    s: 2,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0],
+  },
+  {
+    n: 398,
+    t: "THCS Mỹ Hội",
+    x: "xã Mỹ Thọ",
+    c: "THCS",
+    g: 46,
+    h: 40,
+    s: 1,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 399,
+    t: "MN Anh Đào",
+    x: "P.Cao Lãnh",
+    c: "Mầm non",
+    g: 33,
+    h: 30,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+  },
+  {
+    n: 400,
+    t: "MN Sao Mai",
+    x: "P.Cao Lãnh",
+    c: "Mầm non",
+    g: 27,
+    h: 24,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0],
+  },
+  {
+    n: 401,
+    t: "MN Tân Thuận Đông",
+    x: "P.Cao Lãnh",
+    c: "Mầm non",
+    g: 32,
+    h: 27,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0],
+  },
+  {
+    n: 402,
+    t: "TH Bùi Thị Xuân",
+    x: "P.Cao Lãnh",
+    c: "Tiểu học",
+    g: 43,
+    h: 42,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 403,
+    t: "THCS Kim Hồng",
+    x: "P.Cao Lãnh",
+    c: "THCS",
+    g: 98,
+    h: 94,
+    s: 2,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0],
+  },
+  {
+    n: 404,
+    t: "THCS Phạm Hữu Lầu",
+    x: "P.Cao Lãnh",
+    c: "THCS",
+    g: 48,
+    h: 42,
+    s: 3,
+    d: [1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0],
+  },
+  {
+    n: 405,
+    t: "THCS Nguyễn Trãi",
+    x: "P.Cao Lãnh",
+    c: "THCS",
+    g: 36,
+    h: 34,
+    s: 1,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 406,
+    t: "THCS Tân Thuận Đông",
+    x: "P.Cao Lãnh",
+    c: "THCS",
+    g: 38,
+    h: 36,
+    s: 1,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 407,
+    t: "TH Tân Lý Đông",
+    x: "xã Tân Hương",
+    c: "Tiểu học",
+    g: 44,
+    h: 40,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 408,
+    t: "THCS Tân Hương",
+    x: "xã Tân Hương",
+    c: "THCS",
+    g: 36,
+    h: 29,
+    s: 4,
+    d: [1, 0, 0, 0, 0, 0, 2, 0, 0, 0, 1, 0, 0, 0, 0],
+  },
+  {
+    n: 409,
+    t: "THCS Tân Hội Đông",
+    x: "xã Tân Hương",
+    c: "THCS",
+    g: 47,
+    h: 43,
+    s: 2,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0],
+  },
+  {
+    n: 410,
+    t: "THCS Võ Việt Tân",
+    x: "P.Cai Lậy",
+    c: "THCS",
+    g: 48,
+    h: 39,
+    s: 7,
+    d: [1, 0, 0, 0, 0, 0, 4, 0, 0, 0, 1, 1, 0, 0, 0],
+  },
+  {
+    n: 411,
+    t: "TH Mỹ Lợi A",
+    x: "xã Mỹ Lợi",
+    c: "Tiểu học",
+    g: 43,
+    h: 39,
+    s: 4,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 3, 0],
+  },
+  {
+    n: 412,
+    t: "THCS Mỹ Lợi A",
+    x: "xã Mỹ Lợi",
+    c: "THCS",
+    g: 38,
+    h: 36,
+    s: 2,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0],
+  },
+  {
+    n: 413,
+    t: "TH-THCS An Thái Đông",
+    x: "xã Mỹ Lợi",
+    c: "THCS",
+    g: 65,
+    h: 42,
+    s: 2,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0],
+  },
+  {
+    n: 413,
+    t: "TH-THCS An Thái Đông",
+    x: "xã Mỹ Lợi",
+    c: "Tiểu học",
+    g: 0,
+    h: 0,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 414,
+    t: "TH-THCS Mỹ Lợi B",
+    x: "xã Mỹ Lợi",
+    c: "THCS",
+    g: 36,
+    h: 35,
+    s: 1,
+    d: [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+  {
+    n: 415,
+    t: "MN An Bình A",
+    x: "P.An Bình",
+    c: "Mầm non",
+    g: 26,
+    h: 25,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+  },
+  {
+    n: 416,
+    t: "MN An Bình B",
+    x: "P.An Bình",
+    c: "Mầm non",
+    g: 26,
+    h: 21,
+    s: 5,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0],
+  },
+  {
+    n: 417,
+    t: "MN An Lộc",
+    x: "P.An Bình",
+    c: "Mầm non",
+    g: 26,
+    h: 25,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+  },
+  {
+    n: 418,
+    t: "TH An Bình A",
+    x: "P.An Bình",
+    c: "Tiểu học",
+    g: 47,
+    h: 46,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 419,
+    t: "TH An Bình B",
+    x: "P.An Bình",
+    c: "Tiểu học",
+    g: 22,
+    h: 21,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 420,
+    t: "TH An Bình B 1",
+    x: "P.An Bình",
+    c: "Tiểu học",
+    g: 25,
+    h: 23,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0],
+  },
+  {
+    n: 421,
+    t: "TH-THCS An Lộc",
+    x: "P.An Bình",
+    c: "Tiểu học",
+    g: 58,
+    h: 56,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 422,
+    t: "TH An Hòa 1",
+    x: "xã An Hòa",
+    c: "Tiểu học",
+    g: 35,
+    h: 29,
+    s: 3,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 1, 0],
+  },
+  {
+    n: 423,
+    t: "TH Phú Thành B",
+    x: "xã An Hòa",
+    c: "Tiểu học",
+    g: 20,
+    h: 12,
+    s: 7,
+    d: [0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 1, 1, 1],
+  },
+  {
+    n: 424,
+    t: "THCS An Hòa",
+    x: "xã An Hòa",
+    c: "THCS",
+    g: 37,
+    h: 22,
+    s: 4,
+    d: [1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0],
+  },
+  {
+    n: 425,
+    t: "TH-THCS Phú Thành B",
+    x: "xã An Hòa",
+    c: "Tiểu học",
+    g: 46,
+    h: 32,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 425,
+    t: "TH-THCS Phú Thành B",
+    x: "xã An Hòa",
+    c: "THCS",
+    g: 0,
+    h: 0,
+    s: 5,
+    d: [1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 2, 1, 0, 0, 0],
+  },
+  {
+    n: 426,
+    t: "TH Nhị Quý",
+    x: "P.Nhị Quý",
+    c: "Tiểu học",
+    g: 38,
+    h: 37,
+    s: 1,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  },
+  {
+    n: 427,
+    t: "TH Nhị Mỹ",
+    x: "P.Nhị Quý",
+    c: "Tiểu học",
+    g: 25,
+    h: 23,
+    s: 2,
+    d: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0],
+  },
+  {
+    n: 428,
+    t: "THCS Nhị Quý",
+    x: "P.Nhị Quý",
+    c: "THCS",
+    g: 39,
+    h: 34,
+    s: 3,
+    d: [2, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+];
+
+// Biến lưu dữ liệu hiện tại (từ API hoặc fallback)
+let D1 = D1_fallback;
+let D2 = D2_fallback;
+
+// ===== RENDER TABLE 1 =====
+function capCls(c) {
+  if (c === "THPT") return "cap-THPT";
+  if (c === "THCS") return "cap-THCS";
+  if (c === "GDTX") return "cap-GDTX";
+  if (c.startsWith("Tiểu")) return "cap-TH";
+  return "cap-MN";
+}
+function renderSo(rows) {
+  const b = document.getElementById("body1");
+  b.innerHTML = "";
+  
+  let totalCT = 0;
+  const colTotals = new Array(18).fill(0);
+  
+  rows.forEach((r) => {
+    totalCT += r.s;
+    for (let j = 0; j < 18; j++) {
+      colTotals[j] += r.d[j] || 0;
+    }
+    
+    const s = r.d
+      .map((v) => `<td class="${v > 0 ? "tv" : "te"}">${v > 0 ? v : "–"}</td>`)
+      .join("");
+    const qty = regCounts[r.t] || 0;
+    const qtyBadge = `<a href="javascript:void(0)" onclick="viewSchoolCandidates('${r.t.replace(/'/g, "\\'")}')" style="text-decoration:none; margin-left:6px; font-size:0.72rem; font-weight:700; color:var(--bm); background:var(--bp); padding:2px 8px; border-radius:100px; display:inline-block; vertical-align:middle; transition: background 0.2s;" onmouseover="this.style.background='#d0e1fd'" onmouseout="this.style.background='var(--bp)'" title="Xem danh sách thí sinh dự tuyển">👥 ${qty} HS</a>`;
+    b.insertAdjacentHTML(
+      "beforeend",
+      `<tr><td class="tstt">${r.n}</td><td class="tname">${
+        r.t
+      } <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(r.t + ' Tỉnh Đồng Tháp')}" target="_blank" title="Xem vị trí trên Google Maps" style="text-decoration:none; margin-left:6px; font-size:1.05rem; display:inline-block; vertical-align:middle; transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">📍</a>${qtyBadge}</td><td><span class="cap ${capCls(r.c)}">${
+        r.c
+      }</span></td><td class="ttot">${r.s}</td>${s}</tr>`
+    );
+  });
+  document.getElementById("cnt1").textContent = `Hiển thị ${rows.length} hàng`;
+  
+  // Cập nhật tfoot của bảng 1 động
+  const footCells = colTotals.map(v => `<td>${v}</td>`).join('');
+  const table = b.closest('table');
+  const f = table ? table.querySelector('tfoot') : null;
+  if (f) {
+    f.innerHTML = `<tr>
+      <td colspan="3" class="tlbl">TỔNG CỘNG</td>
+      <td>${totalCT}</td>
+      ${footCells}
+    </tr>`;
+  }
+}
+function fSo() {
+  const q = document.getElementById("s1").value.toLowerCase(),
+    c = document.getElementById("c1").value;
+  renderSo(
+    D1.filter((r) => r.t.toLowerCase().includes(q) && (!c || r.c === c))
+  );
+}
+// ===== HÀM KHỞI TẠO DROPDOWN XÃ =====
+function buildXaDropdown() {
+  const xaList = [...new Set(D2.map((r) => r.x))].sort();
+  const xaSel = document.getElementById("x2");
+  // Xoá options cũ (trừ option đầu "Tất cả")
+  while (xaSel.options.length > 1) xaSel.remove(1);
+  xaList.forEach((x) => {
+    const o = document.createElement("option");
+    o.value = x;
+    o.textContent = x;
+    xaSel.appendChild(o);
+  });
+}
+
+// ===== RENDER TABLE 2 =====
+function renderXa(rows) {
+  const b = document.getElementById("body2");
+  b.innerHTML = "";
+  
+  let totalCT = 0;
+  const colTotals = new Array(15).fill(0);
+  
+  rows.forEach((r) => {
+    totalCT += r.s;
+    for (let j = 0; j < 15; j++) {
+      colTotals[j] += r.d[j] || 0;
+    }
+    
+    const s = r.d
+      .map((v) => `<td class="${v > 0 ? "tv" : "te"}">${v > 0 ? v : "–"}</td>`)
+      .join("");
+    const bg = r.g > 0 ? r.g : "–",
+      bh = r.h > 0 ? r.h : "–";
+    const qty = regCounts[r.t] || 0;
+    const qtyBadge = `<a href="javascript:void(0)" onclick="viewSchoolCandidates('${r.t.replace(/'/g, "\\'")}')" style="text-decoration:none; margin-left:6px; font-size:0.72rem; font-weight:700; color:var(--bm); background:var(--bp); padding:2px 8px; border-radius:100px; display:inline-block; vertical-align:middle; transition: background 0.2s;" onmouseover="this.style.background='#d0e1fd'" onmouseout="this.style.background='var(--bp)'" title="Xem danh sách thí sinh dự tuyển">👥 ${qty} HS</a>`;
+    b.insertAdjacentHTML(
+      "beforeend",
+      `<tr><td class="tstt">${r.n}</td><td class="tname">${
+        r.t
+      } <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(r.t + ' Tỉnh Đồng Tháp')}" target="_blank" title="Xem vị trí trên Google Maps" style="text-decoration:none; margin-left:6px; font-size:1.05rem; display:inline-block; vertical-align:middle; transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">📍</a>${qtyBadge}</td><td class="txa">${r.x}</td><td><span class="cap ${capCls(r.c)}">${
+        r.c
+      }</span></td><td class="tbc">${bg}</td><td class="tbc">${bh}</td><td class="ttot">${
+        r.s
+      }</td>${s}</tr>`
+    );
+  });
+  document.getElementById("cnt2").textContent = `Hiển thị ${rows.length} hàng`;
+  
+  // Cập nhật tfoot của bảng 2 động
+  const footCells = colTotals.map(v => `<td>${v}</td>`).join('');
+  const table = b.closest('table');
+  const f = table ? table.querySelector('tfoot') : null;
+  if (f) {
+    f.innerHTML = `<tr>
+      <td colspan="6" class="tlbl">TỔNG CỘNG</td>
+      <td>${totalCT}</td>
+      ${footCells}
+    </tr>`;
+  }
+}
+function fXa() {
+  const q = document.getElementById("s2").value.toLowerCase(),
+    c = document.getElementById("c2").value,
+    x = document.getElementById("x2").value;
+  renderXa(
+    D2.filter(
+      (r) =>
+        (r.t.toLowerCase().includes(q) || r.x.toLowerCase().includes(q)) &&
+        (!c || r.c.startsWith(c.substring(0, 4))) &&
+        (!x || r.x === x)
+    )
+  );
+}
+// ===== KHỞI TẠO: TẢI DỮ LIỆU TỪ API =====
+let regCounts = {};
+async function initChiTieu() {
+  // Hiển thị trạng thái loading
+  document.getElementById("body1").innerHTML =
+    '<tr><td colspan="22" style="text-align:center;padding:2rem;color:#6b7280">⏳ Đang tải dữ liệu...</td></tr>';
+  document.getElementById("body2").innerHTML =
+    '<tr><td colspan="22" style="text-align:center;padding:2rem;color:#6b7280">⏳ Đang tải dữ liệu...</td></tr>';
+
+  // Tải số lượng đăng ký của từng trường
+  try {
+    const countsRes = await fetch('./api.php?table=don_dang_ky&action=get_counts');
+    if (countsRes.ok) {
+      const countsArr = await countsRes.json();
+      if (Array.isArray(countsArr)) {
+        countsArr.forEach(item => {
+          regCounts[item.truong] = item.qty;
+        });
+      }
+    }
+  } catch(e) {
+    console.warn("Không tải được số lượng đăng ký:", e);
+  }
+
+  // Kiểm tra api.js đã được load chưa
+  if (typeof loadPL01 === "function") {
+    try {
+      // Tải PL01 từ MySQL
+      const rows1 = await loadPL01();
+      if (Array.isArray(rows1) && rows1.length > 0) {
+        // Chuyển đổi từ định dạng MySQL sang định dạng {n,t,c,s,d[]}
+        D1 = rows1.map((r) => ({
+          n: r.stt,
+          t: r.ten_truong,
+          c: r.cap,
+          s: r.so_chi_tieu,
+          d: [
+            r.mon_toan||0, r.mon_ly||0, r.mon_hoa||0, r.mon_sinh||0,
+            r.mon_van||0, r.mon_su||0, r.mon_dia||0, r.mon_gdktpl||0,
+            r.mon_tanh||0, r.mon_tduc||0, r.mon_ktnn||0, r.mon_ktcn||0,
+            r.mon_tin||0, r.mon_gdqp||0, r.mon_am||0, r.mon_my||0,
+            r.mon_th||0, r.mon_mn||0,
+          ],
+        }));
+      }
+    } catch (e) {
+      console.warn("Không tải được PL01 từ API, dùng dữ liệu mặc định:", e.message);
+    }
+
+    try {
+      // Tải PL02 từ MySQL
+      const rows2 = await loadPL02();
+      if (Array.isArray(rows2) && rows2.length > 0) {
+        D2 = rows2.map((r) => ({
+          n: r.stt,
+          t: r.ten_truong,
+          x: r.xa_phuong || "",
+          c: r.cap,
+          g: r.bieu_bien_che || 0,
+          h: r.hd_lao_dong || 0,
+          s: r.so_chi_tieu,
+          d: [
+            r.mon_toan||0, r.mon_khtn||0, r.mon_van||0, r.mon_lichsu||0,
+            r.mon_dialy||0, r.mon_gdcd||0, r.mon_tanh||0, r.mon_tduc||0,
+            r.mon_tin||0, r.mon_congnghe||0, r.mon_amnhac||0, r.mon_mythuat||0,
+            r.mon_tieuhoc||0, r.mon_mamnon||0, r.mon_tptdoi||0,
+          ],
+        }));
+      }
+    } catch (e) {
+      console.warn("Không tải được PL02 từ API, dùng dữ liệu mặc định:", e.message);
+    }
+  } else {
+    console.warn("api.js chưa được load, dùng dữ liệu mặc định.");
+  }
+
+  // Render cả hai bảng
+  renderSo(D1);
+  buildXaDropdown();
+  renderXa(D2);
+}
+
+// Chạy khi trang load xong
+document.addEventListener("DOMContentLoaded", initChiTieu);
+
+// ===== TABS =====
+function switchTab(id, btn) {
+  document
+    .querySelectorAll(".tab-btn")
+    .forEach((b) => b.classList.remove("active"));
+  document
+    .querySelectorAll(".tab-pane")
+    .forEach((p) => p.classList.remove("active"));
+  document.getElementById("tab-" + id).classList.add("active");
+  btn.classList.add("active");
+}
+
+window.toggleNav = function() {
+  document.querySelector('.nav-links').classList.toggle('active');
+};
+
+async function viewSchoolCandidates(schoolName) {
+  const modal = document.getElementById('modal-candidates');
+  const modalTitle = document.getElementById('school-title-modal');
+  const tbody = document.getElementById('candidates-modal-body');
+  
+  modalTitle.textContent = `Trường: ${schoolName}`;
+  tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; padding:1.5rem; color:#4b5563;">⏳ Đang tải danh sách...</td></tr>';
+  modal.style.display = 'flex';
+  
+  try {
+    const res = await fetch(`./api.php?table=don_dang_ky&truong=${encodeURIComponent(schoolName)}`);
+    if (!res.ok) {
+      if (res.status === 403) {
+        const err = await res.json();
+        tbody.innerHTML = `<tr><td colspan="4" style="text-align:center; padding:1.5rem; color:#dc2626; font-weight:600;">⚠️ ${err.error}</td></tr>`;
+      } else {
+        throw new Error(`Lỗi tải dữ liệu: ${res.status}`);
+      }
+      return;
+    }
+    
+    const candidates = await res.json();
+    if (!Array.isArray(candidates) || candidates.length === 0) {
+      tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; padding:1.5rem; color:#4b5563;">Không có thí sinh nào đăng ký vào trường này.</td></tr>';
+      return;
+    }
+    
+    tbody.innerHTML = candidates.map((c, i) => {
+      const trangThai = c.trang_thai || 'Chờ duyệt';
+      let badgeClass = 'badge-gdtx';
+      if (trangThai === 'Đã duyệt') badgeClass = 'badge-thcs';
+      if (trangThai === 'Từ chối') badgeClass = 'badge-mam-non';
+      const displayStatus = trangThai === 'Cho duyet' ? 'Chờ duyệt' : trangThai;
+      
+      return `<tr>
+        <td style="padding:0.6rem; text-align:center;">${i + 1}</td>
+        <td style="padding:0.6rem; font-weight:600; color:var(--bd);">${c.ho_ten}</td>
+        <td style="padding:0.6rem; color:#4b5563;">${c.vi_tri}</td>
+        <td style="padding:0.6rem; text-align:center;"><span class="badge ${badgeClass}">${displayStatus}</span></td>
+      </tr>`;
+    }).join('');
+  } catch(e) {
+    console.error(e);
+    tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; padding:1.5rem; color:#dc2626;">❌ Lỗi kết nối máy chủ. Vui lòng thử lại sau.</td></tr>';
+  }
+}
+
+function closeCandidatesModal() {
+  document.getElementById('modal-candidates').style.display = 'none';
+}
+
+// ===== REVEAL =====
+const ro = new IntersectionObserver(
+  (es) =>
+    es.forEach((e) => {
+      if (e.isIntersecting) e.target.classList.add("vis");
+    }),
+  { threshold: 0.07 }
+);
+document.querySelectorAll(".rev").forEach((el) => ro.observe(el));
+
+// ===== SCROLL TOP =====
+window.addEventListener("scroll", () => {
+  document.getElementById("scrollTop").classList.toggle("show", scrollY > 300);
+});
+
+
+</script>
+<script>
+window.addEventListener('scroll',()=>{
+  document.getElementById('scrollTop').classList.toggle('show',scrollY>300);
+});
+const ro=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis');}),{threshold:0.07});
+document.querySelectorAll('.rev').forEach(el=>ro.observe(el));
+</script>
+</body>
+</html>

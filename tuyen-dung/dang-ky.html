@@ -1,0 +1,2204 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phiếu Đăng Ký Dự Tuyển – Sở GDĐT Đồng Tháp</title>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+        :root {
+            --blue: #1a73e8;
+            --blue-light: #e8f0fe;
+            --green: #34a853;
+            --red: #ea4335;
+            --gray: #5f6368;
+            --border: #dadce0;
+            --bg: #f8f9fa;
+            --bd: #0a2463;
+            --bm: #1e4db7;
+            --bl: #3a7bd5;
+            --bp: #e8f0fe;
+            --ba: #00c2ff;
+            --w: #fff;
+            --g0: #f8fafc;
+            --g1: #f1f5f9;
+            --g3: #cbd5e1;
+            --g6: #475569;
+            --g8: #1e293b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Be Vietnam Pro", 'Segoe UI', Arial, sans-serif;
+            background: var(--bg);
+            color: #202124;
+            font-size: 14px;
+            padding-top: 64px;
+        }
+
+        /* ===== NAVIGATION BAR ===== */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            background: rgba(255, 255, 255, 0.97);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(30, 77, 183, 0.1);
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 1.5rem;
+            box-shadow: 0 2px 16px rgba(10, 36, 99, 0.08);
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--bm), var(--ba));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .nav-txt strong {
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: var(--bd);
+            display: block;
+            line-height: 1.2;
+        }
+
+        .nav-txt span {
+            font-size: 0.7rem;
+            color: var(--g6);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--g6);
+            font-size: 0.82rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--bm);
+        }
+
+        .btn-nav {
+            background: linear-gradient(135deg, var(--bm), var(--bl));
+            color: #w;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 0.45rem 1.1rem;
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 3px 10px rgba(30, 77, 183, 0.3);
+            transition: all 0.2s;
+        }
+
+        .btn-nav:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 16px rgba(30, 77, 183, 0.4);
+        }
+
+        /* ===== CONTAINER ===== */
+        .container {
+            max-width: 840px;
+            margin: 20px auto 40px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+            border-radius: 12px;
+            overflow: hidden;
+            background: white;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #c62828, #b71c1c);
+            color: white;
+            text-align: center;
+            padding: 24px 16px 20px;
+        }
+
+        .header .quoc-hieu {
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .header .doc-lap {
+            font-size: 12px;
+            margin: 2px 0 8px;
+            opacity: 0.9;
+        }
+
+        .header .separator {
+            width: 60px;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.5);
+            margin: 0 auto 12px;
+        }
+
+        .header h1 {
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .header .decree {
+            font-size: 11px;
+            opacity: 0.8;
+            margin-top: 6px;
+        }
+
+        .photo-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            background: white;
+            padding: 20px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .photo-box {
+            width: 96px;
+            height: 128px;
+            border: 2px dashed var(--border);
+            border-radius: 6px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            color: var(--gray);
+            text-align: center;
+            flex-shrink: 0;
+            cursor: pointer;
+            background: var(--bg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .photo-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 4px;
+        }
+
+        .photo-box svg {
+            margin-bottom: 4px;
+            opacity: 0.4;
+        }
+
+        .form-title-area {
+            flex: 1;
+        }
+
+        .form-title-area h2 {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--blue);
+            margin-bottom: 10px;
+        }
+
+        .section {
+            background: white;
+            margin-top: 2px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .section-title {
+            background: var(--blue);
+            color: white;
+            padding: 10px 16px;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .section-title .num {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .section-body {
+            padding: 20px;
+        }
+
+        .row {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+        }
+
+        .field {
+            flex: 1;
+            min-width: 180px;
+        }
+
+        .field.full {
+            flex: 0 0 100%;
+        }
+
+        .field.half {
+            flex: 0 0 calc(50% - 6px);
+        }
+
+        .field.third {
+            flex: 0 0 calc(33.33% - 8px);
+        }
+
+        label {
+            display: block;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--gray);
+            margin-bottom: 4px;
+        }
+
+        label .req {
+            color: var(--red);
+            margin-left: 2px;
+        }
+
+        input[type=text],
+        input[type=date],
+        input[type=email],
+        input[type=tel],
+        input[type=number],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px 10px;
+            border: 1.5px solid var(--border);
+            border-radius: 6px;
+            font-size: 13px;
+            color: #202124;
+            background: white;
+            transition: border-color .2s, box-shadow .2s;
+            outline: none;
+            font-family: inherit;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: var(--blue);
+            box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.15);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 60px;
+        }
+
+        select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235f6368' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            padding-right: 28px;
+        }
+
+        /* Checkbox group */
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 4px;
+        }
+
+        .cb-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+        }
+
+        .cb-item input[type=checkbox],
+        .cb-item input[type=radio] {
+            width: 16px;
+            height: 16px;
+            accent-color: var(--blue);
+            cursor: pointer;
+        }
+
+        .cb-item span {
+            font-size: 13px;
+        }
+
+        /* Dynamic tables */
+        .dyn-table-wrap {
+            overflow-x: auto;
+            margin-bottom: 10px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+        }
+
+        .dyn-table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+
+        .dyn-table th {
+            background: var(--blue-light);
+            color: var(--blue);
+            padding: 8px 10px;
+            font-size: 11.5px;
+            font-weight: 700;
+            border: 1px solid #c5d5f7;
+            text-align: left;
+            white-space: normal;
+            word-break: break-word;
+        }
+
+        .dyn-table td {
+            padding: 6px;
+            border: 1px solid var(--border);
+            vertical-align: middle;
+        }
+
+        .dyn-table td input,
+        .dyn-table td select,
+        .dyn-table td textarea {
+            border: 1px solid transparent;
+            border-radius: 4px;
+            padding: 6px 8px;
+            font-size: 12.5px;
+            width: 100%;
+            font-family: inherit;
+            resize: vertical;
+            box-sizing: border-box;
+        }
+
+        .dyn-table td input:focus,
+        .dyn-table td select:focus,
+        .dyn-table td textarea:focus {
+            border-color: var(--blue);
+            box-shadow: none;
+            outline: none;
+        }
+
+        /* Resizer CSS */
+        .dyn-table th {
+            position: relative;
+        }
+        .resizer {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 8px;
+            cursor: col-resize;
+            user-select: none;
+            height: 100%;
+            z-index: 10;
+        }
+        .resizer::after {
+            content: '';
+            position: absolute;
+            right: 3px;
+            top: 0;
+            width: 1px;
+            height: 100%;
+            background: #c5d5f7;
+            transition: all 0.15s;
+        }
+        .resizer:hover::after,
+        .resizer.resizing::after {
+            background: var(--blue);
+            width: 2px;
+        }
+
+        .dyn-table .del-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--red);
+            font-size: 16px;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        .dyn-table .del-btn:hover {
+            background: #fce8e6;
+        }
+
+        .add-row-btn {
+            background: none;
+            border: 1.5px dashed var(--blue);
+            color: var(--blue);
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: background .2s;
+            margin-top: 8px;
+        }
+
+        .add-row-btn:hover {
+            background: var(--blue-light);
+        }
+
+        /* Submit */
+        .submit-area {
+            padding: 24px 16px;
+            background: white;
+            text-align: center;
+            border-top: 2px solid var(--border);
+        }
+
+        .cam-doan {
+            font-size: 12px;
+            color: var(--gray);
+            margin-bottom: 14px;
+            max-width: 600px;
+            margin: 0 auto 16px;
+            line-height: 1.6;
+        }
+
+        .btn-submit {
+            background: var(--blue);
+            color: white;
+            border: none;
+            padding: 12px 40px;
+            font-size: 15px;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            letter-spacing: 0.5px;
+            transition: background .2s, transform .1s;
+            box-shadow: 0 2px 8px rgba(26, 115, 232, 0.3);
+        }
+
+        .btn-submit:hover {
+            background: #1557b0;
+        }
+
+        .btn-submit:active {
+            transform: scale(0.98);
+        }
+
+        .btn-submit:disabled {
+            background: var(--gray);
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            z-index: 9999;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            animation: slideUp .3s ease;
+        }
+
+        .toast.success {
+            background: var(--green);
+            color: white;
+        }
+
+        .toast.error {
+            background: var(--red);
+            color: white;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateX(-50%) translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
+        }
+
+        .loading-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(255, 255, 255, 0.8);
+            z-index: 9998;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .loading-overlay.show {
+            display: flex;
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid var(--border);
+            border-top-color: var(--blue);
+            border-radius: 50%;
+            animation: spin 0.7s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .note-box {
+            background: #fffde7;
+            border-left: 4px solid #f9a825;
+            padding: 10px 14px;
+            margin-top: 12px;
+            border-radius: 0 6px 6px 0;
+            font-size: 12px;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--g8);
+            color: rgba(255, 255, 255, 0.65);
+            padding: 2.5rem 1.5rem 1.2rem;
+            font-size: 0.82rem;
+            margin-top: 40px;
+        }
+
+        .foot-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .foot-top {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .foot-brand h4 {
+            color: #fff;
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin-bottom: 0.7rem;
+        }
+
+        .foot-col h5 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 0.9rem;
+            font-size: 0.85rem;
+        }
+
+        .foot-col ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.45rem;
+        }
+
+        .foot-col ul li a {
+            color: rgba(255, 255, 255, 0.55);
+            text-decoration: none;
+            transition: color 0.2s;
+            font-size: 0.8rem;
+        }
+
+        .foot-col ul li a:hover {
+            color: var(--ba);
+        }
+
+        .foot-bot {
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding-top: 1rem;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.35);
+            font-size: 0.75rem;
+        }
+
+        /* ===== MODAL SUCCESS ===== */
+        .modal-ov {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .modal-ov.open {
+            display: flex;
+        }
+
+        .modal {
+            background: #fff;
+            border-radius: 18px;
+            max-width: 480px;
+            width: 100%;
+            padding: 2.2rem;
+            box-shadow: 0 32px 80px rgba(0, 0, 0, 0.28);
+            animation: scl 0.3s ease;
+        }
+
+        @keyframes scl {
+            from {
+                transform: scale(0.9);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .modal-icon {
+            font-size: 2.8rem;
+            text-align: center;
+            margin-bottom: 0.9rem;
+        }
+
+        .modal h3 {
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--bd);
+            margin-bottom: 0.5rem;
+        }
+
+        .modal p {
+            text-align: center;
+            color: var(--g6);
+            font-size: 0.87rem;
+            margin-bottom: 1.3rem;
+            line-height: 1.6;
+        }
+
+        .modal-close {
+            width: 100%;
+            background: var(--blue);
+            color: #fff;
+            border: none;
+            border-radius: 9px;
+            padding: 0.75rem;
+            font-size: 0.87rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .modal-close:hover {
+            background: #1557b0;
+        }
+
+        @media (max-width: 900px) {
+            .foot-top {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .nav-toggle-btn {
+                display: flex !important;
+            }
+
+            .btn-nav {
+                display: none !important;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 64px;
+                left: 0;
+                right: 0;
+                background: #fff;
+                border-bottom: 1px solid rgba(30, 77, 183, 0.1);
+                padding: 1.2rem 1.5rem;
+                gap: 1.1rem;
+                box-shadow: 0 8px 20px rgba(10, 36, 99, 0.08);
+                align-items: flex-start;
+                z-index: 1000;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links .btn-nav-mobile {
+                display: inline-block !important;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .field.half,
+            .field.third {
+                flex: 0 0 100%;
+            }
+
+            .photo-row {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .foot-top {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-logo">
+            <div class="nav-icon">🏛️</div>
+            <div class="nav-txt">
+                <strong>Sở GDĐT Đồng Tháp</strong><span>Tuyển dụng viên chức 2026</span>
+            </div>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Trang chủ</a>
+            <a href="thong-bao.html">Thông báo</a>
+            <a href="chi-tieu.html">Chỉ tiêu</a>
+            <a href="quy-trinh.html">Quy trình</a>
+            <a href="ket-qua.html">Kết quả</a>
+            <a href="dang-ky.html">Đăng ký</a>
+            <a href="dang-ky.html" class="btn-nav-mobile" style="display:none; background:linear-gradient(135deg, var(--bm), var(--bl)); color:#fff; text-align:center; padding:0.6rem; border-radius:8px; text-decoration:none; font-weight:600; width:100%; margin-top:0.5rem;">Đăng ký ngay →</a>
+        </div>
+        <a href="dang-ky.html" class="btn-nav">Đăng ký ngay →</a>
+        <button class="nav-toggle-btn" onclick="toggleNav()" style="background:none; border:none; font-size:1.6rem; color:var(--bd); cursor:pointer; display:none; align-items:center; justify-content:center;">☰</button>
+    </nav>
+
+    <div class="container">
+        <!-- HEADER -->
+        <div class="header">
+            <div class="quoc-hieu">CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</div>
+            <div class="doc-lap">Độc lập - Tự do - Hạnh phúc</div>
+            <div class="separator"></div>
+            <h1>PHIẾU ĐĂNG KÝ DỰ TUYỂN</h1>
+            <div class="decree">Mẫu số 01 · Phụ lục kèm theo Nghị định 85/2023/NĐ-CP ngày 07/12/2023</div>
+        </div>
+
+        <!-- PHOTO + TIÊU ĐỀ -->
+        <div class="photo-row">
+            <div class="photo-box" onclick="document.getElementById('photoInput').click()" title="Nhấn để tải ảnh lên">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <rect x="3" y="3" width="18" height="18" rx="2" />
+                    <circle cx="8.5" cy="8.5" r="1.5" />
+                    <path d="M21 15l-5-5L5 21" />
+                </svg>
+                Ảnh 4×6
+                <img id="photoPreview" src="" style="display:none" />
+            </div>
+            <input type="file" id="photoInput" accept="image/*" style="display:none" onchange="previewPhoto(this)" />
+            <div class="form-title-area">
+                <h2>Thông tin đăng ký dự tuyển</h2>
+                <div class="row" style="margin-bottom:0">
+                    <div class="field">
+                        <label>Vị trí dự tuyển <span class="req">*</span> <small style="font-weight:400;color:#888">(1)</small></label>
+                        <input type="text" id="viTriDuTuyen" placeholder="Được điền tự động khi chọn Nguyện vọng 1 ở Phần V..." readonly style="background: var(--bg); cursor: not-allowed;" />
+                    </div>
+                    <div class="field">
+                        <label>Đơn vị dự tuyển <span class="req">*</span> <small style="font-weight:400;color:#888">(2)</small></label>
+                        <input type="text" id="donViDuTuyen" placeholder="Được điền tự động khi chọn Nguyện vọng 1 ở Phần V..." readonly style="background: var(--bg); cursor: not-allowed;" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION I -->
+        <div class="section">
+            <div class="section-title"><span class="num">I</span> THÔNG TIN CÁ NHÂN</div>
+            <div class="section-body">
+                <div class="row">
+                    <div class="field full">
+                        <label>Họ và tên (viết hoa) <span class="req">*</span></label>
+                        <input type="text" id="hoTen" placeholder="VÍ DỤ: NGUYỄN VĂN AN" style="text-transform:uppercase" required />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="field third">
+                        <label>Ngày, tháng, năm sinh <span class="req">*</span></label>
+                        <input type="date" id="ngaySinh" required />
+                    </div>
+                    <div class="field third">
+                        <label>Giới tính <span class="req">*</span> <small style="font-weight:400;color:#888">(3)</small></label>
+                        <select id="gioiTinh" required>
+                            <option value="">-- Chọn --</option>
+                            <option value="Nam">Nam</option>
+                            <option value="Nữ">Nữ</option>
+                        </select>
+                    </div>
+                    <div class="field third">
+                        <label>Dân tộc <span class="req">*</span></label>
+                        <input type="text" id="danToc" placeholder="Kinh, Tày, Mường..." required />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="field half">
+                        <label>Tôn giáo <span class="req">*</span></label>
+                        <input type="text" id="tonGiao" placeholder="Không / Phật giáo / Công giáo..." required />
+                    </div>
+                    <div class="field half">
+                        <label>Số CMND hoặc Thẻ căn cước công dân <span class="req">*</span></label>
+                        <input type="text" id="soCMND" placeholder="Số CMND / CCCD" required pattern="[0-9]{9,12}" title="Nhập số CMND/CCCD từ 9 đến 12 chữ số" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="field third">
+                        <label>Ngày cấp <span class="req">*</span></label>
+                        <input type="date" id="ngayCap" required />
+                    </div>
+                    <div class="field" style="flex:2">
+                        <label>Nơi cấp <span class="req">*</span></label>
+                        <input type="text" id="noiCap" placeholder="Công an tỉnh/thành phố..." required />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="field half">
+                        <label>Số điện thoại di động <span class="req">*</span></label>
+                        <input type="tel" id="soDienThoai" placeholder="0xxx xxx xxx" required />
+                    </div>
+                    <div class="field half">
+                        <label>Email <span class="req">*</span></label>
+                        <input type="email" id="email" placeholder="example@email.com" required />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="field full">
+                        <label>Quê quán <span class="req">*</span></label>
+                        <input type="text" id="queQuan" placeholder="Thôn/Xã/Huyện/Tỉnh..." required />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="field full">
+                        <label>Địa chỉ nhận thông báo <span class="req">*</span></label>
+                        <input type="text" id="diaChiNhanThongBao" placeholder="Số nhà, đường, phường/xã, quận/huyện, tỉnh/thành phố..." required />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="field full">
+                        <label>Thông tin về hộ khẩu (nếu có) <span class="req">*</span></label>
+                        <input type="text" id="thongTinHoKhau" placeholder="Địa chỉ hộ khẩu thường trú thường ghi..." required />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="field third">
+                        <label>Tình trạng sức khỏe <span class="req">*</span></label>
+                        <input type="text" id="tinhTrangSucKhoe" placeholder="Tốt / Bình thường..." required />
+                    </div>
+                    <div class="field third">
+                        <label>Chiều cao (cm) <span class="req">*</span></label>
+                        <input type="number" id="chieuCao" placeholder="Ví dụ: 165" min="100" max="250" required />
+                    </div>
+                    <div class="field third">
+                        <label>Cân nặng (kg) <span class="req">*</span></label>
+                        <input type="number" id="canNang" placeholder="Ví dụ: 55" min="30" max="200" required />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="field half">
+                        <label>Trình độ văn hóa <span class="req">*</span></label>
+                        <input type="text" id="trinhDoVanHoa" placeholder="12/12..." required />
+                    </div>
+                    <div class="field half">
+                        <label>Trình độ chuyên môn <span class="req">*</span></label>
+                        <input type="text" id="trinhDoChuyenMon" placeholder="Đại học / Thạc sĩ / Tiến sĩ..." required />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION II -->
+        <div class="section">
+            <div class="section-title"><span class="num">II</span> THÔNG TIN CƠ BẢN VỀ GIA ĐÌNH <small style="font-weight:400;opacity:.8;font-size:11px">(4)</small></div>
+            <div class="section-body">
+                <div class="dyn-table-wrap">
+                    <table class="dyn-table" id="giadinh-table" style="min-width:850px">
+                        <thead>
+                            <tr>
+                                <th style="width:150px">Mối quan hệ</th>
+                                <th style="width:200px">Họ và tên</th>
+                                <th style="width:150px">Ngày, tháng, năm sinh</th>
+                                <th>Quê quán, nghề nghiệp, chức danh, đơn vị công tác, học tập, nơi ở (trong, ngoài nước)</th>
+                                <th style="width:36px"></th>
+                            </tr>
+                        </thead>
+                        <tbody id="giadinh-body"></tbody>
+                    </table>
+                </div>
+                <button type="button" class="add-row-btn" onclick="addRow('giadinh')">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M12 5v14M5 12h14" />
+                    </svg>
+                    Thêm thành viên gia đình
+                </button>
+                <div class="note-box">
+                    <strong>Ghi chú (4):</strong> Cha, mẹ đẻ; vợ (chồng); con đẻ; anh, chị, em ruột.
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION III -->
+        <div class="section">
+            <div class="section-title"><span class="num">III</span> THÔNG TIN VỀ QUÁ TRÌNH ĐÀO TẠO</div>
+            <div class="section-body">
+                <div class="dyn-table-wrap">
+                    <table class="dyn-table" id="daotao-table" style="min-width:1300px">
+                        <thead>
+                            <tr>
+                                <th style="width:250px">Tên trường, cơ sở đào tạo cấp</th>
+                                <th style="width:120px">Ngày cấp văn bằng</th>
+                                <th style="width:120px">Trình độ văn bằng</th>
+                                <th style="width:120px">Số hiệu văn bằng</th>
+                                <th style="width:220px">Chuyên ngành đào tạo (bảng điểm)</th>
+                                <th style="width:200px">Ngành đào tạo</th>
+                                <th style="width:140px">Hình thức đào tạo</th>
+                                <th style="width:120px">Xếp loại bằng</th>
+                                <th style="width:36px"></th>
+                            </tr>
+                        </thead>
+                        <tbody id="daotao-body"></tbody>
+                    </table>
+                </div>
+                <button type="button" class="add-row-btn" onclick="addRow('daotao')">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M12 5v14M5 12h14" />
+                    </svg>
+                    Thêm bằng cấp / chứng chỉ
+                </button>
+            </div>
+        </div>
+
+        <!-- SECTION IV -->
+        <div class="section">
+            <div class="section-title"><span class="num">IV</span> THÔNG TIN VỀ QUÁ TRÌNH CÔNG TÁC (nếu có)</div>
+            <div class="section-body">
+                <div class="dyn-table-wrap">
+                    <table class="dyn-table" id="congtac-table" style="min-width:700px">
+                        <thead>
+                            <tr>
+                                <th style="width:150px">Từ ngày, tháng, năm</th>
+                                <th style="width:150px">Đến ngày, tháng, năm</th>
+                                <th>Cơ quan, tổ chức, đơn vị công tác</th>
+                                <th style="width:36px"></th>
+                            </tr>
+                        </thead>
+                        <tbody id="congtac-body"></tbody>
+                    </table>
+                </div>
+                <button type="button" class="add-row-btn" onclick="addRow('congtac')">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M12 5v14M5 12h14" />
+                    </svg>
+                    Thêm quá trình công tác
+                </button>
+            </div>
+        </div>
+
+        <!-- SECTION V -->
+        <div class="section">
+            <div class="section-title"><span class="num">V</span> THÔNG TIN ĐĂNG KÝ DỰ TUYỂN</div>
+            <div class="section-body">
+
+                <div style="background:#f8f9fa;border-radius:8px;padding:14px;margin-bottom:12px;border:1px solid var(--border)">
+                    <div style="font-size:13px;font-weight:700;color:var(--blue);margin-bottom:10px">1. Nguyện vọng 1 *</div>
+                    <input type="hidden" id="reg-phuluc" />
+                    <div class="row">
+                        <div class="field full">
+                            <label>Cấp học đăng ký NV1 <span class="req">*</span></label>
+                            <select id="reg-cap" required onchange="onCapHocChange()">
+                                <option value="">-- Chọn cấp học --</option>
+                                <option value="THPT">THPT (Trực thuộc Sở)</option>
+                                <option value="THCS">THCS</option>
+                                <option value="Tiểu học">Tiểu học</option>
+                                <option value="Mầm non">Mầm non</option>
+                                <option value="GDTX">GDTX (Trung tâm GDNN-GDTX)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom:0">
+                        <div class="field">
+                            <label>Trường / Đơn vị tuyển dụng <span class="req">*</span> <small style="font-weight:400">(2)</small></label>
+                            <select id="reg-truong" required onchange="onSchoolChange()">
+                                <option value="">-- Vui lòng chọn cấp học trước --</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label>Vị trí việc làm dự tuyển <span class="req">*</span> <small style="font-weight:400">(1)</small></label>
+                            <select id="reg-vitri" required onchange="onPositionChange()">
+                                <option value="">-- Vui lòng chọn trường trước --</option>
+                            </select>
+                            <input type="text" id="reg-vitri-khac" class="form-input" style="margin-top: 8px; display: none;" placeholder="Nhập vị trí việc làm dự tuyển khác..." oninput="syncNV1()" />
+                        </div>
+                    </div>
+                </div>
+
+                <div style="background:#f8f9fa;border-radius:8px;padding:14px;margin-bottom:12px;border:1px solid var(--border)">
+                    <div style="font-size:13px;font-weight:700;color:#5f6368;margin-bottom:6px">2. Nguyện vọng 2 <small style="font-weight:400;font-style:italic;font-size:11px">(Chỉ điền nếu thông báo tuyển dụng cho phép)</small></div>
+                    <input type="hidden" id="reg-phuluc-nv2" />
+                    <div class="row">
+                        <div class="field full">
+                            <label>Cấp học đăng ký NV2</label>
+                            <select id="reg-cap-nv2" onchange="onCapHocChangeNV2()">
+                                <option value="">-- Không đăng ký Nguyện vọng 2 --</option>
+                                <option value="THPT">THPT (Trực thuộc Sở)</option>
+                                <option value="THCS">THCS</option>
+                                <option value="Tiểu học">Tiểu học</option>
+                                <option value="Mầm non">Mầm non</option>
+                                <option value="GDTX">GDTX (Trung tâm GDNN-GDTX)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom:0">
+                        <div class="field">
+                            <label>Trường / Đơn vị tuyển dụng NV2 <small style="font-weight:400">(2)</small></label>
+                            <select id="reg-truong-nv2" onchange="onSchoolChangeNV2()">
+                                <option value="">-- Không đăng ký Nguyện vọng 2 --</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label>Vị trí việc làm dự tuyển NV2 <small style="font-weight:400">(1)</small></label>
+                            <select id="reg-vitri-nv2" onchange="onPositionChangeNV2()">
+                                <option value="">-- Không đăng ký Nguyện vọng 2 --</option>
+                            </select>
+                            <input type="text" id="reg-vitri-nv2-khac" class="form-input" style="margin-top: 8px; display: none;" placeholder="Nhập vị trí việc làm dự tuyển NV2 khác..." />
+                        </div>
+                    </div>
+                </div>
+
+                <div style="background:#f8f9fa;border-radius:8px;padding:14px;margin-bottom:12px;border:1px solid var(--border)">
+                    <div style="font-size:13px;font-weight:700;color:#5f6368;margin-bottom:10px">3. Đăng ký dự thi môn ngoại ngữ <small style="font-weight:400;font-style:italic;font-size:11px">(If vị trí tuyển không yêu cầu thì không tích)</small></div>
+                    <div style="margin-bottom:10px">
+                        <label style="margin-bottom:6px">3.1. Đăng ký dự thi ngoại ngữ <span class="req">*</span> <small style="font-weight:400">(5)</small></label>
+                        <div class="checkbox-group">
+                            <label class="cb-item"><input type="radio" name="ngoaiNgu" value="Tiếng Anh" required onchange="toggleNgoaiNguKhac()" /> <span>Tiếng Anh</span></label>
+                            <label class="cb-item"><input type="radio" name="ngoaiNgu" value="Tiếng Nga" onchange="toggleNgoaiNguKhac()" /> <span>Tiếng Nga</span></label>
+                            <label class="cb-item"><input type="radio" name="ngoaiNgu" value="Tiếng Pháp" onchange="toggleNgoaiNguKhac()" /> <span>Tiếng Pháp</span></label>
+                            <label class="cb-item"><input type="radio" name="ngoaiNgu" value="Tiếng Đức" onchange="toggleNgoaiNguKhac()" /> <span>Tiếng Đức</span></label>
+                            <label class="cb-item"><input type="radio" name="ngoaiNgu" value="Tiếng Trung Quốc" onchange="toggleNgoaiNguKhac()" /> <span>Tiếng Trung Quốc</span></label>
+                            <label class="cb-item"><input type="radio" name="ngoaiNgu" value="Ngoại ngữ khác" onchange="toggleNgoaiNguKhac()" /> <span>Ngoại ngữ khác</span></label>
+                            <label class="cb-item"><input type="radio" name="ngoaiNgu" value="Miễn thi ngoại ngữ" onchange="toggleNgoaiNguKhac()" /> <span>Miễn thi ngoại ngữ</span></label>
+                        </div>
+                        <div id="wrap-ngoai-ngu-khac" style="display:none; margin-top:8px">
+                            <label>Nhập tên ngoại ngữ khác theo yêu cầu của vị trí việc làm <span class="req">*</span></label>
+                            <input type="text" id="ngoaiNguKhac" placeholder="Ví dụ: Tiếng Nhật, Tiếng Hàn..." />
+                        </div>
+                    </div>
+                    <div id="wrap-mien-ngoai-ngu" style="display:none">
+                        <label>3.2. Lý do miễn thi ngoại ngữ (ghi rõ văn bằng, chứng chỉ đủ điều kiện miễn thi) <span class="req">*</span></label>
+                        <input type="text" id="mienThiNgoaiNgu" placeholder="Ví dụ: Có bằng cử nhân chuyên ngành Tiếng Anh, hoặc IELTS 6.0..." />
+                    </div>
+                </div>
+
+                <div style="background:#f8f9fa;border-radius:8px;padding:14px;border:1px solid var(--border)">
+                    <label>4. Đối tượng ưu tiên (nếu có)</label>
+                    <select id="doiTuongUuTien">
+                        <option value="">-- Không thuộc đối tượng ưu tiên --</option>
+                        <option value="Anh hùng Lực lượng vũ trang, Anh hùng Lao động, thương binh, người hưởng chính sách như thương binh (cộng 7,5 điểm)">Anh hùng Lực lượng vũ trang, Anh hùng Lao động, thương binh (Cộng 7,5 điểm)</option>
+                        <option value="Người dân tộc thiểu số, sĩ quan quân đội, sĩ quan công an, quân nhân chuyên nghiệp phục viên... (cộng 5,0 điểm)">Người dân tộc thiểu số, quân đội/công an phục viên, con liệt sĩ... (Cộng 5,0 điểm)</option>
+                        <option value="Người hoàn thành nghĩa vụ quân sự, nghĩa vụ tham gia công an nhân dân, đội viên thanh niên xung phong... (cộng 2,5 điểm)">Hoàn thành nghĩa vụ quân sự, CA nhân dân, thanh niên xung phong... (Cộng 2,5 điểm)</option>
+                    </select>
+                </div>
+
+            </div>
+        <!-- SECTION VI -->
+        <div class="section">
+            <div class="section-title"><span class="num">VI</span> ĐÍNH KÈM ẢNH THẺ 4x6</div>
+            <div class="section-body">
+                <div style="background:#e8f0fe;border-left:4px solid var(--blue);padding:12px;margin-bottom:15px;border-radius:0 6px 6px 0;font-size:12.5px;color:#1a73e8;line-height:1.6">
+                    💡 <strong>Lưu ý:</strong> Ảnh thẻ 4x6 của bạn sẽ được tự động chèn vào phiếu đăng ký dự tuyển khi xuất file PDF. Vui lòng chọn ảnh rõ mặt, nền xanh hoặc trắng.
+                </div>
+                <div class="row">
+                    <div class="field full">
+                        <label>Chọn ảnh thẻ của bạn (.png, .jpg, .jpeg, tối đa 5MB)</label>
+                        <div style="display: flex; gap: 20px; align-items: center; flex-wrap: wrap;">
+                            <div id="image-upload-container" style="flex: 1; min-width: 200px; border: 2px dashed var(--border); border-radius: 8px; padding: 25px 15px; text-align: center; background: var(--bg); cursor: pointer; transition: all 0.2s;" onclick="document.getElementById('imageFileInput').click()">
+                                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.5" style="margin-bottom:8px">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                                    <circle cx="8.5" cy="8.5" r="1.5" />
+                                    <polyline points="21 15 16 10 5 21" />
+                                </svg>
+                                <div id="image-upload-text" style="font-weight:600; color:var(--gray)">Nhấn vào đây để tải ảnh lên</div>
+                                <div style="font-size:11px; color:#999; margin-top:4px">Chỉ chấp nhận định dạng .png, .jpg, .jpeg</div>
+                            </div>
+                            <input type="file" id="imageFileInput" accept="image/*" style="display:none" onchange="handleImageSelect(this)" />
+                            
+                            <div style="width: 96px; height: 128px; border: 1px dashed var(--border); border-radius: 4px; display: flex; align-items: center; justify-content: center; background: #fff; overflow: hidden; position: relative;">
+                                <img id="imagePreview" style="width: 100%; height: 100%; object-fit: cover; display: none;" />
+                                <span id="imagePreviewPlaceholder" style="font-size: 11px; color: #999; text-align: center; padding: 5px;">Xem trước ảnh 4x6</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SUBMIT -->
+        <div class="submit-area">
+            <p class="cam-doan">
+                Tôi xin cam đoan và chịu trách nhiệm trước pháp luật về thông tin cung cấp trong Phiếu đăng ký dự tuyển
+                này và cam kết hoàn thiện đầy đủ hồ sơ theo quy định sau khi nhận được thông báo trúng tuyển.
+            </p>
+            <button type="button" class="btn-submit" id="submitBtn" onclick="submitForm()">
+                ✓ &nbsp; NỘP PHIẾU ĐĂNG KÝ
+            </button>
+        </div>
+
+    </div><!-- /container -->
+
+    <footer>
+        <div class="foot-inner">
+            <div class="foot-top">
+                <div class="foot-brand">
+                    <h4>🏛️ Sở GDĐT tỉnh Đồng Tháp</h4>
+                    <p>Tuyển dụng viên chức giáo viên 2026 theo Kế hoạch 407/KH-SGDĐT ngày 24/4/2026. Tổng 1.240 chỉ tiêu tại 468+ đơn vị.</p>
+                </div>
+                <div class="foot-col">
+                    <h5>Thông tin</h5>
+                    <ul>
+                        <li><a href="thong-bao.html">Thông báo tuyển dụng</a></li>
+                        <li><a href="chi-tieu.html">Chỉ tiêu theo trường</a></li>
+                        <li><a href="quy-trinh.html">Quy trình xét tuyển</a></li>
+                    </ul>
+                </div>
+                <div class="foot-col">
+                    <h5>Liên hệ</h5>
+                    <ul>
+                        <li><a href="#">Phòng Tổ chức Cán bộ</a></li>
+                        <li><a href="#">Tp. Cao Lãnh, Đồng Tháp</a></li>
+                        <li><a href="dang-ky.html">Đăng ký trực tuyến</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="foot-bot">© 2026 Sở Giáo dục và Đào tạo tỉnh Đồng Tháp — Kế hoạch 407/KH-SGDĐT</div>
+        </div>
+    </footer>
+
+    <!-- Loading overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="spinner"></div>
+        <div style="color:var(--blue);font-weight:600;font-size:14px">Đang gửi dữ liệu đăng ký...</div>
+    </div>
+
+    <!-- Modal thông báo đăng ký thành công -->
+    <div class="modal-ov" id="modal-success">
+        <div class="modal">
+            <div class="modal-icon">🎉</div>
+            <h3>Nộp Hồ Sơ Thành Công!</h3>
+            <p id="success-message">Hồ sơ đã được gửi đi.</p>
+            <button class="modal-close" onclick="closeModalSuccess()">Đóng</button>
+        </div>
+    </div>
+
+    <script>
+        // ===== LOAD SCHOOL DATA FROM MYSQL =====
+        let localPL01 = [];
+        let localPL02 = [];
+
+        async function loadSchoolData() {
+            try {
+                const [r1, r2] = await Promise.all([
+                    fetch('./api.php?table=pl01_chitieu').then(res => res.json()),
+                    fetch('./api.php?table=pl02_chitieu').then(res => res.json())
+                ]);
+                localPL01 = Array.isArray(r1) ? r1 : [];
+                localPL02 = Array.isArray(r2) ? r2 : [];
+            } catch (e) {
+                console.error('Lỗi tải danh sách trường:', e);
+            }
+        }
+        window.addEventListener('DOMContentLoaded', () => {
+            loadSchoolData();
+        });
+
+        // ===== DYNAMIC SELECT FOR NV1/NV2 =====
+        function onCapHocChange() {
+            const cap = document.getElementById('reg-cap').value;
+            const schoolSelect = document.getElementById('reg-truong');
+            schoolSelect.innerHTML = '<option value="">-- Chọn trường --</option>';
+            document.getElementById('reg-vitri').innerHTML = '<option value="">-- Vui lòng chọn trường trước --</option>';
+            
+            if (!cap) {
+                schoolSelect.innerHTML = '<option value="">-- Vui lòng chọn cấp học trước --</option>';
+                syncNV1();
+                return;
+            }
+
+            const schools1 = localPL01.filter(s => s.cap === cap).map(s => ({
+                name: s.ten_truong,
+                source: 'PL01',
+                data: s
+            }));
+
+            const schools2 = localPL02.filter(s => s.cap === cap).map(s => ({
+                name: s.ten_truong + (s.xa_phuong ? ` (${s.xa_phuong})` : ''),
+                source: 'PL02',
+                data: s
+            }));
+
+            const allSchools = [...schools1, ...schools2];
+
+            if (allSchools.length === 0) {
+                schoolSelect.innerHTML = '<option value="">-- Không có trường nào --</option>';
+                syncNV1();
+                return;
+            }
+
+            allSchools.forEach((s, idx) => {
+                const opt = document.createElement('option');
+                opt.value = s.name;
+                opt.dataset.source = s.source;
+                opt.dataset.index = idx;
+                opt.textContent = s.name;
+                schoolSelect.appendChild(opt);
+            });
+            schoolSelect.allSchools = allSchools;
+            syncNV1();
+        }
+
+        function formatDateToYYYYMMDD(dateStr) {
+            if (!dateStr) return '';
+            const cleanStr = dateStr.replace(/\s+/g, '');
+            const match = cleanStr.match(/(\d{1,2})[\/\-](\d{1,2})[\/\-](\d{4})/);
+            if (match) {
+                const d = match[1].padStart(2, '0');
+                const m = match[2].padStart(2, '0');
+                const y = match[3];
+                return `${y}-${m}-${d}`;
+            }
+            return '';
+        }
+
+        function formatPosition(cap, subject) {
+            let capText = cap || '';
+            if (subject === 'Mầm non') {
+                return 'Giáo viên Mầm non Hạng III';
+            } else if (subject === 'Tiểu học') {
+                return 'Giáo viên Tiểu học Hạng III';
+            } else if (subject === 'Tổng phụ trách Đội') {
+                return 'Giáo viên Tổng phụ trách Đội Hạng III';
+            } else {
+                return `Giáo viên ${capText} Hạng III môn ${subject}`;
+            }
+        }
+
+        function onSchoolChange() {
+            const schoolSelect = document.getElementById('reg-truong');
+            const selectedOpt = schoolSelect.options[schoolSelect.selectedIndex];
+            const positionSelect = document.getElementById('reg-vitri');
+            positionSelect.innerHTML = '<option value="">-- Chọn vị trí --</option>';
+
+            if (!selectedOpt || !selectedOpt.value || !schoolSelect.allSchools) {
+                positionSelect.innerHTML = '<option value="">-- Vui lòng chọn trường trước --</option>';
+                syncNV1();
+                return;
+            }
+
+            const idx = selectedOpt.dataset.index;
+            const schoolData = schoolSelect.allSchools[idx];
+            if (!schoolData) return;
+
+            const item = schoolData.data;
+            const source = schoolData.source;
+            document.getElementById('reg-phuluc').value = source;
+
+            const subjects = [];
+            if (source === 'PL01') {
+                const subjectsMap = {
+                    mon_toan: 'Toán', mon_ly: 'Vật lý', mon_hoa: 'Hóa học', mon_sinh: 'Sinh học',
+                    mon_van: 'Ngữ văn', mon_su: 'Lịch sử', mon_dia: 'Địa lý', mon_gdktpl: 'Giáo dục kinh tế và pháp luật',
+                    mon_tanh: 'Tiếng Anh', mon_tduc: 'Thể dục', mon_ktnn: 'Kỹ thuật nông nghiệp', mon_ktcn: 'Kỹ thuật công nghiệp',
+                    mon_tin: 'Tin học', mon_gdqp: 'Giáo dục quốc phòng', mon_am: 'Âm nhạc', mon_my: 'Mỹ thuật',
+                    mon_th: 'Tiểu học', mon_mn: 'Mầm non'
+                };
+                for (let key in subjectsMap) {
+                    if (parseInt(item[key]) > 0) {
+                        subjects.push(`${subjectsMap[key]} (Chỉ tiêu: ${item[key]})`);
+                    }
+                }
+            } else {
+                const subjectsMap = {
+                    mon_toan: 'Toán', mon_khtn: 'Khoa học tự nhiên', mon_van: 'Ngữ văn', mon_lichsu: 'Lịch sử',
+                    mon_dialy: 'Địa lý', mon_gdcd: 'Giáo dục công dân', mon_tanh: 'Tiếng Anh', mon_tduc: 'Thể dục',
+                    mon_tin: 'Tin học', mon_congnghe: 'Công nghệ', mon_amnhac: 'Âm nhạc', mon_mythuat: 'Mỹ thuật',
+                    mon_tieuhoc: 'Tiểu học', mon_mamnon: 'Mầm non', mon_tptdoi: 'Tổng phụ trách Đội'
+                };
+                for (let key in subjectsMap) {
+                    if (parseInt(item[key]) > 0) {
+                        subjects.push(`${subjectsMap[key]} (Chỉ tiêu: ${item[key]})`);
+                    }
+                }
+            }
+
+            if (subjects.length === 0) {
+                positionSelect.innerHTML = '<option value="">-- Trường này hiện hết chỉ tiêu --</option>';
+                syncNV1();
+                return;
+            }
+
+            const cap = document.getElementById('reg-cap').value;
+            subjects.forEach(sub => {
+                const opt = document.createElement('option');
+                const subName = sub.split(' (')[0];
+                const specName = formatPosition(cap, subName);
+                opt.value = specName;
+                opt.textContent = `${specName} (Chỉ tiêu: ${sub.split(' (Chỉ tiêu: ')[1] || '0'}`;
+                positionSelect.appendChild(opt);
+            });
+            
+            // Thêm tùy chọn tự nhập
+            const optKhac = document.createElement('option');
+            optKhac.value = 'khac';
+            optKhac.textContent = '-- Vị trí khác (Tự nhập) --';
+            positionSelect.appendChild(optKhac);
+            
+            onPositionChange();
+        }
+
+        function onPositionChange() {
+            const vitriSelect = document.getElementById('reg-vitri');
+            const khacInput = document.getElementById('reg-vitri-khac');
+            if (vitriSelect && khacInput) {
+                if (vitriSelect.value === 'khac') {
+                    khacInput.style.display = 'block';
+                    khacInput.required = true;
+                } else {
+                    khacInput.style.display = 'none';
+                    khacInput.required = false;
+                    khacInput.value = '';
+                }
+            }
+            syncNV1();
+        }
+
+        function syncNV1() {
+            const school = document.getElementById('reg-truong').value;
+            let position = document.getElementById('reg-vitri').value;
+            if (position === 'khac') {
+                position = document.getElementById('reg-vitri-khac').value.trim();
+            }
+            document.getElementById('donViDuTuyen').value = school || '';
+            document.getElementById('viTriDuTuyen').value = position || '';
+        }
+
+        // Nguyện vọng 2
+        function onCapHocChangeNV2() {
+            const cap = document.getElementById('reg-cap-nv2').value;
+            const schoolSelect = document.getElementById('reg-truong-nv2');
+            schoolSelect.innerHTML = '<option value="">-- Không đăng ký --</option>';
+            document.getElementById('reg-vitri-nv2').innerHTML = '<option value="">-- Không đăng ký --</option>';
+            document.getElementById('reg-phuluc-nv2').value = '';
+
+            if (!cap) return;
+
+            const schools1 = localPL01.filter(s => s.cap === cap).map(s => ({
+                name: s.ten_truong,
+                source: 'PL01',
+                data: s
+            }));
+
+            const schools2 = localPL02.filter(s => s.cap === cap).map(s => ({
+                name: s.ten_truong + (s.xa_phuong ? ` (${s.xa_phuong})` : ''),
+                source: 'PL02',
+                data: s
+            }));
+
+            const allSchools = [...schools1, ...schools2];
+
+            if (allSchools.length === 0) {
+                schoolSelect.innerHTML = '<option value="">-- Không có trường nào --</option>';
+                return;
+            }
+
+            schoolSelect.innerHTML = '<option value="">-- Chọn trường NV2 --</option>';
+            allSchools.forEach((s, idx) => {
+                const opt = document.createElement('option');
+                opt.value = s.name;
+                opt.dataset.source = s.source;
+                opt.dataset.index = idx;
+                opt.textContent = s.name;
+                schoolSelect.appendChild(opt);
+            });
+            schoolSelect.allSchools = allSchools;
+        }
+
+        function onSchoolChangeNV2() {
+            const schoolSelect = document.getElementById('reg-truong-nv2');
+            const selectedOpt = schoolSelect.options[schoolSelect.selectedIndex];
+            const positionSelect = document.getElementById('reg-vitri-nv2');
+            positionSelect.innerHTML = '<option value="">-- Chọn vị trí NV2 --</option>';
+
+            if (!selectedOpt || !selectedOpt.value || !schoolSelect.allSchools) {
+                positionSelect.innerHTML = '<option value="">-- Không đăng ký --</option>';
+                return;
+            }
+
+            const idx = selectedOpt.dataset.index;
+            const schoolData = schoolSelect.allSchools[idx];
+            if (!schoolData) return;
+
+            const item = schoolData.data;
+            const source = schoolData.source;
+            document.getElementById('reg-phuluc-nv2').value = source;
+
+            const subjects = [];
+            if (source === 'PL01') {
+                const subjectsMap = {
+                    mon_toan: 'Toán', mon_ly: 'Vật lý', mon_hoa: 'Hóa học', mon_sinh: 'Sinh học',
+                    mon_van: 'Ngữ văn', mon_su: 'Lịch sử', mon_dia: 'Địa lý', mon_gdktpl: 'Giáo dục kinh tế và pháp luật',
+                    mon_tanh: 'Tiếng Anh', mon_tduc: 'Thể dục', mon_ktnn: 'Kỹ thuật nông nghiệp', mon_ktcn: 'Kỹ thuật công nghiệp',
+                    mon_tin: 'Tin học', mon_gdqp: 'Giáo dục quốc phòng', mon_am: 'Âm nhạc', mon_my: 'Mỹ thuật',
+                    mon_th: 'Tiểu học', mon_mn: 'Mầm non'
+                };
+                for (let key in subjectsMap) {
+                    if (parseInt(item[key]) > 0) {
+                        subjects.push(`${subjectsMap[key]} (Chỉ tiêu: ${item[key]})`);
+                    }
+                }
+            } else {
+                const subjectsMap = {
+                    mon_toan: 'Toán', mon_khtn: 'Khoa học tự nhiên', mon_van: 'Ngữ văn', mon_lichsu: 'Lịch sử',
+                    mon_dialy: 'Địa lý', mon_gdcd: 'Giáo dục công dân', mon_tanh: 'Tiếng Anh', mon_tduc: 'Thể dục',
+                    mon_tin: 'Tin học', mon_congnghe: 'Công nghệ', mon_amnhac: 'Âm nhạc', mon_mythuat: 'Mỹ thuật',
+                    mon_tieuhoc: 'Tiểu học', mon_mamnon: 'Mầm non', mon_tptdoi: 'Tổng phụ trách Đội'
+                };
+                for (let key in subjectsMap) {
+                    if (parseInt(item[key]) > 0) {
+                        subjects.push(`${subjectsMap[key]} (Chỉ tiêu: ${item[key]})`);
+                    }
+                }
+            }
+
+            if (subjects.length === 0) {
+                positionSelect.innerHTML = '<option value="">-- Trường này hiện hết chỉ tiêu --</option>';
+                return;
+            }
+
+            const cap = document.getElementById('reg-cap-nv2').value;
+            subjects.forEach(sub => {
+                const opt = document.createElement('option');
+                const subName = sub.split(' (')[0];
+                const specName = formatPosition(cap, subName);
+                opt.value = specName;
+                opt.textContent = `${specName} (Chỉ tiêu: ${sub.split(' (Chỉ tiêu: ')[1] || '0'}`;
+                positionSelect.appendChild(opt);
+            });
+            
+            // Thêm tùy chọn tự nhập NV2
+            const optKhac = document.createElement('option');
+            optKhac.value = 'khac';
+            optKhac.textContent = '-- Vị trí khác (Tự nhập) --';
+            positionSelect.appendChild(optKhac);
+            
+            onPositionChangeNV2();
+        }
+
+        function onPositionChangeNV2() {
+            const vitriSelect = document.getElementById('reg-vitri-nv2');
+            const khacInput = document.getElementById('reg-vitri-nv2-khac');
+            if (vitriSelect && khacInput) {
+                if (vitriSelect.value === 'khac') {
+                    khacInput.style.display = 'block';
+                    khacInput.required = true;
+                } else {
+                    khacInput.style.display = 'none';
+                    khacInput.required = false;
+                    khacInput.value = '';
+                }
+            }
+        }
+
+        // ===== DYNAMIC TABLES =====
+        const tableConfigs = {
+            giadinh: {
+                tbody: 'giadinh-body',
+                cols: [
+                    {
+                        key: 'quanHe', type: 'select', placeholder: '',
+                        options: ['Cha đẻ', 'Mẹ đẻ', 'Vợ', 'Chồng', 'Con đẻ', 'Anh ruột', 'Chị ruột', 'Em ruột']
+                    },
+                    { key: 'hoTen', type: 'text', placeholder: 'Họ và tên' },
+                    { key: 'namSinh', type: 'text', placeholder: 'VD: 15/08/1970 hoặc 1970' },
+                    { key: 'chiTiet', type: 'textarea', placeholder: 'Quê quán, nghề nghiệp, nơi ở...' },
+                ]
+            },
+            daotao: {
+                tbody: 'daotao-body',
+                cols: [
+                    { key: 'coSo', type: 'text', placeholder: 'Tên trường, cơ sở đào tạo' },
+                    { key: 'ngayCap', type: 'date', placeholder: '' },
+                    {
+                        key: 'trinhDo', type: 'select', placeholder: '',
+                        options: ['Đại học', 'Cao đẳng', 'Thạc sĩ', 'Tiến sĩ', 'Trung cấp', 'Khác']
+                    },
+                    { key: 'soHieu', type: 'text', placeholder: 'Số hiệu bằng' },
+                    { key: 'chuyenNganh', type: 'text', placeholder: 'Chuyên ngành (bảng điểm)' },
+                    { key: 'nganhDaoTao', type: 'text', placeholder: 'Ngành học' },
+                    {
+                        key: 'hinhThuc', type: 'select', placeholder: '',
+                        options: ['Chính quy', 'Vừa làm vừa học', 'Liên thông', 'Từ xa']
+                    },
+                    {
+                        key: 'xepLoai', type: 'text', placeholder: 'Xếp loại/Điểm số'
+                    },
+                ]
+            },
+            congtac: {
+                tbody: 'congtac-body',
+                cols: [
+                    { key: 'tuNgay', type: 'month', placeholder: '' },
+                    { key: 'denNgay', type: 'month', placeholder: '' },
+                    { key: 'coQuan', type: 'text', placeholder: 'Cơ quan, đơn vị công tác' },
+                ]
+            }
+        };
+
+        function addRow(tableKey) {
+            const cfg = tableConfigs[tableKey];
+            const tbody = document.getElementById(cfg.tbody);
+            const tr = document.createElement('tr');
+            tr.dataset.table = tableKey;
+
+            cfg.cols.forEach(col => {
+                const td = document.createElement('td');
+                let el;
+                if (col.type === 'select') {
+                    el = document.createElement('select');
+                    el.innerHTML = `<option value="">-- Chọn --</option>`;
+                    col.options.forEach(o => {
+                        const opt = document.createElement('option');
+                        opt.value = o; opt.textContent = o;
+                        el.appendChild(opt);
+                    });
+                } else if (col.type === 'textarea') {
+                    el = document.createElement('textarea');
+                    el.placeholder = col.placeholder || '';
+                    el.rows = 2;
+                } else {
+                    el = document.createElement('input');
+                    el.type = col.type;
+                    el.placeholder = col.placeholder || '';
+                }
+                el.dataset.key = col.key;
+                td.appendChild(el); tr.appendChild(td);
+            });
+
+            const delTd = document.createElement('td');
+            delTd.innerHTML = '<button type="button" class="del-btn" onclick="this.closest(\'tr\').remove()" title="Xóa hàng">✕</button>';
+            tr.appendChild(delTd);
+            tbody.appendChild(tr);
+        }
+
+        function getTableData(tableKey) {
+            const cfg = tableConfigs[tableKey];
+            const rows = document.querySelectorAll(`#${cfg.tbody} tr`);
+            return Array.from(rows).map(tr => {
+                const obj = {};
+                tr.querySelectorAll('[data-key]').forEach(el => { obj[el.dataset.key] = el.value.trim(); });
+                return obj;
+            }).filter(r => Object.values(r).some(v => v));
+        }
+
+        // Kéo thả thay đổi độ rộng cột cho bảng
+        function makeTableResizable(tableId) {
+            const table = document.getElementById(tableId);
+            if (!table) return;
+            
+            // Đặt table-layout: fixed ngay lập tức
+            table.style.tableLayout = 'fixed';
+            
+            const cols = table.querySelectorAll('thead th');
+            
+            // Gán cứng độ rộng ban đầu cho toàn bộ cột dựa trên kích thước thực tế hiển thị
+            cols.forEach(h => {
+                if (!h.style.width) {
+                    h.style.width = h.getBoundingClientRect().width + 'px';
+                }
+            });
+
+            cols.forEach((col, idx) => {
+                if (idx === cols.length - 1) return; // Bỏ qua cột xoá hàng
+
+                const resizer = document.createElement('div');
+                resizer.className = 'resizer';
+                col.appendChild(resizer);
+
+                let startX, startWidth;
+
+                resizer.addEventListener('mousedown', initDrag);
+                resizer.addEventListener('touchstart', initDrag);
+
+                function initDrag(e) {
+                    startX = e.pageX || (e.touches && e.touches[0].pageX);
+                    startWidth = col.getBoundingClientRect().width;
+                    
+                    document.addEventListener('mousemove', doDrag);
+                    document.addEventListener('mouseup', stopDrag);
+                    document.addEventListener('touchmove', doDrag);
+                    document.addEventListener('touchend', stopDrag);
+                    
+                    resizer.classList.add('resizing');
+                }
+
+                function doDrag(e) {
+                    const currentX = e.pageX || (e.touches && e.touches[0].pageX);
+                    const dx = currentX - startX;
+                    const newWidth = Math.max(50, startWidth + dx);
+                    col.style.width = newWidth + 'px';
+                }
+
+                function stopDrag() {
+                    document.removeEventListener('mousemove', doDrag);
+                    document.removeEventListener('mouseup', stopDrag);
+                    document.removeEventListener('touchmove', doDrag);
+                    document.removeEventListener('touchend', stopDrag);
+                    resizer.classList.remove('resizing');
+                }
+            });
+        }
+
+        // Tạo sẵn các hàng mặc định khi tải trang và thiết lập resizable columns
+        window.onload = () => {
+            addRow('giadinh'); addRow('giadinh');
+            addRow('daotao');
+            addRow('congtac');
+
+            makeTableResizable('giadinh-table');
+            makeTableResizable('daotao-table');
+            makeTableResizable('congtac-table');
+        };
+
+        window.toggleNav = function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        };
+
+        // ===== PHOTO PREVIEW =====
+        window.photoBase64 = null;
+        
+        function updateAllPhotoPreviews(base64Data, filename) {
+            window.photoBase64 = base64Data;
+            
+            // 1. Giao diện phần đầu trang (photoPreview)
+            const imgTop = document.getElementById('photoPreview');
+            if (imgTop) {
+                if (base64Data) {
+                    imgTop.src = base64Data;
+                    imgTop.style.display = 'block';
+                } else {
+                    imgTop.src = '';
+                    imgTop.style.display = 'none';
+                }
+            }
+            
+            // 2. Giao diện phần đính kèm ảnh thẻ (imagePreview)
+            const imgBottom = document.getElementById('imagePreview');
+            const placeholder = document.getElementById('imagePreviewPlaceholder');
+            const uploadText = document.getElementById('image-upload-text');
+            const uploadContainer = document.getElementById('image-upload-container');
+            
+            if (imgBottom) {
+                if (base64Data) {
+                    imgBottom.src = base64Data;
+                    imgBottom.style.display = 'block';
+                    if (placeholder) placeholder.style.display = 'none';
+                    if (uploadText) {
+                        uploadText.innerHTML = `<span style="color:var(--green)">✓ Đã chọn ảnh: <strong>${filename || 'ảnh thẻ'}</strong></span>`;
+                    }
+                    if (uploadContainer) {
+                        uploadContainer.style.borderColor = 'var(--green)';
+                        uploadContainer.style.background = '#e8f5e9';
+                    }
+                } else {
+                    imgBottom.src = '';
+                    imgBottom.style.display = 'none';
+                    if (placeholder) placeholder.style.display = 'block';
+                    if (uploadText) {
+                        uploadText.textContent = 'Nhấn vào đây để tải ảnh lên';
+                    }
+                    if (uploadContainer) {
+                        uploadContainer.style.borderColor = '';
+                        uploadContainer.style.background = '';
+                    }
+                }
+            }
+        }
+
+        function previewPhoto(input) {
+            if (input.files && input.files[0]) {
+                const file = input.files[0];
+                const allowedTypes = ['image/jpeg', 'image/jpg', 'image/png'];
+                if (!allowedTypes.includes(file.type)) {
+                    showToast('Ảnh thẻ chỉ chấp nhận định dạng JPG, JPEG hoặc PNG', 'error');
+                    input.value = '';
+                    updateAllPhotoPreviews(null);
+                    return;
+                }
+                if (file.size > 5 * 1024 * 1024) { // 5MB limit
+                    showToast('Kích thước ảnh thẻ không được vượt quá 5MB', 'error');
+                    input.value = '';
+                    updateAllPhotoPreviews(null);
+                    return;
+                }
+
+                // Đồng bộ tệp tin được chọn sang widget input còn lại
+                try {
+                    if (input.id === 'photoInput') {
+                        const otherInput = document.getElementById('imageFileInput');
+                        if (otherInput) {
+                            otherInput.files = input.files;
+                        }
+                    } else if (input.id === 'imageFileInput') {
+                        const otherInput = document.getElementById('photoInput');
+                        if (otherInput) {
+                            otherInput.files = input.files;
+                        }
+                    }
+                } catch (err) {
+                    console.warn("Không thể đồng bộ file list trực tiếp:", err);
+                    try {
+                        const dt = new DataTransfer();
+                        dt.items.add(file);
+                        if (input.id === 'photoInput') {
+                            const otherInput = document.getElementById('imageFileInput');
+                            if (otherInput) otherInput.files = dt.files;
+                        } else {
+                            const otherInput = document.getElementById('photoInput');
+                            if (otherInput) otherInput.files = dt.files;
+                        }
+                    } catch (dtErr) {
+                        console.error("DataTransfer đồng bộ cũng thất bại:", dtErr);
+                    }
+                }
+
+
+                const reader = new FileReader();
+                reader.onload = e => {
+                    const base64Data = e.target.result;
+                    const isJpeg = base64Data.startsWith('data:image/jpeg;base64,') || base64Data.startsWith('data:image/jpg;base64,');
+                    const isPng = base64Data.startsWith('data:image/png;base64,');
+                    if (!isJpeg && !isPng) {
+                        showToast('Ảnh tải lên không đúng định dạng JPG hoặc PNG hợp lệ.', 'error');
+                        input.value = '';
+                        updateAllPhotoPreviews(null);
+                        return;
+                    }
+                    updateAllPhotoPreviews(base64Data, file.name);
+                };
+                reader.readAsDataURL(file);
+            } else {
+                updateAllPhotoPreviews(null);
+                
+                // Đồng bộ hủy chọn ảnh ở cả 2 input
+                const photoInput = document.getElementById('photoInput');
+                const imageFileInput = document.getElementById('imageFileInput');
+                if (photoInput) photoInput.value = '';
+                if (imageFileInput) imageFileInput.value = '';
+            }
+        }
+
+        function handleImageSelect(input) {
+            previewPhoto(input);
+        }
+
+        // ===== XỬ LÝ ẨN HIỆN NGOẠI NGỮ KHÁC & MIỄN THI =====
+        function toggleNgoaiNguKhac() {
+            const selectedNgoaiNgu = document.querySelector('input[name="ngoaiNgu"]:checked');
+            if (!selectedNgoaiNgu) return;
+            const val = selectedNgoaiNgu.value;
+            
+            document.getElementById('wrap-ngoai-ngu-khac').style.display = (val === 'Ngoại ngữ khác') ? 'block' : 'none';
+            document.getElementById('ngoaiNguKhac').required = (val === 'Ngoại ngữ khác');
+
+            document.getElementById('wrap-mien-ngoai-ngu').style.display = (val === 'Miễn thi ngoại ngữ') ? 'block' : 'none';
+            document.getElementById('mienThiNgoaiNgu').required = (val === 'Miễn thi ngoại ngữ');
+        }
+
+        // ===== VALIDATION =====
+        function validate() {
+            // Cả khi nộp PDF hay nhập tay đều bắt buộc điền đầy đủ mọi thông tin cơ bản
+            const required = ['hoTen', 'ngaySinh', 'gioiTinh', 'danToc', 'tonGiao', 'soCMND', 'ngayCap', 'noiCap', 'soDienThoai', 'email', 'queQuan', 'diaChiNhanThongBao', 'thongTinHoKhau', 'tinhTrangSucKhoe', 'chieuCao', 'canNang', 'trinhDoVanHoa', 'trinhDoChuyenMon', 'reg-cap', 'reg-truong', 'reg-vitri'];
+
+            for (const id of required) {
+                const el = document.getElementById(id);
+                if (!el || !el.value.trim()) {
+                    if (el) {
+                        el.focus(); el.style.borderColor = '#ea4335';
+                        setTimeout(() => el.style.borderColor = '', 2000);
+                    }
+                    showToast('Vui lòng điền đầy đủ thông tin bắt buộc (*)', 'error');
+                    return false;
+                }
+            }
+            
+            // Kiểm tra vị trí tự nhập NV1
+            if (document.getElementById('reg-vitri').value === 'khac') {
+                const khacInput = document.getElementById('reg-vitri-khac');
+                if (!khacInput || !khacInput.value.trim()) {
+                    if (khacInput) {
+                        khacInput.focus(); khacInput.style.borderColor = '#ea4335';
+                        setTimeout(() => khacInput.style.borderColor = '', 2000);
+                    }
+                    showToast('Vui lòng nhập vị trí việc làm dự tuyển tự chọn', 'error');
+                    return false;
+                }
+            }
+
+            // Kiểm tra vị trí tự nhập NV2
+            if (document.getElementById('reg-vitri-nv2').value === 'khac') {
+                const khacInput = document.getElementById('reg-vitri-nv2-khac');
+                if (!khacInput || !khacInput.value.trim()) {
+                    if (khacInput) {
+                        khacInput.focus(); khacInput.style.borderColor = '#ea4335';
+                        setTimeout(() => khacInput.style.borderColor = '', 2000);
+                    }
+                    showToast('Vui lòng nhập vị trí việc làm dự tuyển NV2 tự chọn', 'error');
+                    return false;
+                }
+            }
+            
+            const selectedNgoaiNgu = document.querySelector('input[name="ngoaiNgu"]:checked');
+            if (!selectedNgoaiNgu) {
+                showToast('Vui lòng chọn môn ngoại ngữ dự thi hoặc miễn thi', 'error');
+                return false;
+            }
+
+            // Kiểm tra các dòng của bảng động
+            const checkTableRows = (tbodyId, name) => {
+                const tbody = document.getElementById(tbodyId);
+                const rows = tbody.querySelectorAll('tr');
+                for (let i = 0; i < rows.length; i++) {
+                    const row = rows[i];
+                    const inputs = row.querySelectorAll('[data-key]');
+                    const values = Array.from(inputs).map(inp => inp.value.trim());
+                    const filledCount = values.filter(v => v !== '').length;
+                    
+                    if (filledCount > 0 && filledCount < inputs.length) {
+                        // Xác định dòng này có phải chứng chỉ Anh văn / Tin học không
+                        let isCert = false;
+                        if (tbodyId === 'daotao-body') {
+                            const levelInput = row.querySelector('[data-key="trinhDo"]');
+                            const schoolInput = row.querySelector('[data-key="coSo"]');
+                            const majorInput = row.querySelector('[data-key="nganhDaoTao"]');
+                            
+                            const isKhac = levelInput && levelInput.value === 'Khác';
+                            const textToCheck = ((schoolInput ? schoolInput.value : '') + ' ' + (majorInput ? majorInput.value : '')).toLowerCase();
+                            const matchesCertKeywords = ['anh', 'english', 'tin hoc', 'ngoai ngu', 'chung chi', 'b1', 'b2', 'toeic', 'ielts', 'it'].some(kw => textToCheck.includes(kw));
+                            
+                            if (isKhac || matchesCertKeywords) {
+                                isCert = true;
+                            }
+                        }
+
+                        // Nếu dòng có ít nhất 1 trường được điền nhưng chưa điền đầy đủ
+                        for (let j = 0; j < inputs.length; j++) {
+                            const key = inputs[j].dataset.key;
+                            
+                            // Bỏ qua kiểm tra chuyên ngành và xếp loại đối với chứng chỉ tiếng Anh / tin học
+                            if (isCert && (key === 'chuyenNganh' || key === 'xepLoai')) {
+                                continue;
+                            }
+                            
+                            if (!inputs[j].value.trim()) {
+                                inputs[j].focus();
+                                inputs[j].style.borderColor = '#ea4335';
+                                showToast(`Vui lòng điền đầy đủ các cột tại dòng thứ ${i + 1} của bảng ${name}`, 'error');
+                                setTimeout(() => inputs[j].style.borderColor = '', 2000);
+                                return false;
+                            }
+                        }
+                    }
+                }
+                return true;
+            };
+
+            if (!checkTableRows('giadinh-body', 'Thông tin gia đình')) return false;
+            if (!checkTableRows('daotao-body', 'Quá trình đào tạo')) return false;
+            if (!checkTableRows('congtac-body', 'Quá trình công tác')) return false;
+
+            // Kiểm tra bảng Đào tạo bắt buộc phải có ít nhất 1 dòng được điền đầy đủ
+            const daotaoRows = document.getElementById('daotao-body').querySelectorAll('tr');
+            let hasValidDaotao = false;
+            for (const row of daotaoRows) {
+                const inputs = row.querySelectorAll('[data-key]');
+                
+                // Xác định dòng này có phải chứng chỉ Anh văn / Tin học không
+                let isCert = false;
+                const levelInput = row.querySelector('[data-key="trinhDo"]');
+                const schoolInput = row.querySelector('[data-key="coSo"]');
+                const majorInput = row.querySelector('[data-key="nganhDaoTao"]');
+                const isKhac = levelInput && levelInput.value === 'Khác';
+                const textToCheck = ((schoolInput ? schoolInput.value : '') + ' ' + (majorInput ? majorInput.value : '')).toLowerCase();
+                const matchesCertKeywords = ['anh', 'english', 'tin hoc', 'ngoai ngu', 'chung chi', 'b1', 'b2', 'toeic', 'ielts', 'it'].some(kw => textToCheck.includes(kw));
+                if (isKhac || matchesCertKeywords) {
+                    isCert = true;
+                }
+
+                const allFilled = Array.from(inputs).every(inp => {
+                    const key = inp.dataset.key;
+                    if (isCert && (key === 'chuyenNganh' || key === 'xepLoai')) {
+                        return true; // Bỏ qua không bắt buộc cho chứng chỉ
+                    }
+                    return inp.value.trim() !== '';
+                });
+                
+                const coSoVal = schoolInput ? schoolInput.value.trim() : '';
+                if (allFilled && coSoVal !== '') {
+                    hasValidDaotao = true;
+                    break;
+                }
+            }
+            if (!hasValidDaotao) {
+                showToast('Quá trình đào tạo bắt buộc phải có ít nhất 1 dòng được điền đầy đủ thông tin', 'error');
+                return false;
+            }
+
+            // Kiểm tra ảnh thẻ 4x6 bắt buộc
+            if (!window.photoBase64) {
+                showToast('Vui lòng tải lên ảnh thẻ 4x6 của bạn', 'error');
+                return false;
+            }
+
+            return true;
+        }
+
+        // ===== SUBMIT FORM =====
+        async function submitForm() {
+            if (!validate()) return;
+
+            const selectedNgoaiNgu = document.querySelector('input[name="ngoaiNgu"]:checked');
+
+            const payload = {
+                ho_ten: document.getElementById('hoTen').value.trim(),
+                ngay_sinh: document.getElementById('ngaySinh').value,
+                gioi_tinh: document.getElementById('gioiTinh').value,
+                dan_toc: document.getElementById('danToc').value.trim(),
+                ton_giao: document.getElementById('tonGiao').value.trim(),
+                cccd: document.getElementById('soCMND').value.trim(),
+                ngay_cap: document.getElementById('ngayCap').value,
+                noi_cap: document.getElementById('noiCap').value.trim(),
+                sdt: document.getElementById('soDienThoai').value.trim(),
+                email: document.getElementById('email').value.trim(),
+                que_quan: document.getElementById('queQuan').value.trim(),
+                ho_khau: document.getElementById('thongTinHoKhau').value.trim(),
+                dia_chi_thong_bao: document.getElementById('diaChiNhanThongBao').value.trim(),
+                suc_khoe: document.getElementById('tinhTrangSucKhoe').value.trim(),
+                chieu_cao: parseInt(document.getElementById('chieuCao').value) || null,
+                can_nang: parseInt(document.getElementById('canNang').value) || null,
+                trinh_do_van_hoa: document.getElementById('trinhDoVanHoa').value.trim(),
+                trinh_do_chuyen_mon: document.getElementById('trinhDoChuyenMon').value.trim(),
+                
+                // Nguyện vọng 1
+                cap: document.getElementById('reg-cap').value,
+                truong: document.getElementById('reg-truong').value,
+                vi_tri: document.getElementById('reg-vitri').value === 'khac'
+                    ? document.getElementById('reg-vitri-khac').value.trim()
+                    : document.getElementById('reg-vitri').value,
+                phu_luc: document.getElementById('reg-phuluc').value,
+                
+                // Nguyện vọng 2
+                cap_nv2: document.getElementById('reg-cap-nv2').value || null,
+                truong_nv2: document.getElementById('reg-truong-nv2').value || null,
+                vi_tri_nv2: document.getElementById('reg-vitri-nv2').value === 'khac'
+                    ? document.getElementById('reg-vitri-nv2-khac').value.trim()
+                    : (document.getElementById('reg-vitri-nv2').value || null),
+                phu_luc_nv2: document.getElementById('reg-phuluc-nv2').value || null,
+                
+                // Ngoại ngữ
+                ngoai_ngu: selectedNgoaiNgu ? selectedNgoaiNgu.value : '',
+                ngoai_ngu_khac: document.getElementById('ngoaiNguKhac').value.trim() || null,
+                mien_ngoai_ngu: document.getElementById('mienThiNgoaiNgu').value.trim() || null,
+                
+                // Khác
+                doi_tuong_uu_tien: document.getElementById('doiTuongUuTien').value || null,
+                thong_tin_gia_dinh: JSON.stringify(getTableData('giadinh')),
+                qua_trinh_dao_tao: JSON.stringify(getTableData('daotao')),
+                qua_trinh_cong_tac: JSON.stringify(getTableData('congtac')),
+                trang_thai: 'Chờ duyệt',
+                file_anh_base64: window.photoBase64 || null
+            };
+
+            document.getElementById('loadingOverlay').classList.add('show');
+            const submitBtn = document.getElementById('submitBtn');
+            submitBtn.disabled = true;
+
+            try {
+                const res = await fetch('./api.php?table=don_dang_ky', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(payload)
+                });
+                const data = await res.json();
+                
+                if (res.ok && data.ok) {
+                    showToast('✓ Gửi đăng ký hồ sơ thành công!', 'success');
+                    openModalSuccess(payload.ho_ten, payload.cccd);
+                    
+                    // Reset Photo đính kèm
+                    window.photoBase64 = null;
+                    document.getElementById('photoInput').value = '';
+                    document.getElementById('photoPreview').src = '';
+                    document.getElementById('photoPreview').style.display = 'none';
+                    
+                    // Reset bottom Photo widget
+                    document.getElementById('imageFileInput').value = '';
+                    const imgBottom = document.getElementById('imagePreview');
+                    if (imgBottom) {
+                        imgBottom.src = '';
+                        imgBottom.style.display = 'none';
+                    }
+                    const placeholder = document.getElementById('imagePreviewPlaceholder');
+                    if (placeholder) placeholder.style.display = 'block';
+                    const uploadText = document.getElementById('image-upload-text');
+                    if (uploadText) uploadText.textContent = 'Nhấn vào đây để tải ảnh lên';
+                    const uploadContainer = document.getElementById('image-upload-container');
+                    if (uploadContainer) {
+                        uploadContainer.style.borderColor = '';
+                        uploadContainer.style.background = '';
+                    }
+
+                    // Reset form và các bảng động
+                    document.getElementById('hoTen').value = '';
+                    document.getElementById('ngaySinh').value = '';
+                    document.getElementById('gioiTinh').value = '';
+                    document.getElementById('danToc').value = '';
+                    document.getElementById('tonGiao').value = '';
+                    document.getElementById('soCMND').value = '';
+                    document.getElementById('ngayCap').value = '';
+                    document.getElementById('noiCap').value = '';
+                    document.getElementById('soDienThoai').value = '';
+                    document.getElementById('email').value = '';
+                    document.getElementById('queQuan').value = '';
+                    document.getElementById('diaChiNhanThongBao').value = '';
+                    document.getElementById('thongTinHoKhau').value = '';
+                    document.getElementById('tinhTrangSucKhoe').value = '';
+                    document.getElementById('chieuCao').value = '';
+                    document.getElementById('canNang').value = '';
+                    document.getElementById('trinhDoVanHoa').value = '';
+                    document.getElementById('trinhDoChuyenMon').value = '';
+                    
+                    // Reset NV
+                    document.getElementById('reg-cap').value = '';
+                    onCapHocChange();
+                    document.getElementById('reg-cap-nv2').value = '';
+                    onCapHocChangeNV2();
+                    
+                    document.getElementById('reg-vitri-khac').value = '';
+                    document.getElementById('reg-vitri-nv2-khac').value = '';
+                    onPositionChange();
+                    onPositionChangeNV2();
+                    
+                    // Reset radio ngoại ngữ
+                    const checkedRadio = document.querySelector('input[name="ngoaiNgu"]:checked');
+                    if (checkedRadio) checkedRadio.checked = false;
+                    document.getElementById('ngoaiNguKhac').value = '';
+                    document.getElementById('mienThiNgoaiNgu').value = '';
+                    toggleNgoaiNguKhac();
+                    
+                    document.getElementById('doiTuongUuTien').value = '';
+                    
+                    // Reset table con
+                    document.getElementById('giadinh-body').innerHTML = '';
+                    document.getElementById('daotao-body').innerHTML = '';
+                    document.getElementById('congtac-body').innerHTML = '';
+                    addRow('giadinh'); addRow('giadinh');
+                    addRow('daotao');
+                    addRow('congtac');
+                } else {
+                    showToast('✗ Nộp phiếu thất bại: ' + (data.error || 'Vui lòng kiểm tra lại. Số CCCD này có thể đã đăng ký.'), 'error');
+                }
+            } catch (err) {
+                console.error(err);
+                showToast('Lỗi kết nối máy chủ: ' + err.message, 'error');
+            } finally {
+                document.getElementById('loadingOverlay').classList.remove('show');
+                submitBtn.disabled = false;
+            }
+        }
+
+        // ===== CONTROL MODAL =====
+        function openModalSuccess(name, cccd) {
+            document.getElementById('success-message').innerHTML = `Hồ sơ tuyển dụng của ứng viên <strong>${name}</strong> (CCCD: ${cccd}) đã được ghi nhận trên hệ thống.<br/><br/>Hội đồng tuyển dụng sẽ tiến hành xét duyệt hồ sơ Vòng 1. Bạn vui lòng theo dõi thông tin tại trang <strong>Tra cứu kết quả</strong>.`;
+            document.getElementById('modal-success').classList.add('open');
+        }
+
+        function closeModalSuccess() {
+            document.getElementById('modal-success').classList.remove('open');
+        }
+
+        function showToast(msg, type) {
+            const container = document.body;
+            const t = document.createElement('div');
+            t.className = `toast ${type}`;
+            t.textContent = msg;
+            container.appendChild(t);
+            setTimeout(() => {
+                t.style.opacity = '0';
+                t.style.transform = 'translateX(-50%) translateY(10px)';
+                t.style.transition = 'all .3s';
+                setTimeout(() => t.remove(), 300);
+            }, 3500);
+        }
+    </script>
+</body>
+
+</html>
