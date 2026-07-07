@@ -2,9 +2,8 @@
 -- SQL SCRIPT KHỞI TẠO DATABASE TUYỂN DỤNG VIÊN CHỨC 2026
 -- Hướng dẫn: Import file này vào phpMyAdmin (localhost/phpmyadmin)
 -- ============================================================
-
-CREATE DATABASE IF NOT EXISTS `tuyen_dung` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-USE `tuyen_dung`;
+-- CREATE DATABASE IF NOT EXISTS `tuyen_dung` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+-- USE `tuyen_dung`;
 
 -- Xoá các bảng cũ nếu đã tồn tại để tránh xung đột cấu trúc
 DROP TABLE IF EXISTS `admin_sessions`;
