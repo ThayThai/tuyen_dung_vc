@@ -22,11 +22,11 @@ if (!$is_custom_action && !in_array($table, $allowed_tables)) {
     die(json_encode(['error' => 'Tên bảng không hợp lệ']));
 }
 
-$dbname = 'tuyen_dung';
+$dbname = 'if0_42353776_tuyendung';
 
 // ===== KẾT NỐI DATABASE =====
 try {
-    $pdo = new PDO("mysql:host=localhost;dbname=$dbname;charset=utf8mb4", 'root', '');
+    $pdo = new PDO("mysql:host=sql306.infinityfree.com;dbname=$dbname;charset=utf8mb4", 'if0_42353776', 'SY4Ldbr82oX');
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 } catch (PDOException $e) {
