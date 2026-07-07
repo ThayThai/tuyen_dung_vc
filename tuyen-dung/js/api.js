@@ -10,6 +10,18 @@ function getAuthHeader() {
   return `Bearer ${token}`;
 }
 
+// Tự động thêm header X-Authorization dự phòng nếu có Authorization (hỗ trợ cho hosting InfinityFree)
+const originalFetch = window.fetch;
+window.fetch = function (url, options) {
+  if (options && options.headers) {
+    const auth = options.headers["Authorization"] || options.headers["authorization"];
+    if (auth) {
+      options.headers["X-Authorization"] = auth;
+    }
+  }
+  return originalFetch(url, options);
+};
+
 // ===== ĐỌC DỮ LIỆU =====
 async function loadPL01() {
   const res = await fetch(`${API}?table=pl01_chitieu`, {

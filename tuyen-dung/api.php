@@ -2,7 +2,7 @@
 header('Content-Type: application/json; charset=utf-8');
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: GET,POST,PUT,DELETE,OPTIONS');
-header('Access-Control-Allow-Headers: Content-Type,Authorization');
+header('Access-Control-Allow-Headers: Content-Type,Authorization,X-Authorization');
 
 // ===== XỬ LÝ PREFLIGHT OPTIONS (CORS) =====
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
@@ -38,7 +38,10 @@ try {
 
 function verifyAdminToken($pdo) {
     $headers = function_exists('getallheaders') ? getallheaders() : [];
-    $tokenHeader = $headers['Authorization'] ?? $headers['authorization'] ?? $_SERVER['HTTP_AUTHORIZATION'] ?? $_SERVER['REDIRECT_HTTP_AUTHORIZATION'] ?? $_GET['token'] ?? '';
+    $tokenHeader = $headers['Authorization'] ?? $headers['authorization'] ?? 
+                   $headers['X-Authorization'] ?? $headers['x-authorization'] ?? 
+                   $_SERVER['HTTP_AUTHORIZATION'] ?? $_SERVER['REDIRECT_HTTP_AUTHORIZATION'] ?? 
+                   $_GET['token'] ?? '';
     
     if (empty($tokenHeader)) {
         return null;
